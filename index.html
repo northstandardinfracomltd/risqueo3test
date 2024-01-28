@@ -16,6 +16,11 @@
       justify-content: center;
       margin-top: 20px;
       position: relative;
+      border: 1px solid grey;
+      max-width: 500px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #search-input-container {
@@ -39,10 +44,10 @@
       display: none;
       position: absolute;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      max-height: 160px;
       overflow-y: auto;
       z-index: 1;
       width: 100%;
+      margin-top: 55px;
     }
 
     .dropdown-item {
@@ -60,6 +65,7 @@
 
     .right-content {
       display: flex;
+      flex-direction: column;
       align-items: flex-end;
     }
 
@@ -108,6 +114,12 @@
 </head>
 <body>
 
+  <div class="tag-list">
+  <div class="tag" onclick="filterByTag(this, 'Angers')">Angers</div>
+  <div class="tag" onclick="filterByTag(this, 'Paris')">Paris</div>
+  <div class="tag" onclick="filterByTag(this, 'Laval')">Laval</div>
+</div>
+  
 <div class="search-container">
   <div id="search-input-container">
     <input type="text" id="search-input" placeholder="Rechercher..." oninput="filterItems()">
@@ -120,33 +132,30 @@
   <li class="item" data-title="Item 1" data-subtitle="Subtitle 1" data-tags="Angers">
     <a href="https://www.example.com/item1" target="_blank">Item 1</a>
   </li>
-  <li class="item" data-title="Arbre crabe Paris" data-subtitle="" data-tags="Paris">
+  <li class="item" data-title="Arbre crabe iris" data-subtitle="Subtitle fag" data-tags="Paris">
     <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
   </li>
-  <li class="item" data-title="Laval item" data-subtitle="" data-tags="Laval">
+  <li class="item" data-title="Laval item" data-subtitle="Subtitle Laval" data-tags="Laval">
     <a href="https://www.example.com/laval-item" target="_blank">Laval item</a>
   </li>
 </ul>
 
-<div class="tag-list">
-  <div class="tag" onclick="filterByTag(this, 'Angers')">Angers</div>
-  <div class="tag" onclick="filterByTag(this, 'Paris')">Paris</div>
-  <div class="tag" onclick="filterByTag(this, 'Laval')">Laval</div>
-</div>
+
 
 <script>
   function filterItems() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById('search-input');
     filter = input.value.toUpperCase();
-    var tag = document.getElementById('tag-display').textContent.toUpperCase();
+    var tagDisplay = document.getElementById('tag-display');
+    var tag = tagDisplay.textContent.toUpperCase();
     dropdown = document.getElementById('search-dropdown');
     items = document.querySelectorAll('.item');
 
     // Clear previous dropdown content
     dropdown.innerHTML = '';
 
-    // Display dropdown only if input has 3 or more characters
+    // Display dropdown only if input has 3 or more characters or tag is selected
     if (filter.length >= 3 || tag) {
       items.forEach(function(item) {
         var title = item.dataset.title.toUpperCase();
@@ -167,10 +176,10 @@
             leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div>`;
             dropdownItem.appendChild(leftContent);
 
-            // Right content (letter)
+            // Right content (tag)
             var rightContent = document.createElement('div');
             rightContent.className = 'right-content';
-            rightContent.textContent = item.dataset.letter;
+            rightContent.textContent = tags;
             dropdownItem.appendChild(rightContent);
 
             dropdownItem.onclick = function() {
@@ -195,8 +204,14 @@
       tagElement.classList.remove('selected');
     });
 
-    tagElement.classList.add('selected');
-    document.getElementById('tag-display').textContent = tag;
+    var tagDisplay = document.getElementById('tag-display');
+    if (tagDisplay.textContent === tag) {
+      tagDisplay.textContent = '';
+    } else {
+      tagElement.classList.add('selected');
+      tagDisplay.textContent = tag;
+    }
+
     document.getElementById('search-input').value = '';
     filterItems();
   }
