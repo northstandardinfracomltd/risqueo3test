@@ -1,72 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barre de Recherche</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      position: relative;
+    }
 
-    <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-    <title>Hello World!</title>
+    #search-input-container {
+      display: flex;
+      align-items: center;
+    }
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    #search-input {
+      padding: 10px;
+      font-size: 16px;
+    }
 
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div class="instructions">
-          <h2>Using this project</h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out the code in the editor and open
-            the <span class="fileopener" data-file="TODO.md" data-line="0"
-              >TODO</span> for next steps!
-          </p>
-          <!--  🚧 TODO: ADD BUTTON HERE -->
+    #tag-display {
+      background-color: #eee;
+      padding: 5px;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
 
-          <!-- Once you've added the button from TODO.md, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
-        </div>
-      </div>
-    </div>
-    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
-  </body>
+    #search-dropdown {
+      display: none;
+      position: absolute;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      max-height: 160px;
+      overflow-y: auto;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .dropdown-item {
+      padding: 12px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .right-content {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f1f1f1;
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      display: none;
+    }
+
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .item a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .tag-list {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .tag {
+      padding: 8px;
+      margin: 0 5px;
+      cursor: pointer;
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    .tag.selected {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="search-container">
+  <div id="search-input-container">
+    <input type="text" id="search-input" placeholder="Rechercher..." oninput="filterItems()">
+    <div id="tag-display"></div>
+  </div>
+  <div id="search-dropdown"></div>
+</div>
+
+<ul class="item-list">
+  <li class="item" data-title="Item 1" data-subtitle="Subtitle 1" data-tags="Angers">
+    <a href="https://www.example.com/item1" target="_blank">Item 1</a>
+  </li>
+  
+    <li class="item" data-title="Angers 1" data-subtitle="Subtitle 1" data-tags="Angers">
+    <a href="https://www.example.com/item1" target="_blank">Item 1</a>
+  </li>
+  <!-- Ajoutez d'autres éléments de la liste ici -->
+</ul>
+
+<div class="tag-list">
+  <div class="tag" onclick="filterByTag(this, 'Angers')">Angers</div>
+  <div class="tag" onclick="filterByTag(this, 'Paris')">Paris</div>
+  <div class="tag" onclick="filterByTag(this, 'Laval')">Laval</div>
+</div>
+
+<script>
+  function filterItems() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('search-input');
+    filter = input.value.toUpperCase();
+    var tag = document.getElementById('tag-display').textContent.toUpperCase();
+    dropdown = document.getElementById('search-dropdown');
+    items = document.querySelectorAll('.item');
+
+    // Clear previous dropdown content
+    dropdown.innerHTML = '';
+
+    // Display dropdown only if input has 3 or more characters
+    if (filter.length >= 3 || tag) {
+      items.forEach(function(item) {
+        var title = item.dataset.title.toUpperCase();
+        var subtitle = item.dataset.subtitle.toUpperCase();
+        var tags = item.dataset.tags.toUpperCase();
+        var combinedText = title + ' ' + subtitle + ' ' + tags;
+
+        // Check if the tag is present in the item's tags
+        if (tag && tags.indexOf(tag) === -1) {
+          return;
+        }
+
+        if (combinedText.indexOf(filter) > -1) {
+          // Display up to 4 matching items in the dropdown
+          if (dropdown.childElementCount < 4) {
+            var dropdownItem = document.createElement('div');
+            dropdownItem.className = 'dropdown-item';
+
+            // Left content (title and subtitle)
+            var leftContent = document.createElement('div');
+            leftContent.className = 'left-content';
+            leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div>`;
+            dropdownItem.appendChild(leftContent);
+
+            // Right content (letter)
+            var rightContent = document.createElement('div');
+            rightContent.className = 'right-content';
+            rightContent.textContent = item.dataset.letter;
+            dropdownItem.appendChild(rightContent);
+
+            dropdownItem.onclick = function() {
+              window.open(item.querySelector('a').href, '_blank');
+            };
+            dropdown.appendChild(dropdownItem);
+          }
+        }
+      });
+
+      // Show the dropdown
+      dropdown.style.display = 'block';
+    } else {
+      // Hide the dropdown if input has less than 3 characters and no tag selected
+      dropdown.style.display = 'none';
+    }
+  }
+
+  function filterByTag(tagElement, tag) {
+    var tags = document.querySelectorAll('.tag');
+    tags.forEach(function(tagElement) {
+      tagElement.classList.remove('selected');
+    });
+
+    tagElement.classList.add('selected');
+    document.getElementById('tag-display').textContent = tag;
+    document.getElementById('search-input').value = '';
+    filterItems();
+  }
+
+  // Custom :contains() function for selecting tags by text content
+  // This function is not part of standard JavaScript and is added for demonstration purposes
+  NodeList.prototype.forEach = Array.prototype.forEach;
+  Element.prototype.querySelector = Element.prototype.querySelector;
+  Element.prototype.matches = Element.prototype.matches || Element.prototype.msMatchesSelector;
+
+  document.addEventListener('click', function(e) {
+    var container = document.querySelector('.search-container');
+    if (!container.contains(e.target)) {
+      document.getElementById('search-dropdown').style.display = 'none';
+    }
+  });
+</script>
+
+</body>
 </html>
