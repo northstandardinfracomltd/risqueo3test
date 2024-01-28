@@ -121,10 +121,96 @@
 </head>
 <body>
   
-  
-  
+  <style>
+    .style-0 {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        border: 0px solid rgba(0, 0, 0, 0);
+        background-image: url('https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2021/04/Background-dots-gradient.svg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-attachment: scroll;
+    }
 
-  <div class="tag-list">
+    .style-1 {
+        max-width: 1400px;
+        margin: 0px auto;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding: 80px 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: grid;
+        grid-template-columns: 1370px;
+        gap: 32px 64px;
+        grid-auto-rows: minmax(min-content, max-content);
+        z-index: 1;
+        position: relative;
+        column-gap: 64px;
+        row-gap: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        align-content: start;
+    }
+
+    .style-2 {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        min-width: 0px;
+        min-height: 0px;
+        justify-content: start;
+        position: relative;
+    }
+
+    .style-3 {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+        position: relative;
+        transition: all 0.3s ease 0s;
+        border-radius: 0px;
+        border-width: 0px;
+    }
+
+    .style-4 {
+        margin-bottom: 0px;
+        gap: 32px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding: 0px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        display: flex;
+    }
+
+
+</style>
+<div class="style-0">
+    <div class="style-1">
+        <div class="style-2">
+
+
+                    <div class="tag-list">
   <div class="tag" onclick="filterByTag(this, 'Angers')">Angers</div>
   <div class="tag" onclick="filterByTag(this, 'Paris')">Paris</div>
   <div class="tag" onclick="filterByTag(this, 'Laval')">Laval</div>
@@ -137,6 +223,16 @@
   </div>
   <div id="search-dropdown"></div>
 </div>
+                  
+
+        </div>
+    </div>
+</div>
+  
+
+
+  
+  
 
 <ul class="item-list">
   <li class="item" data-title="Item 1" data-subtitle="Subtitle 1" data-tags="Angers">
@@ -263,644 +359,243 @@
     </div>
 </section>
   
+  
+  
   <style>
     .style-0 {
-        z-index: 8;
-        background: linear-gradient(0deg, rgba(105, 145, 214, 0.08), rgba(105, 145, 214, 0.08)) repeat scroll 0% 0% / auto padding-box border-box, rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
-        -webkit-box-align: center;
-        align-items: center;
-        box-sizing: border-box;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        gap: 8px;
-        height: 768px;
-        left: 0px;
-        overflow-y: auto;
-        padding: 24px 0px;
-        position: fixed;
-        top: 0px;
-        width: 96px;
-    }
-
-    .style-1 {
-        color: rgb(32, 33, 36);
-        text-decoration: none solid rgb(32, 33, 36);
-        outline: rgb(32, 33, 36) none 0px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(32, 33, 36);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        height: 56px;
-        width: 80px;
-    }
-
-    .style-2 {
-        margin: 0px 0px 8px;
-        padding: 0px;
-        border: 0px none rgb(32, 33, 36);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: 16px;
-        display: flex;
-        height: 32px;
-        -webkit-box-pack: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        width: 56px;
-        background: rgb(203, 240, 248) none repeat scroll 0% 0% / auto padding-box border-box;
-    }
-
-    .style-3 {
-        width: 24px;
-        height: 24px;
-        height: 24px;
-        -webkit-box-align: center;
-        align-items: center;
-        align-self: center;
-        display: flex;
-        vertical-align: middle;
-    }
-
-    .style-4 {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        width: 24px;
-        height: 24px;
-        font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        direction: ltr;
-        display: flex;
-        font-family: 'Google Symbols Subset';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: normal;
-        line-height: 24px;
-        text-transform: none;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        user-select: none;
-        background-repeat: no-repeat;
-        fill: rgb(32, 33, 36);
-        overflow: hidden;
-        color: rgb(32, 33, 36);
-        font-variation-settings: 'FILL' 1, 'GRAD' 0;
-        transition: font-variation-settings 0.2s cubic-bezier(0.2, 0, 0, 1) 0s;
-        -webkit-box-align: center;
-        align-items: center;
-    }
-
-    .style-5 {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16px;
-        font-family: 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        letter-spacing: 0.1px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(32, 33, 36);
-        vertical-align: baseline;
-        display: block;
-        text-align: center;
-    }
-
-    .style-6 {
-        color: rgb(60, 64, 67);
-        text-decoration: none solid rgb(60, 64, 67);
-        outline: rgb(60, 64, 67) none 0px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        height: 56px;
-        width: 80px;
-    }
-
-    .style-7 {
-        margin: 0px 0px 8px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: 16px;
-        display: flex;
-        height: 32px;
-        -webkit-box-pack: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        width: 56px;
-    }
-
-    .style-8 {
-        width: 24px;
-        height: 24px;
-        height: 24px;
-        -webkit-box-align: center;
-        align-items: center;
-        align-self: center;
-        display: flex;
-        vertical-align: middle;
-    }
-
-    .style-9 {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        width: 24px;
-        height: 24px;
-        font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        direction: ltr;
-        display: flex;
-        font-family: 'Google Symbols Subset';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: normal;
-        line-height: 24px;
-        text-transform: none;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        user-select: none;
-        background-repeat: no-repeat;
-        fill: rgb(60, 64, 67);
-        overflow: hidden;
-        color: rgb(60, 64, 67);
-        transition: font-variation-settings 0.2s cubic-bezier(0.2, 0, 0, 1) 0s;
-        -webkit-box-align: center;
-        align-items: center;
-        font-variation-settings: 'FILL' 0, 'GRAD' 0;
-    }
-
-    .style-10 {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16px;
-        font-family: 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        letter-spacing: 0.1px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        vertical-align: baseline;
-        display: block;
-        text-align: center;
-    }
-
-    .style-11 {
-        color: rgb(60, 64, 67);
-        text-decoration: none solid rgb(60, 64, 67);
-        outline: rgb(60, 64, 67) none 0px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        height: 56px;
-        width: 80px;
-    }
-
-    .style-12 {
-        margin: 0px 0px 8px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: 16px;
-        display: flex;
-        height: 32px;
-        -webkit-box-pack: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        width: 56px;
-    }
-
-    .style-13 {
-        width: 24px;
-        height: 24px;
-        height: 24px;
-        -webkit-box-align: center;
-        align-items: center;
-        align-self: center;
-        display: flex;
-        vertical-align: middle;
-    }
-
-    .style-14 {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        width: 24px;
-        height: 24px;
-        font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        direction: ltr;
-        display: flex;
-        font-family: 'Google Symbols Subset';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: normal;
-        line-height: 24px;
-        text-transform: none;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        user-select: none;
-        background-repeat: no-repeat;
-        fill: rgb(60, 64, 67);
-        overflow: hidden;
-        color: rgb(60, 64, 67);
-        transition: font-variation-settings 0.2s cubic-bezier(0.2, 0, 0, 1) 0s;
-        -webkit-box-align: center;
-        align-items: center;
-        font-variation-settings: 'FILL' 0, 'GRAD' 0;
-    }
-
-    .style-15 {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16px;
-        font-family: 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        letter-spacing: 0.1px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        vertical-align: baseline;
-        display: block;
-        text-align: center;
-    }
-
-    .style-16 {
-        color: rgb(60, 64, 67);
-        text-decoration: none solid rgb(60, 64, 67);
-        outline: rgb(60, 64, 67) none 0px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        height: 56px;
-        width: 80px;
-    }
-
-    .style-17 {
-        margin: 0px 0px 8px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: 16px;
-        display: flex;
-        height: 32px;
-        -webkit-box-pack: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        width: 56px;
-    }
-
-    .style-18 {
-        width: 24px;
-        height: 24px;
-        height: 24px;
-        -webkit-box-align: center;
-        align-items: center;
-        align-self: center;
-        display: flex;
-        vertical-align: middle;
-    }
-
-    .style-19 {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        width: 24px;
-        height: 24px;
-        font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        direction: ltr;
-        display: flex;
-        font-family: 'Google Symbols Subset';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: normal;
-        line-height: 24px;
-        text-transform: none;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        user-select: none;
-        background-repeat: no-repeat;
-        fill: rgb(60, 64, 67);
-        overflow: hidden;
-        color: rgb(60, 64, 67);
-        transition: font-variation-settings 0.2s cubic-bezier(0.2, 0, 0, 1) 0s;
-        -webkit-box-align: center;
-        align-items: center;
-        font-variation-settings: 'FILL' 0, 'GRAD' 0;
-    }
-
-    .style-20 {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16px;
-        font-family: 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        letter-spacing: 0.1px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        vertical-align: baseline;
-        display: block;
-        text-align: center;
-    }
-
-    .style-21 {
-        color: rgb(60, 64, 67);
-        text-decoration: none solid rgb(60, 64, 67);
-        outline: rgb(60, 64, 67) none 0px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        height: 56px;
-        width: 80px;
-    }
-
-    .style-22 {
-        margin: 0px 0px 8px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: 16px;
-        display: flex;
-        height: 32px;
-        -webkit-box-pack: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        width: 56px;
-    }
-
-    .style-23 {
-        width: 24px;
-        height: 24px;
-        height: 24px;
-        -webkit-box-align: center;
-        align-items: center;
-        align-self: center;
-        display: flex;
-        vertical-align: middle;
-    }
-
-    .style-24 {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        width: 24px;
-        height: 24px;
-        font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        direction: ltr;
-        display: flex;
-        font-family: 'Google Symbols Subset';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: normal;
-        line-height: 24px;
-        text-transform: none;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        user-select: none;
-        background-repeat: no-repeat;
-        fill: rgb(60, 64, 67);
-        overflow: hidden;
-        color: rgb(60, 64, 67);
-        transition: font-variation-settings 0.2s cubic-bezier(0.2, 0, 0, 1) 0s;
-        -webkit-box-align: center;
-        align-items: center;
-        font-variation-settings: 'FILL' 0, 'GRAD' 0;
-    }
-
-    .style-25 {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16px;
-        font-family: 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        letter-spacing: 0.1px;
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(60, 64, 67);
-        vertical-align: baseline;
-        display: block;
-        text-align: center;
-    }
-
-    .style-26 {
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(0, 0, 0);
-        font: 16px / 24px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        -webkit-box-flex: 1;
-        flex-grow: 1;
-        -webkit-box-pack: end;
-        justify-content: flex-end;
-    }
-
-    .style-27 {
-        color: rgb(95, 99, 104);
-        --mat-text-button-state-layer-color: transparent;
-        font-family: 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        font-size: 14px;
-        letter-spacing: 0.15px;
-        font-weight: 500;
-        text-transform: none;
-        --mdc-icon-button-icon-color: #3c4043;
-        --mat-icon-button-state-layer-color: #3c4043;
-        --mat-icon-button-ripple-color: rgba(60, 64, 67, .1);
-        --mdc-icon-button-state-layer-size: 48px;
-        width: 48px;
-        height: 48px;
-        padding: 12px;
-        text-decoration: none solid rgb(95, 99, 104);
-        border-radius: 50%;
-        flex-shrink: 0;
-        text-align: center;
+        max-width: 1160px;
+        margin: 0px auto;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        display: inline-block;
-        position: relative;
-        box-sizing: border-box;
-        border: 0px none rgb(95, 99, 104);
-        outline: rgb(95, 99, 104) none 0px;
-        background-color: rgba(0, 0, 0, 0);
-        fill: rgb(95, 99, 104);
-        cursor: pointer;
-        user-select: none;
-        z-index: 0;
-        overflow: visible;
-        line-height: 14px;
-    }
-
-    .style-28 {
-        margin: 0px;
-        padding: 0px;
-        border: 0px none rgb(95, 99, 104);
-        font: 500 14px / 14px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        border-radius: 50%;
-        inset: 0px;
-        position: absolute;
-        pointer-events: none;
-    }
-
-    .style-29 {
-        width: 24px;
-        height: 24px;
-        height: 24px;
-        -webkit-box-align: center;
-        align-items: center;
-        align-self: center;
-        display: inline-flex;
-        vertical-align: middle;
-    }
-
-    .style-30 {
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-        width: 24px;
-        height: 24px;
-        font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        direction: ltr;
-        display: flex;
-        font-family: 'Google Symbols Subset';
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: normal;
-        line-height: 24px;
-        text-transform: none;
-        white-space: nowrap;
-        overflow-wrap: normal;
-        user-select: none;
         background-repeat: no-repeat;
-        fill: rgb(95, 99, 104);
-        overflow: hidden;
-        color: rgb(95, 99, 104);
-        -webkit-box-align: center;
+        box-sizing: border-box;
+        padding: 30px 20px 30px 40px;
+        display: grid;
+        grid-template-columns: 165px 690px 165px;
+        gap: 32px 40px;
+        grid-auto-rows: minmax(min-content, max-content);
+        z-index: 1;
+        position: relative;
+        column-gap: 40px;
+        row-gap: 32px;
+        align-content: center;
+    }
+
+    .style-1x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        min-width: 0px;
+        min-height: 0px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .style-2x {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+        position: relative;
+        transition: all 0.3s ease 0s;
+        border-radius: 0px;
+        border-width: 0px;
+    }
+
+    .style-3x {
+        margin-bottom: 0px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding: 0px;
+    }
+
+    .style-4x {
+        vertical-align: bottom;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        border: 0px none rgb(61, 71, 77);
+        height: auto;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+    }
+
+    .style-5x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .style-6x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        min-width: 0px;
+        min-height: 0px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .style-7x {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+        position: relative;
+        transition: all 0.3s ease 0s;
+        border-radius: 0px;
+        border-width: 0px;
+    }
+
+    .style-8x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+    }
+
+    .style-9x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
         align-items: center;
-        font-variation-settings: 'FILL' 0, 'GRAD' 0;
+        display: flex;
     }
 
-    .style-31 {
-        position: absolute;
+    .style-10x {
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 29.4px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        max-width: 100%;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-        border: 0px none rgb(95, 99, 104);
-        font: 500 14px / 14px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        inset: 0px;
+        flex: 1 1 0%;
     }
 
-    .style-32 {
+    .style-11x {
+        margin-bottom: 0px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        line-height: 23.8px;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding: 0px;
+        color: rgb(138, 148, 153);
+    }
+
+    .style-12x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-        border: 0px none rgb(95, 99, 104);
-        font: 500 14px / 14px 'Google Sans', -apple-system, 'system-ui', sans-serif;
-        vertical-align: baseline;
-        position: absolute;
-        top: 24px;
-        height: 48px;
-        left: 24px;
-        width: 48px;
-        transform: matrix(1, 0, 0, 1, -24, -24);
-        display: block;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        min-width: 0px;
+        min-height: 0px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .style-13x {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+        position: relative;
+        transition: all 0.3s ease 0s;
+        border-radius: 0px;
+        border-width: 0px;
+    }
+
+    .style-14x {
+        margin-bottom: 0px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        line-height: 23.8px;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding: 0px;
+        color: rgb(0, 170, 255);
+    }
+
+    .style-15x {
+        width: 14px-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+        border: 0px none rgb(0, 170, 255);
+        height: auto;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        max-width: 100%;
+    }
+
+    .style-16x {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
     }
 </style>
-<gf-nav-rail _ngcontent-ng-c2370359648="" role="navigation" aria-label="Nav bar" _nghost-ng-c887251870="" behavior="rail" class="style-0"><a _ngcontent-ng-c887251870="" role="link" class="style-1" aria-label="Fonts" aria-current="true" href="/"><span _ngcontent-ng-c887251870="" class="style-2">
-            <gf-icon _ngcontent-ng-c887251870="" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" animated="" filled="" class="style-3">
-                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="style-4" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols">font_download</mat-icon>
-            </gf-icon>
-        </span><span _ngcontent-ng-c887251870="" class="style-5">Fonts</span></a><a _ngcontent-ng-c887251870="" role="link" class="style-6" aria-label="Noto" aria-current="false" href="/noto"><span _ngcontent-ng-c887251870="" class="style-7">
-            <gf-icon _ngcontent-ng-c887251870="" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" animated="" class="style-8">
-                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="style-9" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols">language</mat-icon>
-            </gf-icon>
-        </span><span _ngcontent-ng-c887251870="" class="style-10">Noto</span></a><a _ngcontent-ng-c887251870="" role="link" class="style-11" aria-label="Icons" aria-current="false" href="/icons"><span _ngcontent-ng-c887251870="" class="style-12">
-            <gf-icon _ngcontent-ng-c887251870="" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" animated="" class="style-13">
-                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="style-14" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols">interests</mat-icon>
-            </gf-icon>
-        </span><span _ngcontent-ng-c887251870="" class="style-15">Icons</span></a><a _ngcontent-ng-c887251870="" role="link" class="style-16" aria-label="Knowledge" aria-current="false" href="/knowledge"><span _ngcontent-ng-c887251870="" class="style-17">
-            <gf-icon _ngcontent-ng-c887251870="" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" animated="" class="style-18">
-                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="style-19" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols">school</mat-icon>
-            </gf-icon>
-        </span><span _ngcontent-ng-c887251870="" class="style-20">Knowledge</span></a><a _ngcontent-ng-c887251870="" role="link" class="style-21" aria-label="FAQ" aria-current="false" href="https://developers.google.com/fonts/faq"><span _ngcontent-ng-c887251870="" class="style-22">
-            <gf-icon _ngcontent-ng-c887251870="" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" animated="" class="style-23">
-                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="style-24" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols">help</mat-icon>
-            </gf-icon>
-        </span><span _ngcontent-ng-c887251870="" class="style-25">FAQ</span></a>
-    <!---->
-    <div _ngcontent-ng-c887251870="" class="style-26">
-        <gf-theme-toggle _ngcontent-ng-c887251870="" _nghost-ng-c3095797924="" class=""><button _ngcontent-ng-c3095797924="" color="secondary--gray" mat-icon-button="" class="style-27" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" mat-ripple-loader-centered="" aria-label="Switch to dark theme"><span class="style-28"></span>
-                <gf-icon _ngcontent-ng-c3095797924="" name="dark_mode" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" class="style-29">
-                    <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="style-30" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols">dark_mode</mat-icon>
-                </gf-icon>
-                <!---->
-                <!----><span class="style-31"></span><span class="style-32"></span>
-            </button>
-            <!---->
-            <!---->
-            <!---->
-        </gf-theme-toggle>
+<div class="style-0x">
+    <div class="style-1x">
+        <div class="style-2x">
+            <figure class="style-3x"><img decoding="async" width="121" height="64" src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2022/09/Bundle-logo-new.svg" alt="" class="style-4x" data-lazy-src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2022/09/Bundle-logo-new.svg" data-ll-status="loaded" /><noscript class="style-5x"><img decoding="async" width="121" height="64" src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2022/09/Bundle-logo-new.svg" alt="" class="wp-image-21426" /></noscript></figure>
+        </div>
     </div>
-</gf-nav-rail>
+    <div class="style-6x">
+        <div class="style-7x">
+            <div class="style-8x">
+                <div class="style-9x">
+                    <h4 class="style-10x">Save 30% with the MeisterBundle</h4>
+                </div>
+            </div>
+            <p class="style-11x">Get MindMeister and MeisterTask at a reduced price.</p>
+        </div>
+    </div>
+    <div class="style-12x">
+        <div class="style-13x">
+            <p class="style-14x">Find out more <img decoding="async" width="18" height="16" class="style-15x" src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2022/09/Blue-arrow.svg" alt="" data-lazy-src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2022/09/Blue-arrow.svg" data-ll-status="loaded" /><noscript class="style-16x"><img decoding="async" width="18" height="16" class="wp-image-21438" style="width: 14px" src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2022/09/Blue-arrow.svg" alt="" /></noscript> </p>
+        </div>
+    </div>
+</div>
+  
+  
 </body>
 </html>
