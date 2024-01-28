@@ -120,11 +120,12 @@
   <li class="item" data-title="Item 1" data-subtitle="Subtitle 1" data-tags="Angers">
     <a href="https://www.example.com/item1" target="_blank">Item 1</a>
   </li>
-  
-    <li class="item" data-title="Angers 1" data-subtitle="Subtitle 1" data-tags="Angers">
-    <a href="https://www.example.com/item1" target="_blank">Item 1</a>
+  <li class="item" data-title="Arbre crabe Paris" data-subtitle="" data-tags="Paris">
+    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
   </li>
-  <!-- Ajoutez d'autres éléments de la liste ici -->
+  <li class="item" data-title="Laval item" data-subtitle="" data-tags="Laval">
+    <a href="https://www.example.com/laval-item" target="_blank">Laval item</a>
+  </li>
 </ul>
 
 <div class="tag-list">
@@ -153,12 +154,8 @@
         var tags = item.dataset.tags.toUpperCase();
         var combinedText = title + ' ' + subtitle + ' ' + tags;
 
-        // Check if the tag is present in the item's tags
-        if (tag && tags.indexOf(tag) === -1) {
-          return;
-        }
-
-        if (combinedText.indexOf(filter) > -1) {
+        // Check if both filter and tag are present in the combined text
+        if ((filter && combinedText.indexOf(filter) > -1) && (!tag || (tag && tags.indexOf(tag) > -1))) {
           // Display up to 4 matching items in the dropdown
           if (dropdown.childElementCount < 4) {
             var dropdownItem = document.createElement('div');
