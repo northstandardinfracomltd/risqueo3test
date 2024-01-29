@@ -95,7 +95,7 @@ format("opentype");
 #search-input {
     position: relative;
 margin-top: 10px;
-  padding: 14px 10px 14px 10px !important;
+  padding: 14px 16px !important;
   font-size: 16px;
   text-align: left;
   width: 100% !important;
@@ -106,10 +106,19 @@ margin-top: 10px;
   color: #2b5bd7 !important;
 }
 
+    
+    
+    #search-input:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
 #search-input::placeholder {
-  /* Styles pour le placeholder */
-  color: #71809f;
-  font-size: 14px;
+      color: #8a97bb;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
 }
 
 #search-input:-ms-input-placeholder {
@@ -1043,7 +1052,7 @@ display: grid;
 <div class="search-container">
   <div id="search-input-container"><div id="word-container"></div>
 
-    <input maxlength="35" type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement, (...)" oninput="filterItems()">
+    <input maxlength="35" type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement ..." oninput="filterItems()">
     <div id="tag-display"></div>
   </div>
   <div id="search-dropdown"></div>
