@@ -47,6 +47,9 @@ format("opentype");
       border: 0px solid transparent;
       width: 100%;
       margin-right: auto;
+          padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 25px;
     }
 
     #search-input-container {
@@ -61,30 +64,45 @@ format("opentype");
     
     
 .word {
-  background-color: #e0e0e0;
-  padding: 2px;
-  margin: 2px;
+  margin-right: 8px;
+    padding: 9px 18px;
+    cursor: pointer;
+    background-color: #000;
+    border-radius: 55px;
+    color: #fff;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+    
+    
+   .word:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
 }
 
 #word-container {
   display: flex;
   flex-wrap: wrap;
-      text-align: center !important;
-    justify-content: center;
+      text-align: left !important;
+    justify-content: left;
+  margin-top: -15px;
 }
     
     
 #search-input {
     position: relative;
-
+margin-top: 10px;
   padding: 14px 10px 14px 10px !important;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   width: 100% !important;
-  background: #fff;
-  border: 0.08rem solid #71809f !important;
+  background: #f4f6fa;
+  border: 0.08rem solid #f4f6fa !important;
   border-radius: 12px !important;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   color: #2b5bd7 !important;
 }
 
@@ -1025,7 +1043,7 @@ display: grid;
 <div class="search-container">
   <div id="search-input-container"><div id="word-container"></div>
 
-    <input type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement, (...)" oninput="filterItems()">
+    <input maxlength="35" type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement, (...)" oninput="filterItems()">
     <div id="tag-display"></div>
   </div>
   <div id="search-dropdown"></div>
