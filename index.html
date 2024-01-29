@@ -44,16 +44,18 @@ format("opentype");
       margin-top: 20px;
       position: relative;
       border: 0px solid transparent;
-      max-width: 500px;
-      width: 90%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
 
     #search-input-container {
-      display: flex;
+      display: block;
       align-items: center;
-      width: 90% !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    
     }
 
     #search-input {
@@ -61,6 +63,7 @@ format("opentype");
       font-size: 16px;
           text-align: center;
        width: 90% !important;
+        background: red;
     }
 
     #tag-display {
@@ -236,14 +239,15 @@ format("opentype");
     }
 
     .defibcontainer {
-      max-width: 700px;
-      width: 90%;
+      max-width: 500px;
+      width: 96%;
       margin-left: auto;
       margin-right: auto;
       margin-top: 55px;
-        border: 1px solid #303030;
+      border: 1px solid #303030;
       background-color: #262626;
       border-radius: 10px;
+      text-align: center;
       
     }
 
@@ -308,6 +312,24 @@ format("opentype");
   }
 }
 
+    
+    .custom-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for the button */
+.custom-button:hover {
+    background-color: #2980b9; /* Darker background color on hover */
+}
+    
+    
   </style>
   <title>Sticky NavBar</title>
 </head>
@@ -449,7 +471,7 @@ format("opentype");
   
 <div class="search-container">
   <div id="search-input-container">
-    <input type="text" id="search-input" class="iris" placeholder="Rechercher un fournisseur" oninput="filterItems()">
+    <input type="text" id="search-input" autofocus class="iris" placeholder="Rechercher un fournisseur" oninput="filterItems()">
     <div id="tag-display"></div>
   </div>
   <div id="search-dropdown"></div>
@@ -494,6 +516,9 @@ format("opentype");
                 <div style="font:16px / 24px 'Google Sans Text', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;grid-area:content;box-sizing:border-box;margin:0px;padding:0px;">
                     Ask a question on Stack Overflow
                 </div>
+              
+                  <a href="https://www.example.com" class="custom-button">Je suis prestataire</a>
+
             </div>
         </div>
     </div>
@@ -530,9 +555,16 @@ format("opentype");
                 </h3>
                 <div style="font:16px / 24px 'Google Sans Text', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;grid-area:content;box-sizing:border-box;margin:0px;padding:0px;">
                     Report an issue and track bugs
+                  
+                  
                 </div>
+                              <a href="https://www.example.com" class="custom-button">Je suis client</a>
+
+              
             </div>
+          
         </div>
+      
     </div>
     <div background="light-green" description-position="bottom" style="position:relative;--devsite-background-button-background: transparent;--devsite-background-button-background-hover: #000;--devsite-background-button-border-color: #000;--devsite-background-button-border-color-hover: #000;--devsite-background-button-primary-background: #000;--devsite-background-button-primary-background-hover: #fff;--devsite-background-button-primary-color: #fff;--devsite-background-button-primary-color-hover: #000;--devsite-background-button-white-color: #174ea6;--devsite-background-color: #ceead6;--devsite-button-background-hover: #000;--devsite-button-color-hover: #fff;--devsite-button-primary-background-hover: #fff;--devsite-button-white-color: #174ea6;--devsite-foreground-button-color: #000;--devsite-foreground-button-color-hover: #fff;--devsite-foreground-button-white-color: #174ea6;--devsite-foreground-color: #202124;--devsite-heading-color: #202124;--devsite-text-color: #3c4043;-webkit-box-flex:1;flex:1 0 0%;min-width:0px;-webkit-box-align:stretch;align-items:normal;border:0px none rgb(60, 64, 67);border-radius:24px;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;gap:normal;-webkit-box-pack:start;justify-content:normal;max-height:none;max-width:100%;z-index:auto;color:rgb(60, 64, 67);background-color:rgb(206, 234, 214);--devsite-label-color: inherit;--devsite-button-primary-background: #202124;--devsite-button-primary-color: #fff;--devsite-button-primary-color-hover: #000;--devsite-foreground-button-primary-background: #202124;--devsite-foreground-button-primary-background-hover: #34a853;--devsite-foreground-button-primary-color: #fff;--devsite-foreground-button-primary-color-hover: #000;--devsite-icon-color: #3c4043;--devsite-icon-color-hover: hsla(210,6%,63%,.5);--devsite-link-color: #3c4043;--devsite-text-color-hover: hsla(210,6%,63%,.5);--devsite-background-link-color: #3c4043;--devsite-foreground-button-background-hover: #fff;--devsite-heading-link-color: #202124;--devsite-link-text-decoration: underline;--devsite-link-text-decoration-hover: none;--devsite-label-font: 500 14px/20px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;--devsite-label-letter-spacing: 1.5px;--devsite-label-margin: 0 0 16px;--devsite-button-background: 0;--devsite-button-background-active: #202124;--devsite-button-border: 2px solid #202124;--devsite-button-border-hover: 2px solid #202124;--devsite-button-border-active: 2px solid #202124;--devsite-button-color: #202124;--devsite-button-color-active: #fff;--devsite-foreground-button-border-color: #202124;--devsite-background-button-color: #202124;--devsite-background-button-color-hover: #202124;--devsite-button-primary-background-active: #dadce0;--devsite-button-primary-color-active: #000;--devsite-button-white-background-hover: transparent;--devsite-button-white-background-active: transparent;--devsite-button-white-text-decoration-hover: underline;--devsite-feature-tooltip-border-radius: 8px;--devsite-foreground-button-white-background-hover: transparent;--devsite-background-button-white-background-hover: transparent;--devsite-background-button-white-background-focus: transparent;box-sizing:border-box;margin:0px;padding:0px;">
 
@@ -569,7 +601,7 @@ format("opentype");
                     Join the KotlinLang Slack group
                 </div>
               
-                  <a href="https://www.example.com" class="custom-button">Cliquez ici</a>
+                  <a href="https://www.example.com" class="custom-button">En savoir plus</a>
 
             </div>
         </div>
