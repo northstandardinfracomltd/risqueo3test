@@ -746,7 +746,7 @@ button {
               grid-template-columns: 4fr 2fr 2fr;
           display: grid;
               width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 
@@ -774,7 +774,7 @@ button {
 
         .button img {
             margin-right: 10px;
-          max-width: 40px;
+          max-width: 70px;
         }
 
         @media (max-width: 768px) {
@@ -790,6 +790,14 @@ button {
                 width: 96% !important;
         }
       
+      
+             .science1 {
+        font-size: 40px !important;
+    font-family: "proxima nova semibold" !important;
+        }
+      
+      
+      
       @font-face { 
   font-family:proxima nova;
   src:url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
@@ -799,7 +807,7 @@ button {
   src:url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
 } 
 @font-face { 
-  font-family:proxima nova bold;
+  font-family:ouiprev;
   src:url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
 } 
 @font-face { 
@@ -807,7 +815,30 @@ button {
   src:url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
 } 
 
+        .divinfoable {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+        }
 
+        .titreinfoable {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .sous-titreinfoable {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .fermerinfoable {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
       
       
     </style>
@@ -824,12 +855,28 @@ button {
   
 
   
-   <h1 class="orb-typography h1 header">
-    Le moteur de recherche pour trouver des fournisseurs et formateurs en prévention et sécurité qualifiés et labelisés OuiPrev à proximité
+   <h1 class="orb-typography h1 header science1">
+    
   </h1>
   <p class="orb-typography p description">
     Create a QR Code from any short link. Then edit, customize, and track your QR Codes here.
   </p>
+  
+  
+  <div class="divinfoable" id="maDiv">
+    <div class="titreinfoable">OuiPrev c'est quoi?</div>
+    <div class="sous-titreinfoable">Le moteur de recherche pour trouver des fournisseurs et formateurs en prévention et sécurité qualifiés et labelisés OuiPrev à proximité</div>
+    <button class="fermerinfoable" onclick="masquerDiv()">Enchanté! Masquer l'information</button>
+</div>
+
+<script>
+    function masquerDiv() {
+        var div = document.getElementById('maDiv');
+        div.style.display = 'none';
+    }
+</script>
+  
+  
                     <div class="tag-list">
                         
   <div class="tag" onclick="filterByTag(this, 'Défibrillation')">Défibrillation</div>
