@@ -35,7 +35,7 @@ format("opentype");
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background-color: #212121;
     }
 
     .search-container {
@@ -43,7 +43,7 @@ format("opentype");
       justify-content: center;
       margin-top: 20px;
       position: relative;
-      border: 1px solid grey;
+      border: 0px solid transparent;
       max-width: 500px;
       width: 90%;
       margin-left: auto;
@@ -53,12 +53,14 @@ format("opentype");
     #search-input-container {
       display: flex;
       align-items: center;
+      width: 90% !important;
     }
 
     #search-input {
       padding: 10px;
       font-size: 16px;
           text-align: center;
+       width: 90% !important;
     }
 
     #tag-display {
@@ -128,16 +130,18 @@ format("opentype");
     }
 
     .tag {
-      padding: 8px;
+      padding: 10px 15px;
       margin: 0 5px;
       cursor: pointer;
-      background-color: #ddd;
-      border-radius: 5px;
+      background-color: #553425;
+      border-radius: 12px;
+      color: #ff8e64;
     }
 
     .tag.selected {
-      background-color: #4CAF50;
+      background-color: #097bed;
       color: #fff;
+      transform: scale(1.05);
     }
     
         .iris {
@@ -232,9 +236,14 @@ format("opentype");
     }
 
     .defibcontainer {
-        border: 1px solid rgb(230, 230, 230);
-      background-color: rgb(245, 245, 245);
-      border-radius: 20px;
+      max-width: 700px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 55px;
+        border: 1px solid #303030;
+      background-color: #262626;
+      border-radius: 10px;
       
     }
 
@@ -250,7 +259,8 @@ format("opentype");
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #262626;
+  box-shadow: inset 0 -1px 0 #3B3B3B;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -427,21 +437,11 @@ format("opentype");
 </script>
 
   
-  
-  <section style="padding:0px;margin-top:120px;position:relative;display:flex;flex-direction:column;align-items:center;box-sizing:border-box;background-repeat:no-repeat;margin:120px 0px 0px;">
-    <div style="opacity:1;transform:matrix(1, 0, 0, 1, 0, 0);position:absolute;z-index:-1;background:rgba(0, 0, 0, 0) url('https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/energybackground.svg?v=1706545951215') no-repeat scroll 50% 50% / auto padding-box border-box;transition:all 1.8s cubic-bezier(0, 0.25, 0, 1) 0s;width: 100%;height:724px;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;"></div>
-    <div style="max-width:1170px;position:relative;width: 100%;padding:0px 25px;font-size:17px;height:300px;text-align:center;box-sizing:border-box;background-repeat:no-repeat;margin:0px;">
-        <div style="font-size:32px;font-weight:500;line-height:38.4px;color:rgba(61, 71, 77, 0.5);letter-spacing:normal;margin-bottom:10px;box-sizing:border-box;background-repeat:no-repeat;margin:0px 0px 10px;padding:0px;">Connectons les talents de la prévention</div>
-        <h1 style="font-size:80px;font-weight:700;line-height:80px;letter-spacing:-2px;max-width:100%;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;">Collaborative <span style="line-height:72px;display:block;max-width:100%;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;">Mind Mapping</span></h1>
-    </div>
-    <div column="" style="display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;">
-        <div style="background-color:rgb(255, 255, 255);border-radius:62px;padding:32px;box-sizing:border-box;background-repeat:no-repeat;margin:0px;">
-
 <div class="defibcontainer">
   
-  
+  <div class="994">Trouvez le bon fournisseur</div>
                     <div class="tag-list">
-                        <div class="994">Filtres</div>
+                        
   <div class="tag" onclick="filterByTag(this, 'Défibrillation')">Défibrillation</div>
   <div class="tag" onclick="filterByTag(this, 'Incendie')">Incendie</div>
   <div class="tag" onclick="filterByTag(this, 'Formation')">Formation</div>
@@ -456,14 +456,8 @@ format("opentype");
 </div>
                   
  </div>
-        </div>
-    </div>
-    <div column="" style="height:300px;display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;">
-        <a href="https://accounts.meister.co/sign_up?locale=en&amp;product=mindmeister&amp;r=140672" style="text-align:center;margin-bottom:30px;margin-top:60px;font-size:17px;color:rgb(0, 170, 255);line-height:23.8px;max-width:100%;box-sizing:border-box;background-repeat:no-repeat;margin:60px 0px 30px;padding:0px;">or sign up using your email</a> <img title="4.7+ stars on Capterra, App Store, Play Store and many more" src="//cdn5.mindmeister.com/assets/content/home/5stars-127a1fa5754356dfe44a9edc1d5b792dec8860a202c461fbe7d833819458c406.svg" width="93" height="17" style="margin-bottom:10px;box-sizing:border-box;background-repeat:no-repeat;padding:0px;" /> <span style="text-align:center;color:rgb(138, 148, 153);font-size:15px;line-height:21px;max-width:100%;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;">Trusted by <strong style="font-weight:700;box-sizing:border-box;background-repeat:no-repeat;margin:0px;padding:0px;">25 million</strong> happy users worldwide</span>
-    </div>
-</section>
   
-  
+  <br>
   <div style="background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;border:0px none rgb(32, 33, 36);border-radius:0px;display:grid;grid-template-rows:224px;grid-template-columns:396px 396px 396px 0px;grid-template-areas:none;grid-auto-flow:;grid-auto-columns:;grid-auto-rows: 1;grid-gap:32px 32px;max-width:none;padding:0px;margin: 0px auto;box-sizing:border-box;">
 
     <div background="light-green" description-position="bottom" style="position:relative;--devsite-background-button-background: transparent;--devsite-background-button-background-hover: #000;--devsite-background-button-border-color: #000;--devsite-background-button-border-color-hover: #000;--devsite-background-button-primary-background: #000;--devsite-background-button-primary-background-hover: #fff;--devsite-background-button-primary-color: #fff;--devsite-background-button-primary-color-hover: #000;--devsite-background-button-white-color: #174ea6;--devsite-background-color: #ceead6;--devsite-button-background-hover: #000;--devsite-button-color-hover: #fff;--devsite-button-primary-background-hover: #fff;--devsite-button-white-color: #174ea6;--devsite-foreground-button-color: #000;--devsite-foreground-button-color-hover: #fff;--devsite-foreground-button-white-color: #174ea6;--devsite-foreground-color: #202124;--devsite-heading-color: #202124;--devsite-text-color: #3c4043;-webkit-box-flex:1;flex:1 0 0%;min-width:0px;-webkit-box-align:stretch;align-items:normal;border:0px none rgb(60, 64, 67);border-radius:24px;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;gap:normal;-webkit-box-pack:start;justify-content:normal;max-height:none;max-width:100%;z-index:auto;color:rgb(60, 64, 67);background-color:rgb(206, 234, 214);--devsite-label-color: inherit;--devsite-button-primary-background: #202124;--devsite-button-primary-color: #fff;--devsite-button-primary-color-hover: #000;--devsite-foreground-button-primary-background: #202124;--devsite-foreground-button-primary-background-hover: #34a853;--devsite-foreground-button-primary-color: #fff;--devsite-foreground-button-primary-color-hover: #000;--devsite-icon-color: #3c4043;--devsite-icon-color-hover: hsla(210,6%,63%,.5);--devsite-link-color: #3c4043;--devsite-text-color-hover: hsla(210,6%,63%,.5);--devsite-background-link-color: #3c4043;--devsite-foreground-button-background-hover: #fff;--devsite-heading-link-color: #202124;--devsite-link-text-decoration: underline;--devsite-link-text-decoration-hover: none;--devsite-label-font: 500 14px/20px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;--devsite-label-letter-spacing: 1.5px;--devsite-label-margin: 0 0 16px;--devsite-button-background: 0;--devsite-button-background-active: #202124;--devsite-button-border: 2px solid #202124;--devsite-button-border-hover: 2px solid #202124;--devsite-button-border-active: 2px solid #202124;--devsite-button-color: #202124;--devsite-button-color-active: #fff;--devsite-foreground-button-border-color: #202124;--devsite-background-button-color: #202124;--devsite-background-button-color-hover: #202124;--devsite-button-primary-background-active: #dadce0;--devsite-button-primary-color-active: #000;--devsite-button-white-background-hover: transparent;--devsite-button-white-background-active: transparent;--devsite-button-white-text-decoration-hover: underline;--devsite-feature-tooltip-border-radius: 8px;--devsite-foreground-button-white-background-hover: transparent;--devsite-background-button-white-background-hover: transparent;--devsite-background-button-white-background-focus: transparent;box-sizing:border-box;margin:0px;padding:0px;">
@@ -574,6 +568,9 @@ format("opentype");
                 <div style="font:16px / 24px 'Google Sans Text', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;grid-area:content;box-sizing:border-box;margin:0px;padding:0px;">
                     Join the KotlinLang Slack group
                 </div>
+              
+                  <a href="https://www.example.com" class="custom-button">Cliquez ici</a>
+
             </div>
         </div>
     </div>
