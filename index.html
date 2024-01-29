@@ -28,14 +28,15 @@ font-weight: bold;
 src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Button?v=1692822927520")
 format("opentype");
 }
-    
-    
+    input:focus, button:focus {
+    outline: none;
+}
     
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #212121;
+      background-color: #f4f6fa;
     }
 
     .search-container {
@@ -52,19 +53,24 @@ format("opentype");
     #search-input-container {
       display: block;
       align-items: center;
-      width: 100% !important;
+      width: 90% !important;
       margin-left: auto !important;
       margin-right: auto !important;
     
     }
 
     #search-input {
-      padding: 10px;
+      padding: 12px 10px 12px 10px !important;
       font-size: 16px;
           text-align: center;
        width: 90% !important;
-        background: red;
+        background: #fff;
+      border: 1px solid #2b5bd7 !important;
+      border-radius: 12px !important;
+      margin-bottom: 30px;
+      color: #2b5bd7 !important;
     }
+    
 
     #tag-display {
       background-color: #eee;
@@ -240,13 +246,13 @@ format("opentype");
 
     .defibcontainer {
       max-width: 500px;
-      width: 96%;
+      width: 93%;
       margin-left: auto;
       margin-right: auto;
       margin-top: 55px;
-      border: 1px solid #303030;
-      background-color: #262626;
-      border-radius: 10px;
+      border: 1px solid #dbe0eb;
+      background-color: #ffffff;
+      border-radius: 14px;
       text-align: center;
       
     }
