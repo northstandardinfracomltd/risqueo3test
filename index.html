@@ -177,13 +177,17 @@ format("opentype");
       padding: 10px 15px;
       margin: 0 5px;
       cursor: pointer;
-      background-color: #553425;
-      border-radius: 12px;
-      color: #ff8e64;
+      background-color: #eef2ff;
+      border-radius: 55px;
+      color: #4c587c;
+      font-family: "proxima nova bold" !important;
+      font-weight: 800;
+      letter-spacing: 0px;
+      font-size: 14px;
     }
 
     .tag.selected {
-      background-color: #097bed;
+      background-color: #000;
       color: #fff;
       transform: scale(1.05);
     }
@@ -397,7 +401,7 @@ format("opentype");
       <img src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883" alt="Logo">
     </div>
     <div class="links">
-      <a href="#">Charte OuiPrev</a>
+      <a onclick="openPopup()" href="#">Charte OuiPrev</a>
       <a href="#">Accès OpenSource API</a>
       <a href="#">Support</a>
     </div>
@@ -743,7 +747,7 @@ button {
     border-radius: 14px;
             display: flex;
             justify-content: space-between;
-              grid-template-columns: 4fr 2fr 2fr;
+              grid-template-columns: 1fr 1fr;
           display: grid;
               width: 100%;
     max-width: 1100px;
@@ -754,7 +758,6 @@ button {
 
         .column {
             flex: 1;
-            max-width: 300px;
             margin: 10px;
         }
 
@@ -786,8 +789,7 @@ button {
       
       
               .viking {
-         max-width: 500px !important;
-                width: 96% !important;
+                width: 100% !important;
         }
       
       
@@ -861,8 +863,7 @@ display: grid;
       
       
           .divsponso {
-      max-width: 400px;
-      margin: 20px auto;
+      width: 100%;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
@@ -891,6 +892,53 @@ display: grid;
       text-decoration: none;
       border-radius: 5px;
     }
+      
+      
+      
+      
+        .buttonpopup {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .divpopup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .divpopup {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .divpopup h2 {
+            margin-top: 0;
+        }
+
+        .closepopup {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 
   
@@ -913,7 +961,7 @@ display: grid;
     Trouver now
   </h1>
   <p class="orb-typography p description">
-    Create a QR Code from any short link. Then edit, customize, and track your QR Codes here.
+    Commencez à écrire et utilisez au minimum 3 caractères et OuiPrev va montrer en dessous les fournisseurs et formateurs correspondants. Vous pouvez affiner votre recherche en utilisant un filtre de catégorie. 
   </p>
   
   
@@ -1023,7 +1071,7 @@ display: grid;
   <div class="divsponso">
 
     <!-- Titre et sous-titre avec classes sponso -->
-    <div class="titlesponso">Titre de la Sponso</div>
+    <div class="titlesponso">S'enregistrer</div>
     <div class="subtitlesponso">Sous-titre de la Sponso</div>
 
     <!-- Formulaires avec classe sponso -->
@@ -1036,9 +1084,34 @@ display: grid;
 
   </div>
     </div>
+  
+  
+  
 
 </footer>
 
+  
+  
+
+<div class="divpopup-overlay" id="popupOverlay" onclick="closePopup()">
+    <div class="divpopup" id="popupContent">
+        <h2>Titre du Popup</h2>
+        <p>Sous-titre du Popup</p>
+        <button class="closepopup" onclick="closePopup()">Fermer</button>
+    </div>
+</div>
+
+<script>
+    function openPopup() {
+        document.getElementById('popupOverlay').style.display = 'flex';
+        document.getElementById('popupContent').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popupOverlay').style.display = 'none';
+        document.getElementById('popupContent').style.display = 'none';
+    }
+</script>
 
     <style>
 
