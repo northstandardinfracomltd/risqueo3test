@@ -59,19 +59,37 @@ format("opentype");
     
     }
 
-    #search-input {
-      padding: 12px 10px 12px 10px !important;
-      font-size: 16px;
-          text-align: center;
-       width: 90% !important;
-        background: #fff;
-      border: 1px solid #2b5bd7 !important;
-      border-radius: 12px !important;
-      margin-bottom: 30px;
-      color: #2b5bd7 !important;
-    }
     
+    
+#search-input {
+  padding: 14px 10px 14px 10px !important;
+  font-size: 16px;
+  text-align: center;
+  width: 90% !important;
+  background: #fff;
+  border: 0.08rem solid #71809f !important;
+  border-radius: 12px !important;
+  margin-bottom: 30px;
+  color: #2b5bd7 !important;
+}
 
+#search-input::placeholder {
+  /* Styles pour le placeholder */
+  color: #71809f;
+  font-size: 14px;
+}
+
+#search-input:-ms-input-placeholder {
+  /* Styles pour le placeholder sur Internet Explorer */
+  color: #71809f;
+  font-size: 14px;
+}
+
+#search-input::-ms-input-placeholder {
+  /* Styles pour le placeholder sur Microsoft Edge */
+  color: #71809f;
+  font-size: 14px;
+}
     #tag-display {
       background-color: #eee;
       padding: 5px;
@@ -467,6 +485,8 @@ format("opentype");
   
 <div class="defibcontainer">
   
+
+  
   <div class="994">Trouvez le bon fournisseur</div>
                     <div class="tag-list">
                         
@@ -486,185 +506,270 @@ format("opentype");
  </div>
   
   <br>
-  <div style="background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;border:0px none rgb(32, 33, 36);border-radius:0px;display:grid;grid-template-rows:224px;grid-template-columns:396px 396px 396px 0px;grid-template-areas:none;grid-auto-flow:;grid-auto-columns:;grid-auto-rows: 1;grid-gap:32px 32px;max-width:none;padding:0px;margin: 0px auto;box-sizing:border-box;">
 
-    <div background="light-green" description-position="bottom" style="position:relative;--devsite-background-button-background: transparent;--devsite-background-button-background-hover: #000;--devsite-background-button-border-color: #000;--devsite-background-button-border-color-hover: #000;--devsite-background-button-primary-background: #000;--devsite-background-button-primary-background-hover: #fff;--devsite-background-button-primary-color: #fff;--devsite-background-button-primary-color-hover: #000;--devsite-background-button-white-color: #174ea6;--devsite-background-color: #ceead6;--devsite-button-background-hover: #000;--devsite-button-color-hover: #fff;--devsite-button-primary-background-hover: #fff;--devsite-button-white-color: #174ea6;--devsite-foreground-button-color: #000;--devsite-foreground-button-color-hover: #fff;--devsite-foreground-button-white-color: #174ea6;--devsite-foreground-color: #202124;--devsite-heading-color: #202124;--devsite-text-color: #3c4043;-webkit-box-flex:1;flex:1 0 0%;min-width:0px;-webkit-box-align:stretch;align-items:normal;border:0px none rgb(60, 64, 67);border-radius:24px;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;gap:normal;-webkit-box-pack:start;justify-content:normal;max-height:none;max-width:100%;z-index:auto;color:rgb(60, 64, 67);background-color:rgb(206, 234, 214);--devsite-label-color: inherit;--devsite-button-primary-background: #202124;--devsite-button-primary-color: #fff;--devsite-button-primary-color-hover: #000;--devsite-foreground-button-primary-background: #202124;--devsite-foreground-button-primary-background-hover: #34a853;--devsite-foreground-button-primary-color: #fff;--devsite-foreground-button-primary-color-hover: #000;--devsite-icon-color: #3c4043;--devsite-icon-color-hover: hsla(210,6%,63%,.5);--devsite-link-color: #3c4043;--devsite-text-color-hover: hsla(210,6%,63%,.5);--devsite-background-link-color: #3c4043;--devsite-foreground-button-background-hover: #fff;--devsite-heading-link-color: #202124;--devsite-link-text-decoration: underline;--devsite-link-text-decoration-hover: none;--devsite-label-font: 500 14px/20px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;--devsite-label-letter-spacing: 1.5px;--devsite-label-margin: 0 0 16px;--devsite-button-background: 0;--devsite-button-background-active: #202124;--devsite-button-border: 2px solid #202124;--devsite-button-border-hover: 2px solid #202124;--devsite-button-border-active: 2px solid #202124;--devsite-button-color: #202124;--devsite-button-color-active: #fff;--devsite-foreground-button-border-color: #202124;--devsite-background-button-color: #202124;--devsite-background-button-color-hover: #202124;--devsite-button-primary-background-active: #dadce0;--devsite-button-primary-color-active: #000;--devsite-button-white-background-hover: transparent;--devsite-button-white-background-active: transparent;--devsite-button-white-text-decoration-hover: underline;--devsite-feature-tooltip-border-radius: 8px;--devsite-foreground-button-white-background-hover: transparent;--devsite-background-button-white-background-hover: transparent;--devsite-background-button-white-background-focus: transparent;box-sizing:border-box;margin:0px;padding:0px;">
-
-
-
-
-
-
-        <div icon-position="top" style="-webkit-box-align:stretch;align-items:normal;display:flex;-webkit-box-flex:1;flex: 1 1 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;height:224px;min-width:0px;padding:32px;color:rgb(60, 64, 67);max-width:none;text-align:start;--devsite-icon-margin-inline: 0;--devsite-header-icon-canvas-margin-block: 0 20px;--devsite-header-icon-canvas-margin-inline: 0;box-sizing:border-box;margin:0px;">
-
-
-
-            <a href="https://stackoverflow.com/questions/tagged/android-jetpack-compose" style="color:rgb(32, 33, 36);outline:rgb(32, 33, 36) none 0px;text-decoration:underline solid rgb(32, 33, 36);word-break:break-word;box-sizing:border-box;">
-
-                <div size="medium" style="--devsite-icon-canvas-margin-block: 0 24px;color:rgb(60, 64, 67);display:block;inset:auto;margin-block:0px 24px;margin-inline:0px 16px;overflow:visible;position:static;height:56px;-webkit-box-flex:0;flex: 0 0 auto;transition:background 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s;width: 56px;--devsite-icon-canvas-size: 56px;--devsite-icon-size: 56px;box-sizing:border-box;margin:0px 16px 24px 0px;padding:0px;">
-
-
-                    <img alt="" src="https://developer.android.com/static/images/picto-icons/stack-overflow.svg" srcset="" sizes="64px" loading="lazy" style="font-size:56px;height:56px;margin-block:0px;margin-inline:0px;width: 56px;aspect-ratio:1 / 1;border-radius:0px;border:0px none rgb(60, 64, 67);max-width:100%;box-sizing:border-box;margin:0px;padding:0px;" />
-                </div>
-            </a>
-            <div style="display:flex;grid:none / none / none / row / auto / auto;grid-gap:normal normal;-webkit-box-align:stretch;align-items:normal;-webkit-box-flex:1;flex: 1 1 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;height:80px;min-width:0px;box-sizing:border-box;margin:0px;padding:0px;">
-
-
-
-                <h3 data-text="Stack Overflow" style="margin-top:0px;grid-area:heading;font:600 32px / 40px 'Google Sans', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;padding:0px;letter-spacing:-0.25px;color:rgb(32, 33, 36);box-sizing:border-box;">
-
-                    <a href="https://stackoverflow.com/questions/tagged/android-jetpack-compose" style="color:rgb(32, 33, 36);outline:rgb(32, 33, 36) none 0px;text-decoration:none solid rgb(32, 33, 36);word-break:break-word;--devsite-link-color: #202124;--devsite-link-text-decoration: none;--devsite-link-text-decoration-hover: underline;box-sizing:border-box;">
-
-                        Stack Overflow
-
-                    </a>
-                </h3>
-                <div style="font:16px / 24px 'Google Sans Text', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;grid-area:content;box-sizing:border-box;margin:0px;padding:0px;">
-                    Ask a question on Stack Overflow
-                </div>
-              
-                  <a href="https://www.example.com" class="custom-button">Je suis prestataire</a>
-
-            </div>
-        </div>
-    </div>
-    <div background="light-green" description-position="bottom" style="position:relative;--devsite-background-button-background: transparent;--devsite-background-button-background-hover: #000;--devsite-background-button-border-color: #000;--devsite-background-button-border-color-hover: #000;--devsite-background-button-primary-background: #000;--devsite-background-button-primary-background-hover: #fff;--devsite-background-button-primary-color: #fff;--devsite-background-button-primary-color-hover: #000;--devsite-background-button-white-color: #174ea6;--devsite-background-color: #ceead6;--devsite-button-background-hover: #000;--devsite-button-color-hover: #fff;--devsite-button-primary-background-hover: #fff;--devsite-button-white-color: #174ea6;--devsite-foreground-button-color: #000;--devsite-foreground-button-color-hover: #fff;--devsite-foreground-button-white-color: #174ea6;--devsite-foreground-color: #202124;--devsite-heading-color: #202124;--devsite-text-color: #3c4043;-webkit-box-flex:1;flex:1 0 0%;min-width:0px;-webkit-box-align:stretch;align-items:normal;border:0px none rgb(60, 64, 67);border-radius:24px;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;gap:normal;-webkit-box-pack:start;justify-content:normal;max-height:none;max-width:100%;z-index:auto;color:rgb(60, 64, 67);background-color:rgb(206, 234, 214);--devsite-label-color: inherit;--devsite-button-primary-background: #202124;--devsite-button-primary-color: #fff;--devsite-button-primary-color-hover: #000;--devsite-foreground-button-primary-background: #202124;--devsite-foreground-button-primary-background-hover: #34a853;--devsite-foreground-button-primary-color: #fff;--devsite-foreground-button-primary-color-hover: #000;--devsite-icon-color: #3c4043;--devsite-icon-color-hover: hsla(210,6%,63%,.5);--devsite-link-color: #3c4043;--devsite-text-color-hover: hsla(210,6%,63%,.5);--devsite-background-link-color: #3c4043;--devsite-foreground-button-background-hover: #fff;--devsite-heading-link-color: #202124;--devsite-link-text-decoration: underline;--devsite-link-text-decoration-hover: none;--devsite-label-font: 500 14px/20px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;--devsite-label-letter-spacing: 1.5px;--devsite-label-margin: 0 0 16px;--devsite-button-background: 0;--devsite-button-background-active: #202124;--devsite-button-border: 2px solid #202124;--devsite-button-border-hover: 2px solid #202124;--devsite-button-border-active: 2px solid #202124;--devsite-button-color: #202124;--devsite-button-color-active: #fff;--devsite-foreground-button-border-color: #202124;--devsite-background-button-color: #202124;--devsite-background-button-color-hover: #202124;--devsite-button-primary-background-active: #dadce0;--devsite-button-primary-color-active: #000;--devsite-button-white-background-hover: transparent;--devsite-button-white-background-active: transparent;--devsite-button-white-text-decoration-hover: underline;--devsite-feature-tooltip-border-radius: 8px;--devsite-foreground-button-white-background-hover: transparent;--devsite-background-button-white-background-hover: transparent;--devsite-background-button-white-background-focus: transparent;box-sizing:border-box;margin:0px;padding:0px;">
-
-
-
-
-
-
-        <div icon-position="top" style="-webkit-box-align:stretch;align-items:normal;display:flex;-webkit-box-flex:1;flex: 1 1 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;height:224px;min-width:0px;padding:32px;color:rgb(60, 64, 67);max-width:none;text-align:start;--devsite-icon-margin-inline: 0;--devsite-header-icon-canvas-margin-block: 0 20px;--devsite-header-icon-canvas-margin-inline: 0;box-sizing:border-box;margin:0px;">
-
-
-
-            <a href="https://issuetracker.google.com/issues/new?component=612128" style="color:rgb(32, 33, 36);outline:rgb(32, 33, 36) none 0px;text-decoration:underline solid rgb(32, 33, 36);word-break:break-word;box-sizing:border-box;">
-
-                <div size="medium" style="--devsite-icon-canvas-margin-block: 0 24px;color:rgb(60, 64, 67);display:block;inset:auto;margin-block:0px 24px;margin-inline:0px 16px;overflow:visible;position:static;height:56px;-webkit-box-flex:0;flex: 0 0 auto;transition:background 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s;width: 56px;--devsite-icon-canvas-size: 56px;--devsite-icon-size: 56px;box-sizing:border-box;margin:0px 16px 24px 0px;padding:0px;">
-
-
-                    <img alt="" src="https://developer.android.com/static/images/picto-icons/bug.svg" srcset="" sizes="64px" loading="lazy" style="font-size:56px;height:56px;margin-block:0px;margin-inline:0px;width: 56px;aspect-ratio:1 / 1;border-radius:0px;border:0px none rgb(60, 64, 67);max-width:100%;box-sizing:border-box;margin:0px;padding:0px;" />
-                </div>
-            </a>
-            <div style="display:flex;grid:none / none / none / row / auto / auto;grid-gap:normal normal;-webkit-box-align:stretch;align-items:normal;-webkit-box-flex:1;flex: 1 1 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;height:80px;min-width:0px;box-sizing:border-box;margin:0px;padding:0px;">
-
-
-
-                <h3 data-text="Bug tracker" style="margin-top:0px;grid-area:heading;font:600 32px / 40px 'Google Sans', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;padding:0px;letter-spacing:-0.25px;color:rgb(32, 33, 36);box-sizing:border-box;">
-
-                    <a href="https://issuetracker.google.com/issues/new?component=612128" style="color:rgb(32, 33, 36);outline:rgb(32, 33, 36) none 0px;text-decoration:none solid rgb(32, 33, 36);word-break:break-word;--devsite-link-color: #202124;--devsite-link-text-decoration: none;--devsite-link-text-decoration-hover: underline;box-sizing:border-box;">
-
-                        Bug tracker
-
-                    </a>
-                </h3>
-                <div style="font:16px / 24px 'Google Sans Text', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;grid-area:content;box-sizing:border-box;margin:0px;padding:0px;">
-                    Report an issue and track bugs
-                  
-                  
-                </div>
-                              <a href="https://www.example.com" class="custom-button">Je suis client</a>
-
-              
-            </div>
-          
-        </div>
-      
-    </div>
-    <div background="light-green" description-position="bottom" style="position:relative;--devsite-background-button-background: transparent;--devsite-background-button-background-hover: #000;--devsite-background-button-border-color: #000;--devsite-background-button-border-color-hover: #000;--devsite-background-button-primary-background: #000;--devsite-background-button-primary-background-hover: #fff;--devsite-background-button-primary-color: #fff;--devsite-background-button-primary-color-hover: #000;--devsite-background-button-white-color: #174ea6;--devsite-background-color: #ceead6;--devsite-button-background-hover: #000;--devsite-button-color-hover: #fff;--devsite-button-primary-background-hover: #fff;--devsite-button-white-color: #174ea6;--devsite-foreground-button-color: #000;--devsite-foreground-button-color-hover: #fff;--devsite-foreground-button-white-color: #174ea6;--devsite-foreground-color: #202124;--devsite-heading-color: #202124;--devsite-text-color: #3c4043;-webkit-box-flex:1;flex:1 0 0%;min-width:0px;-webkit-box-align:stretch;align-items:normal;border:0px none rgb(60, 64, 67);border-radius:24px;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;gap:normal;-webkit-box-pack:start;justify-content:normal;max-height:none;max-width:100%;z-index:auto;color:rgb(60, 64, 67);background-color:rgb(206, 234, 214);--devsite-label-color: inherit;--devsite-button-primary-background: #202124;--devsite-button-primary-color: #fff;--devsite-button-primary-color-hover: #000;--devsite-foreground-button-primary-background: #202124;--devsite-foreground-button-primary-background-hover: #34a853;--devsite-foreground-button-primary-color: #fff;--devsite-foreground-button-primary-color-hover: #000;--devsite-icon-color: #3c4043;--devsite-icon-color-hover: hsla(210,6%,63%,.5);--devsite-link-color: #3c4043;--devsite-text-color-hover: hsla(210,6%,63%,.5);--devsite-background-link-color: #3c4043;--devsite-foreground-button-background-hover: #fff;--devsite-heading-link-color: #202124;--devsite-link-text-decoration: underline;--devsite-link-text-decoration-hover: none;--devsite-label-font: 500 14px/20px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;--devsite-label-letter-spacing: 1.5px;--devsite-label-margin: 0 0 16px;--devsite-button-background: 0;--devsite-button-background-active: #202124;--devsite-button-border: 2px solid #202124;--devsite-button-border-hover: 2px solid #202124;--devsite-button-border-active: 2px solid #202124;--devsite-button-color: #202124;--devsite-button-color-active: #fff;--devsite-foreground-button-border-color: #202124;--devsite-background-button-color: #202124;--devsite-background-button-color-hover: #202124;--devsite-button-primary-background-active: #dadce0;--devsite-button-primary-color-active: #000;--devsite-button-white-background-hover: transparent;--devsite-button-white-background-active: transparent;--devsite-button-white-text-decoration-hover: underline;--devsite-feature-tooltip-border-radius: 8px;--devsite-foreground-button-white-background-hover: transparent;--devsite-background-button-white-background-hover: transparent;--devsite-background-button-white-background-focus: transparent;box-sizing:border-box;margin:0px;padding:0px;">
-
-
-
-
-
-
-        <div icon-position="top" style="-webkit-box-align:stretch;align-items:normal;display:flex;-webkit-box-flex:1;flex: 1 1 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;height:224px;min-width:0px;padding:32px;color:rgb(60, 64, 67);max-width:none;text-align:start;--devsite-icon-margin-inline: 0;--devsite-header-icon-canvas-margin-block: 0 20px;--devsite-header-icon-canvas-margin-inline: 0;box-sizing:border-box;margin:0px;">
-
-
-
-            <a href="https://surveys.jetbrains.com/s3/kotlin-slack-sign-up" style="color:rgb(32, 33, 36);outline:rgb(32, 33, 36) none 0px;text-decoration:underline solid rgb(32, 33, 36);word-break:break-word;box-sizing:border-box;">
-
-                <div size="medium" style="--devsite-icon-canvas-margin-block: 0 24px;color:rgb(60, 64, 67);display:block;inset:auto;margin-block:0px 24px;margin-inline:0px 16px;overflow:visible;position:static;height:56px;-webkit-box-flex:0;flex: 0 0 auto;transition:background 0.2s ease 0s, box-shadow 0.2s ease 0s, color 0.2s ease 0s;width: 56px;--devsite-icon-canvas-size: 56px;--devsite-icon-size: 56px;box-sizing:border-box;margin:0px 16px 24px 0px;padding:0px;">
-
-
-                    <img alt="" src="https://developer.android.com/static/images/logos/slack.svg" srcset="" sizes="64px" loading="lazy" style="font-size:56px;height:56px;margin-block:0px;margin-inline:0px;width: 56px;aspect-ratio:1 / 1;border-radius:0px;border:0px none rgb(60, 64, 67);max-width:100%;box-sizing:border-box;margin:0px;padding:0px;" />
-                </div>
-            </a>
-            <div style="display:flex;grid:none / none / none / row / auto / auto;grid-gap:normal normal;-webkit-box-align:stretch;align-items:normal;-webkit-box-flex:1;flex: 1 1 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;height:80px;min-width:0px;box-sizing:border-box;margin:0px;padding:0px;">
-
-
-
-                <h3 data-text="Slack group" style="margin-top:0px;grid-area:heading;font:600 32px / 40px 'Google Sans', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;padding:0px;letter-spacing:-0.25px;color:rgb(32, 33, 36);box-sizing:border-box;">
-
-                    <a href="https://surveys.jetbrains.com/s3/kotlin-slack-sign-up" style="color:rgb(32, 33, 36);outline:rgb(32, 33, 36) none 0px;text-decoration:none solid rgb(32, 33, 36);word-break:break-word;--devsite-link-color: #202124;--devsite-link-text-decoration: none;--devsite-link-text-decoration-hover: underline;box-sizing:border-box;">
-
-                        Slack group
-
-                    </a>
-                </h3>
-                <div style="font:16px / 24px 'Google Sans Text', 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Naskh Arabic', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Noto Sans Bengali', sans-serif;grid-area:content;box-sizing:border-box;margin:0px;padding:0px;">
-                    Join the KotlinLang Slack group
-                </div>
-              
-                  <a href="https://www.example.com" class="custom-button">En savoir plus</a>
-
-            </div>
-        </div>
-    </div>
-</div>
-    
-<div class="style-0">
-    <div class="style-1">
-        <div class="style-2">
-          
-          
-
-          
-          
-          
-        </div>
-      
-      <div style="grid-template-columns:[box-start image-start] 30px [content-start] 1100px [content-end] 30px [image-end box-end];grid-template-rows: [box-start image-start] auto [image-end] 33px [content-start] auto [content-end] 30px [box-end];font-size:15px;padding:0px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;overflow:hidden;display:grid;background-color:rgb(255, 255, 255);border:0px none rgb(61, 71, 77);border-radius:20px;box-shadow:rgba(0, 0, 0, 0.07) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 5px 10px -5px;">
-    <div style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;grid-area:content;margin-bottom:0px;">
-        <div style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;margin-bottom:0px;position:relative;border:0px solid rgba(0, 0, 0, 0);">
-            <div style="max-width:1160px;margin: 0px auto;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;padding:0px 20px 0px 0px;display:grid;grid-template-columns:108px 716px 216px;gap:20px;grid-auto-rows: minmax(min-content, max-content);z-index:1;position:relative;padding-top:0px;padding-right:20px;padding-bottom:0px;align-content:center;">
-
-                <div style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;display:flex;flex-direction:column;z-index:1;min-width:0px;min-height:0px;justify-content:center;position:relative;">
-                    <div style="box-sizing:border-box;display:flex;flex-direction:column;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;margin:0px;padding:0px;border:0px solid rgba(0, 0, 0, 0);position:relative;transition:all 0.3s ease 0s;border-radius:0px;">
-                        <figure style="margin-bottom:0px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;padding:0px;"><img decoding="async" width="24" height="24" src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2021/06/Mortarboard.svg" alt="" style="width:98px;height:67pxvertical-align:bottom;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);border:0px none rgb(61, 71, 77);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;vertical-align:bottom;max-width:100%;" data-lazy-src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2021/06/Mortarboard.svg" data-ll-status="loaded" /><noscript style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;"><img decoding="async" width="24" height="24" src="https://www.mindmeister.com/pages/wp-content/uploads/sites/3/2021/06/Mortarboard.svg" alt="" class="wp-image-4099" style="width:98px;height:67px" /></noscript></figure>
-                    </div>
-                </div>
-                <div style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;display:flex;flex-direction:column;z-index:1;min-width:0px;min-height:0px;justify-content:center;position:relative;">
-                    <div style="box-sizing:border-box;display:flex;flex-direction:column;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;margin:0px;padding:0px;border:0px solid rgba(0, 0, 0, 0);position:relative;transition:all 0.3s ease 0s;border-radius:0px;">
-                        <p style="margin-bottom:0px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);line-height:47.6px;max-width:100%;background-repeat:no-repeat;box-sizing:border-box;padding:0px;font-size:34px;"><strong style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);font-weight:700;background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;">Learn more. Pay less.</strong></p>
-                        <p style="margin-bottom:0px;margin-top:0px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);line-height:23.8px;max-width:100%;background-repeat:no-repeat;box-sizing:border-box;padding:0px;font-size:17px;">Get up to 50% off as a student, teacher, or school with our Education Plans.</p>
-                    </div>
-                </div>
-                <div style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;display:flex;flex-direction:column;z-index:1;min-width:0px;min-height:0px;justify-content:center;position:relative;">
-                    <div style="box-sizing:border-box;display:flex;flex-direction:column;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;margin:0px;padding:0px;border:0px solid rgba(0, 0, 0, 0);position:relative;transition:all 0.3s ease 0s;border-radius:0px;">
-                        <div style="margin-bottom:0px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;padding:0px;flex-wrap:wrap;align-items:center;display:flex;gap:0px;">
-                            <div style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;box-sizing:border-box;margin:0px;padding:0px;display:block;"><a href="https://www.mindmeister.com/mind-map-pricing/education" target="_blank" rel="noreferrer noopener" style="background-color:rgb(0, 170, 255);box-shadow:rgb(0, 170, 255) 0px 10px 30px -10px;color:rgb(255, 255, 255);border-radius:30px;font-size:21px;height:60px;line-height:60px;padding:0px 40px;align-items:center;appearance:none;border:0px none rgb(255, 255, 255);cursor:pointer;display:inline-block;flex-shrink:0;font-family:'Avenir Next', 'Segoe UI', Helvetica, Arial, sans-serif;font-weight:700;overflow:visible;resize:none;text-align:center;text-decoration:none solid rgb(255, 255, 255);transition:background 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;white-space:nowrap;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);max-width:100%;background-repeat:no-repeat;box-sizing:border-box;margin:0px;border-width:0px;--wp--preset--color--white: #FFFFFF;--wp--preset--color--blue: #00AAFF;--wp--preset--color--green: #3DCC3D;--wp--preset--color--orange: #FFAA00;word-break:break-word;">Check Edu Plans</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div>
   
   
+  <div class="block-container justify-content-center flex-wrap free-blocks background-white p-24 border-radius-8 snipcss-k4XLU">
+  <div class="card width-full d-flex">
+    <div class="image-block align-items-center justify-content-center width-6/12">
+      <img src="https://app.bitly.com/s/bbt2/images/dashboard_links.png" alt="">
+    </div>
+    <div class="width-6/12 align-content-center justify-content-center align-items-center flex-col">
+      <h2 class="text-align-center">
+        Make it short
+      </h2>
+      <button class="orb-button secondary-brand" tabindex="0">
+        Go to Links
+      </button>
+    </div>
+  </div>
+  <div class="card width-full d-flex">
+    <div class="image-block align-items-center justify-content-center width-6/12">
+      <img src="https://app.bitly.com/s/bbt2/images/dashboard_qrcs.png" alt="">
+    </div>
+    <div class="width-6/12 align-content-center justify-content-center align-items-center flex-col">
+      <h2 class="text-align-center">
+        Make it scannable
+      </h2>
+      <button class="orb-button secondary-brand" tabindex="0">
+        Go to QR Codes
+      </button>
+    </div>
+  </div>
+  <div class="card width-full d-flex">
+    <div class="image-block align-items-center justify-content-center width-6/12">
+      <img src="https://app.bitly.com/s/bbt2/images/dashboard_lib.png" alt="">
+    </div>
+    <div class="width-6/12 align-content-center justify-content-center align-items-center flex-col">
+      <h2 class="text-align-center">
+        Make a page
+      </h2>
+      <button class="orb-button secondary-brand" tabindex="0">
+        Go to Link-in-bio
+      </button>
+    </div>
+  </div>
 </div>
-  
 
   
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+      
+      
+      @font-face { 
+  font-family:proxima nova;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
+} 
+@font-face { 
+  font-family:proxima nova semibold;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
+} 
+@font-face { 
+  font-family:proxima nova bold;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
+} 
+  body {  
+    color:#273144;
+    font-size:1.4rem;
+  }  
+* { 
+    box-sizing: inherit;
+} 
+
+body { 
+    max-width: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin: 0; 
+    padding: 0; 
+    font-size: 1.4rem; 
+    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+} 
+
+html { 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+    font-size: 10px;
+} 
+
+.background-white { 
+    background-color: #fff;
+} 
+
+.border-radius-8 { 
+    border-radius: .8rem;
+} 
+
+.p-24 { 
+    padding: 2.4rem;
+} 
+
+.justify-content-center { 
+    display: flex; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    justify-content: center; 
+    -webkit-justify-content: center;
+} 
+
+.flex-wrap { 
+    display: flex; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    flex-wrap: wrap;
+} 
+
+.block-container  { 
+    gap: 1.6rem; 
+    margin-top: 1rem; 
+    margin-bottom: 3.2rem; 
+    padding-top: 2.4rem; 
+    padding-bottom: 2.4rem; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    background-color: #fff; 
+    border-radius: .8rem;
+      max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.block-container.free-blocks  { 
+    margin-bottom: 3.2rem; 
+    padding-right: 1.6rem; 
+    padding-left: 1.6rem;
+} 
+
+*,:before,:after { 
+    box-sizing: inherit;
+} 
+
+.width-full { 
+    width: 100%;
+} 
+
+.d-flex { 
+    display: flex; 
+    display: -webkit-flex; 
+    display: -ms-flexbox;
+} 
+
+.card  { 
+    border: .1rem solid #e8ebf2; 
+    border-radius: .3rem; 
+    height: 10rem; 
+    max-width: 100%;
+} 
+
+@media (min-width: 768px){ 
+  .card  { 
+    width: calc((100% - 3.2rem)/3); 
+    max-width: 48%;
+  } 
+}     
+
+.width-6\/12 { 
+    width: 50%;
+} 
+
+.align-items-center { 
+    display: flex; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    align-items: center; 
+    -webkit-align-items: center;
+} 
+
+.card .image-block  { 
+    background-color: #f3f9fe; 
+    overflow: hidden;
+} 
+
+.flex-col { 
+    display: flex; 
+    flex-direction: column;
+} 
+
+.align-content-center { 
+    display: flex; 
+    display: -webkit-flex; 
+    display: -ms-flexbox; 
+    align-content: center;
+} 
+
+.card .image-block img  { 
+    max-width: 15rem;
+} 
+
+h2 { 
+    font-family: proxima nova bold; 
+    font-weight: 400;
+} 
+
+.text-align-center { 
+    text-align: center;
+} 
+
+.dashboard-container .free-blocks h2 { 
+    font-size: 2.4rem;
+} 
+
+.card h2  { 
+    font-size: 1.8rem; 
+    margin-top: 0;
+} 
+
+button { 
+    border-radius: 0;
+} 
+
+.orb-button { 
+    display: inline-flex; 
+    align-items: center; 
+    background: #2a5bd7; 
+    border-radius: .4rem; 
+    border: none; 
+    color: #fff; 
+    cursor: pointer; 
+    font-family: proxima nova semibold; 
+    font-size: 1.6rem; 
+    justify-content: center; 
+    letter-spacing: 0; 
+    min-height: 4rem; 
+    outline: none; 
+    text-align: center; 
+    padding: 0 1.6rem;
+} 
+
+.orb-button.secondary-brand { 
+    background: #fff; 
+    color: #2a5bd7; 
+    border: .1rem solid #2a5bd7; 
+    padding: 0 1.5rem;
+} 
+
+.card button  { 
+    padding: 0 1rem; 
+    font-size: 1.4rem; 
+    min-height: 3rem;
+} 
+
+.orb-button:enabled:hover { 
+    background: #0c3ebb;
+} 
+
+.orb-button.secondary-brand:enabled:hover { 
+    background: #edf2ff; 
+    color: #0c3ebb; 
+    border: .1rem solid #0c3ebb;
+} 
+
+      
+      
+ 
 
         footer {
             background-color: #333;
