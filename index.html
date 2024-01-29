@@ -50,7 +50,11 @@ format("opentype");
       margin-right: auto;
     }
 
+    
+    
     #search-input-container {
+        position: relative;
+
       display: block;
       align-items: center;
       width: 90% !important;
@@ -59,6 +63,15 @@ format("opentype");
     
     }
 
+    #search-input-container::before {
+  content: attr(data-placeholder);
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #ffffff; /* Couleur de fond blanc pour le placeholder */
+  padding: 0 4px;
+}
     
     
 #search-input {
@@ -371,14 +384,6 @@ format("opentype");
           
     }
     
-        .word {
-            display: inline-block;
-            background-color: #f2f2f2;
-            padding: 5px;
-            margin-right: 5px;
-            border-radius: 3px;
-        }
-    
   </style>
   <title>Sticky NavBar</title>
 </head>
@@ -528,32 +533,15 @@ format("opentype");
   <div class="tag" onclick="filterByTag(this, 'Formation')">Formation</div>
 </div>
   
-    <div class="search-container">
-        <div id="search-input-container">
-            <input type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement, (...)" oninput="filterItems(event)">
-            <div id="tag-display"></div>
-        </div>
-        <div id="search-dropdown"></div>
-    </div>
+<div class="search-container">
+  <div id="search-input-container">
+    <input type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement, (...)" oninput="filterItems()">
+    <div id="tag-display"></div>
+  </div>
+  <div id="search-dropdown"></div>
+</div>
   
         
-    <script>
-        function filterItems(event) {
-            const searchInput = document.getElementById('search-input');
-            const tagDisplay = document.getElementById('tag-display');
-
-            if (event.inputType === 'insertText' || event.inputType === 'insertLineBreak') {
-                const inputValue = searchInput.value.trim();
-                if (inputValue !== '') {
-                    const wordElement = document.createElement('span');
-                    wordElement.classList.add('word');
-                    wordElement.textContent = inputValue;
-                    tagDisplay.appendChild(wordElement);
-                    searchInput.value = '';
-                }
-            }
-        }
-    </script>
  </div>
   <div class="defibcontainer2">
 
