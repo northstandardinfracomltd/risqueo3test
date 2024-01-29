@@ -354,6 +354,11 @@ format("opentype");
 }
     
     
+    .iso {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    
   </style>
   <title>Sticky NavBar</title>
 </head>
@@ -483,6 +488,9 @@ format("opentype");
 </script>
 
   
+  
+  <div class="iso">
+  
 <div class="defibcontainer">
   
 
@@ -509,12 +517,16 @@ format("opentype");
 </div>
                   
  </div>
-  
-  <br>
-
-  
-  
-  <div class="block-container justify-content-center flex-wrap free-blocks background-white p-24 border-radius-8 snipcss-k4XLU">
+  <div class="defibcontainer2">
+    
+      
+   <h1 class="orb-typography h1 header">
+    Connect your audience with a simple scan
+  </h1>
+  <p class="orb-typography p description">
+    Create a QR Code from any short link. Then edit, customize, and track your QR Codes here.
+  </p>
+    
   <div class="card width-full d-flex">
     <div class="image-block align-items-center justify-content-center width-6/12">
       <img src="https://app.bitly.com/s/bbt2/images/dashboard_links.png" alt="">
@@ -555,6 +567,14 @@ format("opentype");
     </div>
   </div>
 </div>
+    
+    </div>
+
+  
+  <br>
+
+  
+  
 
   
     <style>
@@ -666,15 +686,13 @@ html {
     border: .1rem solid #e8ebf2; 
     border-radius: .3rem; 
     height: 10rem; 
-    max-width: 100%;
+    max-width: 90%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 } 
-
-@media (min-width: 768px){ 
-  .card  { 
-    width: calc((100% - 3.2rem)/3); 
-    max-width: 48%;
-  } 
-}     
+   
 
 .width-6\/12 { 
     width: 50%;

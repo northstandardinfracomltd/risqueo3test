@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    .left-column {
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .right-column {
+      padding: 20px;
+      background-color: #e0e0e0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .nested-div {
+      padding: 10px;
+      background-color: #c0c0c0;
+    }
+    
+    
+    
+    
+          
+@font-face {
+font-family: saasduoTIL;
+font-weight: bold;
+src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
+format("opentype");
+}
+
+@font-face {
+font-family: saasduoPAR;
+font-weight: bold;
+src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
+format("opentype");
+}
+
+@font-face {
+font-family: saasduoBTN;
+font-weight: bold;
+src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Button?v=1692822927520")
+format("opentype");
+}
+    input:focus, button:focus {
+    outline: none;
+}
+
+    
+    .navbar {
+  overflow: hidden;
+  background-color: #262626;
+  box-shadow: inset 0 -1px 0 #3B3B3B;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-container img {
+  max-height: 50px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .links {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .links a:not(:last-child) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .links {
+    margin-left: auto;
+  }
+}
+
+    
+    .custom-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for the button */
+.custom-button:hover {
+    background-color: #2980b9; /* Darker background color on hover */
+}
+    
+    
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      position: relative;
+      border: 0px solid transparent;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #search-input-container {
+      display: block;
+      align-items: center;
+      width: 90% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    
+    }
+
+    
+    
+#search-input {
+  padding: 14px 10px 14px 10px !important;
+  font-size: 16px;
+  text-align: center;
+  width: 90% !important;
+  background: #fff;
+  border: 0.08rem solid #71809f !important;
+  border-radius: 12px !important;
+  margin-bottom: 30px;
+  color: #2b5bd7 !important;
+}
+
+#search-input::placeholder {
+  /* Styles pour le placeholder */
+  color: #71809f;
+  font-size: 14px;
+}
+
+#search-input:-ms-input-placeholder {
+  /* Styles pour le placeholder sur Internet Explorer */
+  color: #71809f;
+  font-size: 14px;
+}
+
+#search-input::-ms-input-placeholder {
+  /* Styles pour le placeholder sur Microsoft Edge */
+  color: #71809f;
+  font-size: 14px;
+}
+    #tag-display {
+      background-color: #eee;
+      padding: 5px;
+      border-radius: 5px;
+      margin-left: 5px;
+      display: none !important;
+    }
+
+    #search-dropdown {
+      display: none;
+      position: absolute;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      overflow-y: auto;
+      z-index: 1;
+      width: 100%;
+      margin-top: 55px;
+    }
+
+    .dropdown-item {
+      padding: 12px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f1f1f1;
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      display: none;
+    }
+
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .item a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .tag-list {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .tag {
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      background-color: #553425;
+      border-radius: 12px;
+      color: #ff8e64;
+    }
+
+    .tag.selected {
+      background-color: #097bed;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    
+        .iris {
+      
+      border: 0px solid transparent !important;
+    }
+    
+  
+  </style>
+</head>
+  
+<body>
+  
+  
+  
+  <div class="left-column">
+    <p>Texte Dummy dans la colonne de gauche</p>
+    <div class="defibcontainer">
+  
+
+  
+   <h1 class="orb-typography h1 header">
+    Connect your audience with a simple scan
+  </h1>
+  <p class="orb-typography p description">
+    Create a QR Code from any short link. Then edit, customize, and track your QR Codes here.
+  </p>
+                    <div class="tag-list">
+                        
+  <div class="tag" onclick="filterByTag(this, 'Défibrillation')">Défibrillation</div>
+  <div class="tag" onclick="filterByTag(this, 'Incendie')">Incendie</div>
+  <div class="tag" onclick="filterByTag(this, 'Formation')">Formation</div>
+</div>
+  
+<div class="search-container">
+  <div id="search-input-container">
+    <input type="text" id="search-input" autofocus class="iris" placeholder="Rechercher un fournisseur" oninput="filterItems()">
+    <div id="tag-display"></div>
+  </div>
+  <div id="search-dropdown"></div>
+</div>
+                  
+ </div>
+  </div>
+  <div class="right-column">
+    <div class="nested-div">
+      <p>Texte Dummy dans la première div de droite</p>
+    </div>
+    <div class="nested-div">
+      <p>Texte Dummy dans la deuxième div de droite</p>
+    </div>
+    <div class="nested-div">
+      <p>Texte Dummy dans la troisième div de droite</p>
+    </div>
+  </div>
+  
+  
+  
+<ul class="item-list">
+  <li class="item" data-title="paris 1" data-subtitle="PREVIGOLD" data-tags="Formation">
+    <a href="https://www.example.com/item1" target="_blank">Item 1</a>
+  </li>
+  <li class="item" data-title="Arbre crabe iris" data-subtitle="Subtitle fag" data-tags="Défibrillation">
+    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
+  </li>
+    <li class="item" data-title="Voiture crabe iris" data-subtitle="Subtitle fag" data-tags="Formation">
+    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
+  </li>
+  <li class="item" data-title="Laval item" data-subtitle="Subtitle Laval" data-tags="Incendie">
+    <a href="https://www.example.com/laval-item" target="_blank">Laval item</a>
+  </li>
+</ul>
+
+
+
+<script>
+  function filterItems() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('search-input');
+    filter = input.value.toUpperCase();
+    var tagDisplay = document.getElementById('tag-display');
+    var tag = tagDisplay.textContent.toUpperCase();
+    dropdown = document.getElementById('search-dropdown');
+    items = document.querySelectorAll('.item');
+
+    // Clear previous dropdown content
+    dropdown.innerHTML = '';
+
+    // Display dropdown only if input has 3 or more characters or tag is selected
+    if (filter.length >= 3 || tag) {
+      items.forEach(function(item) {
+        var title = item.dataset.title.toUpperCase();
+        var subtitle = item.dataset.subtitle.toUpperCase();
+        var tags = item.dataset.tags.toUpperCase();
+        var combinedText = title + ' ' + subtitle + ' ' + tags;
+
+        // Check if both filter and tag are present in the combined text
+        if ((filter && combinedText.indexOf(filter) > -1) && (!tag || (tag && tags.indexOf(tag) > -1))) {
+          // Display up to 4 matching items in the dropdown
+          if (dropdown.childElementCount < 4) {
+            var dropdownItem = document.createElement('div');
+            dropdownItem.className = 'dropdown-item';
+
+            // Left content (title and subtitle)
+            var leftContent = document.createElement('div');
+            leftContent.className = 'left-content';
+            leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div>`;
+            dropdownItem.appendChild(leftContent);
+
+            // Right content (tag)
+            var rightContent = document.createElement('div');
+            rightContent.className = 'right-content';
+            rightContent.textContent = tags;
+            dropdownItem.appendChild(rightContent);
+
+            dropdownItem.onclick = function() {
+              window.open(item.querySelector('a').href, '_blank');
+            };
+            dropdown.appendChild(dropdownItem);
+          }
+        }
+      });
+
+      // Show the dropdown
+      dropdown.style.display = 'block';
+    } else {
+      // Hide the dropdown if input has less than 3 characters and no tag selected
+      dropdown.style.display = 'none';
+    }
+  }
+
+  function filterByTag(tagElement, tag) {
+    var tags = document.querySelectorAll('.tag');
+    tags.forEach(function(tagElement) {
+      tagElement.classList.remove('selected');
+    });
+
+    var tagDisplay = document.getElementById('tag-display');
+    if (tagDisplay.textContent === tag) {
+      tagDisplay.textContent = '';
+    } else {
+      tagElement.classList.add('selected');
+      tagDisplay.textContent = tag;
+    }
+
+    document.getElementById('search-input').value = '';
+    filterItems();
+  }
+
+  // Custom :contains() function for selecting tags by text content
+  // This function is not part of standard JavaScript and is added for demonstration purposes
+  NodeList.prototype.forEach = Array.prototype.forEach;
+  Element.prototype.querySelector = Element.prototype.querySelector;
+  Element.prototype.matches = Element.prototype.matches || Element.prototype.msMatchesSelector;
+
+  document.addEventListener('click', function(e) {
+    var container = document.querySelector('.search-container');
+    if (!container.contains(e.target)) {
+      document.getElementById('search-dropdown').style.display = 'none';
+    }
+  });
+</script>
+  
+  
+</body>
+</html>
