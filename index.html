@@ -173,24 +173,46 @@ format("opentype");
       margin-top: 10px;
     }
 
+    
+    
+    .filtertagtxt
+    {
+      color: #4c587c;
+      font-family: "proxima nova" !important;
+      font-weight: 100;
+      letter-spacing: -0.2px;
+      line-height: 28px;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    
+    
     .tag {
-      padding: 10px 15px;
+      padding: 9px 18px;
       margin: 0 5px;
       cursor: pointer;
       background-color: #eef2ff;
       border-radius: 55px;
       color: #4c587c;
-      font-family: "proxima nova bold" !important;
-      font-weight: 800;
-      letter-spacing: 0px;
-      font-size: 14px;
+      font-family: "proxima nova semibold" !important;
+      font-weight: 100;
+      letter-spacing: -0.2px;
+      font-size: 16px;
     }
 
     .tag.selected {
       background-color: #000;
       color: #fff;
-      transform: scale(1.05);
     }
+    
+    
+    
+        .tag:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+          cursor: pointer !important;
+    }
+    
+    
     
         .iris {
       
@@ -288,12 +310,12 @@ format("opentype");
       width: 93%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 55px;
+      margin-top: 20px;
       border: 1px solid #dbe0eb;
       background-color: #ffffff;
-      border-radius: 14px;
+      border-radius: 16px;
       text-align: center;
-      
+      padding: 20px;
     }
 
 </style>
@@ -960,7 +982,7 @@ display: grid;
    <h1 class="orb-typography h1 header science1">
     Trouver now
   </h1>
-  <p class="orb-typography p description">
+  <p class="filtertagtxt">
     Commencez à écrire et utilisez au minimum 3 caractères et OuiPrev va montrer en dessous les fournisseurs et formateurs correspondants. Vous pouvez affiner votre recherche en utilisant un filtre de catégorie. 
   </p>
   
