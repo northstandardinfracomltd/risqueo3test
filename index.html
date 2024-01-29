@@ -487,7 +487,12 @@ format("opentype");
   
 
   
-  <div class="994">Trouvez le bon fournisseur</div>
+   <h1 class="orb-typography h1 header">
+    Connect your audience with a simple scan
+  </h1>
+  <p class="orb-typography p description">
+    Create a QR Code from any short link. Then edit, customize, and track your QR Codes here.
+  </p>
                     <div class="tag-list">
                         
   <div class="tag" onclick="filterByTag(this, 'Défibrillation')">Défibrillation</div>
@@ -745,9 +750,9 @@ button {
 } 
 
 .orb-button.secondary-brand { 
-    background: #fff; 
-    color: #2a5bd7; 
-    border: .1rem solid #2a5bd7; 
+    background: #007c8c; 
+    color: #fff; 
+    border: .1rem solid #007c8c; 
     padding: 0 1.5rem;
 } 
 
@@ -810,8 +815,189 @@ button {
                 flex: 1 0 100%;
             }
         }
+      
+      
+      @font-face { 
+  font-family:proxima nova;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
+} 
+@font-face { 
+  font-family:proxima nova semibold;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
+} 
+@font-face { 
+  font-family:proxima nova bold;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
+} 
+@font-face { 
+  font-family:proxima nova extrabold;
+  src:url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
+} 
+
+
+
+.upgrade-page-container { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    text-align: center; 
+    height: 100%; 
+    width: 100%; 
+    background-color: #fff; 
+    padding: 0 2.4rem;
+} 
+
+*,:before,:after { 
+    box-sizing: inherit;
+} 
+
+.upgrade-page-container img  { 
+    image-rendering: -moz-crisp-edges; 
+    image-rendering: -o-crisp-edges; 
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: crisp-edges; 
+    -ms-interpolation-mode: nearest-neighbor; 
+    max-height: 24rem; 
+    margin-top: 4.8rem; 
+    margin-bottom: 4rem;
+} 
+
+h1 { 
+    font-family: proxima nova bold; 
+    font-weight: 400;
+} 
+
+.orb-typography { 
+    color: #273144; 
+    font-family: proxima nova; 
+    font-weight: 400; 
+    line-height: normal; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+} 
+
+.orb-typography.h1 { 
+    padding: 0; 
+    margin: .8rem 0;
+} 
+
+.orb-typography.h1 { 
+    font-family: proxima nova extrabold;
+} 
+
+.orb-typography.h1 { 
+    font-size: 3.2rem; 
+    line-height: 4rem;
+} 
+
+.upgrade-page-container .header  { 
+    margin-top: 0; 
+    margin-bottom: 1.6rem;
+} 
+
+.orb-typography.p { 
+    font-size: 1.6rem; 
+    line-height: 2rem; 
+    padding: 0; 
+    margin: 0 0 .8rem;
+} 
+
+.upgrade-page-container .description  { 
+    font-size: 2rem; 
+    line-height: 2.4rem; 
+    max-width: 60rem; 
+    margin-top: 0; 
+    margin-bottom: 3.2rem;
+} 
+
+.upgrade-page-container .actions  { 
+    display: flex; 
+    flex-direction: column; 
+    padding-bottom: 6.4rem;
+} 
+
+      
+.orb-button { 
+    display: inline-flex; 
+    align-items: center; 
+    background: #2a5bd7; 
+    border-radius: .4rem; 
+    border: none; 
+    color: #fff; 
+    cursor: pointer; 
+    font-family: proxima nova semibold; 
+    font-size: 1.6rem; 
+    justify-content: center; 
+    letter-spacing: 0; 
+    min-height: 4rem; 
+    outline: none; 
+    text-align: center; 
+    padding: 0 1.6rem;
+} 
+
+.upgrade-page-container .actions .orb-button  { 
+    margin-bottom: 2.6rem; 
+    min-width: 20rem;
+} 
+
+.orb-button:enabled:hover { 
+    background: #0c3ebb;
+} 
+
+a { 
+    text-decoration: none;
+} 
+
+.orb-link { 
+    color: #2a5bd7;
+} 
+
+.orb-link { 
+    background: 0 0; 
+    border: 0; 
+    cursor: pointer; 
+    font-family: proxima nova; 
+    font-size: inherit; 
+    font-weight: inherit; 
+    text-decoration: none; 
+    margin: 0; 
+    padding: 0;
+} 
+
+.upgrade-page-container .actions .orb-link  { 
+    font: 1.6rem/2rem proxima nova;
+} 
+
+.orb-link:hover { 
+    color: #0c3ebb;
+} 
+
+      
+      
     </style>
 
+  
+  
+  <div class="upgrade-page-container snipcss-g5wlo">
+  <img src="https://app.bitly.com/s/bbt2/images/qrc-list-empty.png" alt="QR Codes illustration">
+  <h1 class="orb-typography h1 header">
+    Connect your audience with a simple scan
+  </h1>
+  <p class="orb-typography p description">
+    Create a QR Code from any short link. Then edit, customize, and track your QR Codes here.
+  </p>
+  <div class="actions">
+    <button class="orb-button" tabindex="0">
+      Create a QR Code
+    </button>
+    <a target="_blank" rel="noopener noreferrer" href="https://support.bitly.com/hc/en-us/articles/360030557072" class="orb-link">
+      Learn more
+    </a>
+  </div>
+</div>
+  
+  
 
 <footer>
     <div class="column">
