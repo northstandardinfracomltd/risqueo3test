@@ -118,7 +118,7 @@ margin-top: 10px;
     font-weight: 100;
     letter-spacing: -0.2px;
     line-height: 28px;
-    font-size: 16px;
+    font-size: 16.5px;
 }
 
 #search-input:-ms-input-placeholder {
@@ -150,7 +150,7 @@ margin-top: 10px;
       
       
       background: #ffffff;
-    border: 1px solid #dbe0eb !important;
+    border: 0px solid transparent !important;
     border-radius: 16px !important;
     }
 
@@ -481,9 +481,9 @@ margin-top: 10px;
       <img src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883" alt="Logo">
     </div>
     <div class="links">
-      <a onclick="openPopup()" href="#">Charte OuiPrev</a>
-      <a href="#">Accès OpenSource API</a>
-      <a href="#">Support</a>
+      <a onclick="openPopup()" href="#">Charte et qualificatifs</a>
+      <a href="#">Modules et ressources</a>
+       <a href="#">Support </a>
     </div>
   </div>
 </body>
@@ -898,29 +898,58 @@ button {
 } 
 
         .divinfoable {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 20px;
+          
+          
+          max-width: 500px;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 1px solid #dbe0eb;
+    background-color: #ffffff;
+    border-radius: 16px;
+    text-align: left;
+    padding: 25px;
         }
 
         .titreinfoable {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
+    color: #4c587c;
+    font-family: "proxima nova bold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
 
         .sous-titreinfoable {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
 
         .fermerinfoable {
-            background-color: #ff0000;
+            background-color: #007c8c;
             color: #fff;
             padding: 8px 15px;
             border: none;
             cursor: pointer;
-            font-size: 1em;
-        }
+font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;           border-radius: 12px !important;
+      }
       
       
       
@@ -1029,8 +1058,8 @@ display: grid;
       
       
         <div class="divinfoable" id="maDiv">
-    <div class="titreinfoable">OuiPrev c'est quoi?</div>
-    <div class="sous-titreinfoable">Le moteur de recherche pour trouver des fournisseurs et formateurs en prévention et sécurité qualifiés et labelisés OuiPrev à proximité</div>
+    <div class="titreinfoable">Nouveau</div>
+<div class="sous-titreinfoable">OuiPrev c'est quoi ? Il s'agit d'un moteur de recherche pour trouver des fournisseurs et formateurs en <a href="https://google.com/">prévention</a> et sécurité qualifiés et labelisés OuiPrev à proximité</div>
     <button class="fermerinfoable" onclick="masquerDiv()">Fermer</button>
 </div>
 <div class="defibcontainer">
@@ -1038,7 +1067,7 @@ display: grid;
 
   
    <h1 class="filtertagtxtmaster">
-    Trouver now
+    Rechercher sur OuiPrev
   </h1>
   <p class="filtertagtxt">
     Commencez à écrire et utilisez au minimum 3 caractères et OuiPrev va montrer en dessous les fournisseurs et formateurs correspondants. Vous pouvez affiner votre recherche en utilisant un filtre de catégorie. 
