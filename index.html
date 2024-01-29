@@ -50,11 +50,7 @@ format("opentype");
       margin-right: auto;
     }
 
-    
-    
     #search-input-container {
-        position: relative;
-
       display: block;
       align-items: center;
       width: 90% !important;
@@ -63,18 +59,24 @@ format("opentype");
     
     }
 
-    #search-input-container::before {
-  content: attr(data-placeholder);
-  display: inline-block;
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  background-color: #ffffff; /* Couleur de fond blanc pour le placeholder */
-  padding: 0 4px;
+    
+    
+    
+.word {
+  background-color: #e0e0e0;
+  padding: 2px;
+  margin: 2px;
+}
+
+#word-container {
+  display: flex;
+  flex-wrap: wrap;
 }
     
     
 #search-input {
+    position: relative;
+
   padding: 14px 10px 14px 10px !important;
   font-size: 16px;
   text-align: center;
@@ -384,6 +386,406 @@ format("opentype");
           
     }
     
+    
+    
+    
+[_nghost-ng-c1336401394] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+    -webkit-flex-direction: column; 
+    -moz-box-orient: vertical; 
+    -moz-box-direction: normal; 
+    -ms-flex-direction: column; 
+    flex-direction: column; 
+    margin-bottom: 24px; 
+    gap: 24px;
+} 
+
+@media (min-width: 721px){ 
+  [_nghost-ng-c1336401394] { 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: normal; 
+    -webkit-flex-flow: row wrap; 
+    -moz-box-orient: horizontal; 
+    -moz-box-direction: normal; 
+    -ms-flex-flow: row wrap; 
+    flex-flow: row wrap; 
+    gap: 16px; 
+    margin-bottom: 48px;
+  } 
+}     
+
+[_nghost-ng-c2076405273] { 
+    border-radius: 24px; 
+    display: block; 
+    margin-bottom: 32px; 
+    overflow: hidden; 
+    position: relative;
+} 
+
+@media (min-width: 721px){ 
+  [_nghost-ng-c2076405273] { 
+    border-radius: 32px; 
+    margin-bottom: 64px;
+  } 
+}     
+
+.header__left[_ngcontent-ng-c1336401394] { 
+    margin-bottom: 0;
+} 
+
+@media (min-width: 721px){ 
+  .header__left[_ngcontent-ng-c1336401394] { 
+    -webkit-box-flex: 2; 
+    -webkit-flex: 2; 
+    -moz-box-flex: 2; 
+    -ms-flex: 2; 
+    flex: 2; 
+    min-width: 440px;
+  } 
+}     
+
+.header__right[_ngcontent-ng-c1336401394] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+    -webkit-flex-direction: column; 
+    -moz-box-orient: vertical; 
+    -moz-box-direction: normal; 
+    -ms-flex-direction: column; 
+    flex-direction: column; 
+    gap: 16px 0;
+} 
+
+@media (min-width: 721px){ 
+  .header__right[_ngcontent-ng-c1336401394] { 
+    -webkit-box-flex: 1; 
+    -webkit-flex: 1; 
+    -moz-box-flex: 1; 
+    -ms-flex: 1; 
+    flex: 1; 
+    min-width: 320px;
+  } 
+}     
+
+.background__media[_ngcontent-ng-c2076405273] { 
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -moz-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    height: 100%; 
+    -webkit-box-pack: center; 
+    -webkit-justify-content: center; 
+    -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center; 
+    position: absolute; 
+    width: 100%; 
+    z-index: 1;
+} 
+
+.foreground[_ngcontent-ng-c2076405273] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-pack: justify; 
+    -webkit-justify-content: space-between; 
+    -moz-box-pack: justify; 
+    -ms-flex-pack: justify; 
+    justify-content: space-between; 
+    position: relative; 
+    z-index: 2;
+} 
+
+
+gf-split-hero .background__media > *  { 
+    height: 100%; 
+    object-fit: cover; 
+    width: 100%;
+} 
+
+.foreground__description[_ngcontent-ng-c2076405273] { 
+    max-width: 568px; 
+    padding: 40px; 
+    width: 100%;
+} 
+
+@media (min-width: 721px){ 
+  .foreground__description[_ngcontent-ng-c2076405273] { 
+    width: 64%;
+  } 
+}     
+
+.foreground__media[_ngcontent-ng-c2076405273] { 
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -moz-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    display: none; 
+    -webkit-box-pack: center; 
+    -webkit-justify-content: center; 
+    -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center; 
+    position: relative; 
+    width: 36%; 
+    z-index: 2;
+} 
+
+@media (min-width: 721px){ 
+  .foreground__media[_ngcontent-ng-c2076405273] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex;
+  } 
+}     
+
+
+
+.item-container[_ngcontent-ng-c46727527] { 
+    background: rgba(105,145,214,.05); 
+    border: 2px solid transparent; 
+    border-radius: 24px; 
+    display: block; 
+    padding: 16px 24px; 
+    text-decoration: none;
+} 
+
+a:hover { 
+    text-decoration: underline;
+} 
+
+.item-container[_ngcontent-ng-c46727527]:hover { 
+    background: rgba(105,145,214,.08);
+} 
+
+
+
+gf-split-hero .header__title  { 
+    margin-bottom: 32px;
+} 
+
+.responsive-headings h1  { 
+    font-size: 64px; 
+    font-weight: 400; 
+    line-height: 76px; 
+    font-family: Google Sans,-apple-system,BlinkMacSystemFont,sans-serif; 
+    letter-spacing: normal;
+} 
+
+.header__title[_ngcontent-ng-c1336401394] { 
+    margin-bottom: 24px;
+} 
+
+.item-contents[_ngcontent-ng-c46727527] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-flex: 1; 
+    -webkit-flex: 1; 
+    -moz-box-flex: 1; 
+    -ms-flex: 1; 
+    flex: 1; 
+    color: #3c4043;
+} 
+
+span { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-size: 100%; 
+    font: inherit; 
+    vertical-align: baseline;
+} 
+
+.item-contents__left[_ngcontent-ng-c46727527] { 
+    -webkit-box-flex: 1; 
+    -webkit-flex: 1; 
+    -moz-box-flex: 1; 
+    -ms-flex: 1; 
+    flex: 1; 
+    padding-right: 8px;
+} 
+
+.item-contents__button[_ngcontent-ng-c46727527] { 
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -moz-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex;
+} 
+
+.gmat-caption { 
+    font-size: 12px; 
+    font-weight: 400; 
+    line-height: 16px; 
+    font-family: Google Sans,-apple-system,BlinkMacSystemFont,sans-serif; 
+    letter-spacing: .1px;
+} 
+
+.item-contents__description[_ngcontent-ng-c46727527] { 
+    padding-top: 8px;
+} 
+
+.button__star[_ngcontent-ng-c46727527] { 
+    color: #d2e3fc; 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex;
+} 
+
+[_nghost-ng-c831665239] { 
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -moz-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    -webkit-align-self: center; 
+    -ms-flex-item-align: center; 
+    align-self: center; 
+    display: -webkit-inline-box; 
+    display: -webkit-inline-flex; 
+    display: -moz-inline-box; 
+    display: -ms-inline-flexbox; 
+    display: inline-flex; 
+    vertical-align: middle;
+} 
+
+gf-icon[_ngcontent-ng-c46727527] { 
+    position: absolute; 
+    translate: 8px;
+} 
+
+.star-button[_ngcontent-ng-c2025496844] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex;
+} 
+
+mat-icon { 
+    color: var(--mat-icon-color);
+} 
+
+.google-symbols { 
+    -webkit-font-feature-settings: "liga"; 
+    -webkit-font-smoothing: antialiased; 
+    direction: ltr; 
+    display: inline-block; 
+    font-family: "Google Symbols Subset"; 
+    font-style: normal; 
+    font-weight: normal; 
+    letter-spacing: normal; 
+    line-height: 1; 
+    text-transform: none; 
+    white-space: nowrap; 
+    word-wrap: normal;
+} 
+
+.mat-icon { 
+    -webkit-user-select: none; 
+    user-select: none; 
+    background-repeat: no-repeat; 
+    display: inline-block; 
+    fill: currentColor; 
+    height: 24px; 
+    width: 24px; 
+    overflow: hidden;
+} 
+
+.icon[_ngcontent-ng-c831665239] { 
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -moz-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    font-variation-settings: "GRAD" 0,"FILL" 0;
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-eZl3o.style-eZl3o {  
+   width: 24px;  
+    height: 24px;  
+}  
+#style-2LEIJ.style-2LEIJ {  
+   font-size: 24px;  
+    width: 24px;  
+    height: 24px;  
+}  
+#style-HN4C2.style-HN4C2 {  
+   width: 24px;  
+    height: 24px;  
+}  
+#style-qninU.style-qninU {  
+   font-size: 24px;  
+    width: 24px;  
+    height: 24px;  
+}  
+#style-Tx5Sq.style-Tx5Sq {  
+   width: 24px;  
+    height: 24px;  
+}  
+#style-4EcXo.style-4EcXo {  
+   font-size: 24px;  
+    width: 24px;  
+    height: 24px;  
+}  
+#style-hCWlM.style-hCWlM {  
+   width: 24px;  
+    height: 24px;  
+}  
+#style-7fhvK.style-7fhvK {  
+   font-size: 24px;  
+    width: 24px;  
+    height: 24px;  
+}  
+#style-VTAyP.style-VTAyP {  
+   width: 24px;  
+    height: 24px;  
+}  
+#style-Rop3e.style-Rop3e {  
+   font-size: 24px;  
+    width: 24px;  
+    height: 24px;  
+}  
+
+    
   </style>
   <title>Sticky NavBar</title>
 </head>
@@ -403,7 +805,187 @@ format("opentype");
 
   
 
-
+<gf-icons-header _ngcontent-ng-c1871072547="" _nghost-ng-c1336401394="" class="ng-star-inserted snipcss-Dwx4M">
+  <gf-split-hero _ngcontent-ng-c1336401394="" class="header__left ng-star-inserted" _nghost-ng-c2076405273="">
+    <div _ngcontent-ng-c2076405273="" class="background__media">
+      <img _ngcontent-ng-c1336401394="" aria-hidden="true" width="1860" height="690" priority="true" split-hero-background="" loading="eager" fetchpriority="high" ng-img="true" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/catalog/v5/heroes/material-symbols-bg-light.jpg">
+    </div>
+    <div _ngcontent-ng-c2076405273="" class="foreground">
+      <div _ngcontent-ng-c2076405273="" class="foreground__description">
+        <div _ngcontent-ng-c1336401394="" class="responsive-headings">
+          <h1 _ngcontent-ng-c1336401394="" class="mat-text header__title">
+            Introducing Material Symbols
+          </h1>
+          <div _ngcontent-ng-c1336401394="" class="header__description ng-star-inserted">
+            Material Symbols are our newest icons consolidating over 3,209
+            glyphs in a single font file with a wide range of design variants.
+            Symbols are available in three styles and  four adjustable variable
+            font styles (fill, weight, grade, and optical size).
+          </div>
+        </div>
+      </div>
+      <div _ngcontent-ng-c2076405273="" class="foreground__media">
+      </div>
+    </div>
+  </gf-split-hero>
+  <div _ngcontent-ng-c1336401394="" class="header__right ng-star-inserted">
+    <div _ngcontent-ng-c1336401394="" class="header__items ng-star-inserted">
+      <gf-icons-header-item _ngcontent-ng-c1336401394="" _nghost-ng-c46727527="">
+        <a _ngcontent-ng-c46727527="" logevent="iconsHeader-click" logeventcategory="iconsHeader" logeventlabel="title" class="item-container" href="https://m3.material.io/styles/icons/overview">
+          <div _ngcontent-ng-c46727527="" class="item-contents">
+            <span _ngcontent-ng-c46727527="" class="item-contents__left">
+              <div _ngcontent-ng-c46727527="" class="item-contents__title gmat-body-1">
+                Design guide
+              </div>
+              <div _ngcontent-ng-c46727527="" class="item-contents__description gmat-caption ng-star-inserted">
+                Learn about icon guidelines 
+              </div>
+            </span>
+            <div _ngcontent-ng-c46727527="" class="item-contents__button">
+              <gf-thumbnail _ngcontent-ng-c46727527="" name="star_button" class="button__star" _nghost-ng-c2025496844="">
+                <span _ngcontent-ng-c2025496844="" class="star-button ng-star-inserted">
+                  <svg _ngcontent-ng-c2025496844="" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor">
+                    <path _ngcontent-ng-c2025496844="" d="M.41 12.649C-1.78 5.166 5.166-1.781 12.65.41l4.579 1.342c1.81.53 3.734.53 5.544 0L27.352.41C34.833-1.78 41.781 5.166 39.59 12.65l-1.342 4.579a9.864 9.864 0 0 0 0 5.544l1.342 4.58c2.191 7.482-4.756 14.43-12.239 12.238l-4.578-1.342a9.864 9.864 0 0 0-5.546 0L12.65 39.59C5.166 41.78-1.781 34.834.41 27.35l1.342-4.578c.53-1.81.53-3.735 0-5.546L.41 12.65Z">
+                    </path>
+                  </svg>
+                </span>
+              </gf-thumbnail>
+              <gf-icon _ngcontent-ng-c46727527="" name="arrow_outward" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" id="style-eZl3o" class="style-eZl3o">
+                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="mat-icon notranslate icon google-symbols mat-icon-no-color style-2LEIJ" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols" id="style-2LEIJ">
+                  arrow_outward
+                </mat-icon>
+              </gf-icon>
+            </div>
+          </div>
+        </a>
+      </gf-icons-header-item>
+    </div>
+    <div _ngcontent-ng-c1336401394="" class="header__items ng-star-inserted">
+      <gf-icons-header-item _ngcontent-ng-c1336401394="" _nghost-ng-c46727527="">
+        <a _ngcontent-ng-c46727527="" logevent="iconsHeader-click" logeventcategory="iconsHeader" logeventlabel="title" class="item-container" href="https://www.figma.com/community/plugin/1088610476491668236">
+          <div _ngcontent-ng-c46727527="" class="item-contents">
+            <span _ngcontent-ng-c46727527="" class="item-contents__left">
+              <div _ngcontent-ng-c46727527="" class="item-contents__title gmat-body-1">
+                Figma Plugin
+              </div>
+              <div _ngcontent-ng-c46727527="" class="item-contents__description gmat-caption ng-star-inserted">
+                Use the Material Symbols plugin 
+              </div>
+            </span>
+            <div _ngcontent-ng-c46727527="" class="item-contents__button">
+              <gf-thumbnail _ngcontent-ng-c46727527="" name="star_button" class="button__star" _nghost-ng-c2025496844="">
+                <span _ngcontent-ng-c2025496844="" class="star-button ng-star-inserted">
+                  <svg _ngcontent-ng-c2025496844="" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor">
+                    <path _ngcontent-ng-c2025496844="" d="M.41 12.649C-1.78 5.166 5.166-1.781 12.65.41l4.579 1.342c1.81.53 3.734.53 5.544 0L27.352.41C34.833-1.78 41.781 5.166 39.59 12.65l-1.342 4.579a9.864 9.864 0 0 0 0 5.544l1.342 4.58c2.191 7.482-4.756 14.43-12.239 12.238l-4.578-1.342a9.864 9.864 0 0 0-5.546 0L12.65 39.59C5.166 41.78-1.781 34.834.41 27.35l1.342-4.578c.53-1.81.53-3.735 0-5.546L.41 12.65Z">
+                    </path>
+                  </svg>
+                </span>
+              </gf-thumbnail>
+              <gf-icon _ngcontent-ng-c46727527="" name="arrow_outward" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" id="style-HN4C2" class="style-HN4C2">
+                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="mat-icon notranslate icon google-symbols mat-icon-no-color style-qninU" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols" id="style-qninU">
+                  arrow_outward
+                </mat-icon>
+              </gf-icon>
+            </div>
+          </div>
+        </a>
+      </gf-icons-header-item>
+    </div>
+    <div _ngcontent-ng-c1336401394="" class="header__items ng-star-inserted">
+      <gf-icons-header-item _ngcontent-ng-c1336401394="" _nghost-ng-c46727527="">
+        <a _ngcontent-ng-c46727527="" logevent="iconsHeader-click" logeventcategory="iconsHeader" logeventlabel="title" class="item-container" href="https://github.com/google/material-design-icons">
+          <div _ngcontent-ng-c46727527="" class="item-contents">
+            <span _ngcontent-ng-c46727527="" class="item-contents__left">
+              <div _ngcontent-ng-c46727527="" class="item-contents__title gmat-body-1">
+                GitHub repo
+              </div>
+              <div _ngcontent-ng-c46727527="" class="item-contents__description gmat-caption ng-star-inserted">
+                This repository contains the binary font file served by Google Fonts 
+              </div>
+            </span>
+            <div _ngcontent-ng-c46727527="" class="item-contents__button">
+              <gf-thumbnail _ngcontent-ng-c46727527="" name="star_button" class="button__star" _nghost-ng-c2025496844="">
+                <span _ngcontent-ng-c2025496844="" class="star-button ng-star-inserted">
+                  <svg _ngcontent-ng-c2025496844="" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor">
+                    <path _ngcontent-ng-c2025496844="" d="M.41 12.649C-1.78 5.166 5.166-1.781 12.65.41l4.579 1.342c1.81.53 3.734.53 5.544 0L27.352.41C34.833-1.78 41.781 5.166 39.59 12.65l-1.342 4.579a9.864 9.864 0 0 0 0 5.544l1.342 4.58c2.191 7.482-4.756 14.43-12.239 12.238l-4.578-1.342a9.864 9.864 0 0 0-5.546 0L12.65 39.59C5.166 41.78-1.781 34.834.41 27.35l1.342-4.578c.53-1.81.53-3.735 0-5.546L.41 12.65Z">
+                    </path>
+                  </svg>
+                </span>
+              </gf-thumbnail>
+              <gf-icon _ngcontent-ng-c46727527="" name="arrow_outward" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" id="style-Tx5Sq" class="style-Tx5Sq">
+                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="mat-icon notranslate icon google-symbols mat-icon-no-color style-4EcXo" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols" id="style-4EcXo">
+                  arrow_outward
+                </mat-icon>
+              </gf-icon>
+            </div>
+          </div>
+        </a>
+      </gf-icons-header-item>
+    </div>
+    <div _ngcontent-ng-c1336401394="" class="header__items ng-star-inserted">
+      <gf-icons-header-item _ngcontent-ng-c1336401394="" _nghost-ng-c46727527="">
+        <a _ngcontent-ng-c46727527="" logevent="iconsHeader-click" logeventcategory="iconsHeader" logeventlabel="title" class="item-container" href="https://www.apache.org/licenses/LICENSE-2.0.html">
+          <div _ngcontent-ng-c46727527="" class="item-contents">
+            <span _ngcontent-ng-c46727527="" class="item-contents__left">
+              <div _ngcontent-ng-c46727527="" class="item-contents__title gmat-body-1">
+                Apache license
+              </div>
+              <div _ngcontent-ng-c46727527="" class="item-contents__description gmat-caption ng-star-inserted">
+                Material Symbols are available under the Apache License Version 2.0 
+              </div>
+            </span>
+            <div _ngcontent-ng-c46727527="" class="item-contents__button">
+              <gf-thumbnail _ngcontent-ng-c46727527="" name="star_button" class="button__star" _nghost-ng-c2025496844="">
+                <span _ngcontent-ng-c2025496844="" class="star-button ng-star-inserted">
+                  <svg _ngcontent-ng-c2025496844="" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor">
+                    <path _ngcontent-ng-c2025496844="" d="M.41 12.649C-1.78 5.166 5.166-1.781 12.65.41l4.579 1.342c1.81.53 3.734.53 5.544 0L27.352.41C34.833-1.78 41.781 5.166 39.59 12.65l-1.342 4.579a9.864 9.864 0 0 0 0 5.544l1.342 4.58c2.191 7.482-4.756 14.43-12.239 12.238l-4.578-1.342a9.864 9.864 0 0 0-5.546 0L12.65 39.59C5.166 41.78-1.781 34.834.41 27.35l1.342-4.578c.53-1.81.53-3.735 0-5.546L.41 12.65Z">
+                    </path>
+                  </svg>
+                </span>
+              </gf-thumbnail>
+              <gf-icon _ngcontent-ng-c46727527="" name="arrow_outward" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" id="style-hCWlM" class="style-hCWlM">
+                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="mat-icon notranslate icon google-symbols mat-icon-no-color style-7fhvK" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols" id="style-7fhvK">
+                  arrow_outward
+                </mat-icon>
+              </gf-icon>
+            </div>
+          </div>
+        </a>
+      </gf-icons-header-item>
+    </div>
+    <div _ngcontent-ng-c1336401394="" class="header__items ng-star-inserted">
+      <gf-icons-header-item _ngcontent-ng-c1336401394="" _nghost-ng-c46727527="">
+        <a _ngcontent-ng-c46727527="" logevent="iconsHeader-click" logeventcategory="iconsHeader" logeventlabel="title" class="item-container" href="https://developers.google.com/fonts/docs/material_symbols">
+          <div _ngcontent-ng-c46727527="" class="item-contents">
+            <span _ngcontent-ng-c46727527="" class="item-contents__left">
+              <div _ngcontent-ng-c46727527="" class="item-contents__title gmat-body-1">
+                Developer guide
+              </div>
+              <div _ngcontent-ng-c46727527="" class="item-contents__description gmat-caption ng-star-inserted">
+                How to use Material Symbols in your projects 
+              </div>
+            </span>
+            <div _ngcontent-ng-c46727527="" class="item-contents__button">
+              <gf-thumbnail _ngcontent-ng-c46727527="" name="star_button" class="button__star" _nghost-ng-c2025496844="">
+                <span _ngcontent-ng-c2025496844="" class="star-button ng-star-inserted">
+                  <svg _ngcontent-ng-c2025496844="" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor">
+                    <path _ngcontent-ng-c2025496844="" d="M.41 12.649C-1.78 5.166 5.166-1.781 12.65.41l4.579 1.342c1.81.53 3.734.53 5.544 0L27.352.41C34.833-1.78 41.781 5.166 39.59 12.65l-1.342 4.579a9.864 9.864 0 0 0 0 5.544l1.342 4.58c2.191 7.482-4.756 14.43-12.239 12.238l-4.578-1.342a9.864 9.864 0 0 0-5.546 0L12.65 39.59C5.166 41.78-1.781 34.834.41 27.35l1.342-4.578c.53-1.81.53-3.735 0-5.546L.41 12.65Z">
+                    </path>
+                  </svg>
+                </span>
+              </gf-thumbnail>
+              <gf-icon _ngcontent-ng-c46727527="" name="arrow_outward" _nghost-ng-c831665239="" role="presentation" aria-hidden="true" id="style-VTAyP" class="style-VTAyP">
+                <mat-icon _ngcontent-ng-c831665239="" role="img" fontset="google-symbols" class="mat-icon notranslate icon google-symbols mat-icon-no-color style-Rop3e" aria-hidden="true" data-mat-icon-type="font" data-mat-icon-namespace="google-symbols" id="style-Rop3e">
+                  arrow_outward
+                </mat-icon>
+              </gf-icon>
+            </div>
+          </div>
+        </a>
+      </gf-icons-header-item>
+    </div>
+  </div>
+</gf-icons-header>
   
   
 
@@ -534,13 +1116,40 @@ format("opentype");
 </div>
   
 <div class="search-container">
-  <div id="search-input-container">
+  <div id="search-input-container"><div id="word-container"></div>
+
     <input type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement, (...)" oninput="filterItems()">
     <div id="tag-display"></div>
   </div>
   <div id="search-dropdown"></div>
 </div>
-  
+<script>
+  function updateWordContainer() {
+    const input = document.getElementById('search-input');
+    const wordContainer = document.getElementById('word-container');
+    const words = input.value.split(/\s+/).filter(word => word.trim() !== '');
+
+    wordContainer.innerHTML = ''; // Efface le contenu précédent
+
+    words.forEach(word => {
+      const wordElement = document.createElement('div');
+      wordElement.textContent = word;
+      wordElement.classList.add('word');
+      wordElement.addEventListener('click', () => removeWord(word, input, wordContainer));
+      wordContainer.appendChild(wordElement);
+    });
+  }
+
+  function removeWord(word, input, wordContainer) {
+    const currentInputValue = input.value;
+    const updatedInputValue = currentInputValue.replace(new RegExp(`\\b${word}\\b\\s*`), '');
+    input.value = updatedInputValue.trim();
+    updateWordContainer(); // Met à jour les mots après la suppression
+  }
+
+  // Ajoutez cet événement pour mettre à jour le conteneur de mots à chaque saisie
+  document.getElementById('search-input').addEventListener('input', updateWordContainer);
+</script>
         
  </div>
   <div class="defibcontainer2">
