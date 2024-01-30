@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Gradient</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ccc; /* Fond gris */
+        }
+
+        .content {
+            text-align: center;
+            color: #000; /* Couleur du texte */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #fff; /* Fond blanc pour le bouton */
+            color: #000; /* Couleur du texte du bouton */
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            /* Désactive le bouton par défaut */
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* Active le bouton si le radio check est sélectionné */
+        input[type="radio"]:checked + button {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        /* Style du radio check */
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            outline: none;
+            margin-right: 10px;
+            position: relative;
+            top: 5px;
+        }
+
+        input[type="radio"]:checked {
+            background-color: #000;
+        }
+
+        input[type="radio"]:checked::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Titre</h1>
+        <h2>Sous-Titre</h2>
+        <input type="email" placeholder="Entrez votre e-mail">
+        <input type="text" placeholder="Entrez le nom de l'entreprise">
+        <input type="radio" id="conditions" name="acceptConditions" required>
+        <label for="conditions">J'accepte les <a href="#">conditions générales</a></label>
+        <button href="#">Cliquez ici</button>
+    </div>
+</body>
+</html>
