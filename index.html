@@ -1118,7 +1118,9 @@ display: grid;
 }
 
     .formsponso {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
+      padding-left: 10px;
+    padding-right: 10px;
     }
 
     .btnsponso {
@@ -1307,8 +1309,8 @@ display: grid;
     <!-- Formulaires avec classe sponso -->
     <div class="formsponso">
 <br>
-<input placeholder="Titre mission" class="jobname" required>
-<input placeholder="Mon email" class="jobmail" type="email" id="email" name="email" required>
+<input placeholder="Titre de la mission" class="jobname" required>
+<input placeholder="Email pour postuler" class="jobmail" type="email" id="email" name="email" required>
 </div>
 
     <!-- Bouton avec classe sponso et lien vers nouvel onglet -->
@@ -1330,9 +1332,9 @@ display: grid;
 </div>
     
     <a href="/upgrade-as-client" target="_blank" class="btnsponso">Partager ma recherche</a>
-<p class="balisagedown-til">ou</p>
+<p class="othertify">ou</p>
         <a href="/missions" target="_blank" class="btnsponso2">Parcourir les missions</a>
-
+<br><br>
   </div>
     </div>
   
@@ -1428,6 +1430,20 @@ display: grid;
     <style>
       
       
+      .othertify {
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
+      
+      
       
       .jobname
       
@@ -1450,6 +1466,11 @@ display: grid;
       .jobmail
       
      {
+       
+             color: #8a97bb;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
     position: flex;
     margin-top: 10px;
     padding: 14px 16px !important;
@@ -1460,7 +1481,6 @@ display: grid;
     border: 0.08rem solid #f4f6fa !important;
     border-radius: 12px !important;
     margin-bottom: 5px;
-    color: #2b5bd7 !important;
     cursor: text !important;
 }
     
@@ -1486,7 +1506,15 @@ display: grid;
 }
       
       
+.jobname:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: text !important;
+}
       
+      .jobmail:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: text !important;
+}
         
       .jobname
       
@@ -1501,9 +1529,11 @@ display: grid;
     border: 0.08rem solid #f4f6fa !important;
     border-radius: 12px !important;
     margin-bottom: 5px;
-    color: #2b5bd7 !important;
     cursor: text !important;
-       
+             color: #8a97bb;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
            margin-right: 10px;
 }
     
@@ -1685,6 +1715,9 @@ padding: 10px;
     display: flex; 
     align-items: center; 
     margin-top: 10px;
+  margin-bottom: 20px;
+      padding-left: 10px;
+    padding-right: 10px;
 } 
 
 :selection { 
@@ -1711,8 +1744,8 @@ padding: 10px;
   font-weight: 100;
     letter-spacing: -0.2px;
     color: #000; 
-    margin-left: 0px; 
-    margin-top: -1px; 
+    margin-left: -3px; 
+    margin-top: 1.2px; 
     line-height: 37px; 
     cursor: pointer;
 } 
@@ -1750,11 +1783,18 @@ padding: 10px;
 } 
 
 .link-span2 { 
-    color: #7CF178 !important; 
+    color: #2a5bd7 !important; 
     text-decoration: none; 
     cursor: pointer;
 } 
 
+      
+      .link-span2:hover { 
+    text-decoration: underline; 
+} 
+
+      
+      
 a:-webkit-any-link { 
     cursor: pointer; 
     text-decoration: none;
