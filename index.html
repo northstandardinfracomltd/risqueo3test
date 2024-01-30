@@ -1347,26 +1347,36 @@ display: grid;
   
 <div class="balisagedown">
 <div class="balisagedown-col">
+  
+  
+  <div class="plastico">
 <p class="balisagedown-til">Vérifier le respect des normes</p>
 <p class="balisagedown-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-<br>
+  </div>
+  
+  <br>
+    <div class="plastico">
   <p class="balisagedown-til">Encadrer l'écosystème</p>
 <p class="balisagedown-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-<br>
+</div><br>
+        <div class="plastico">
   <p class="balisagedown-til">Générer les bonnes interactions</p>
 <p class="balisagedown-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-
+</div>
   </div>
 <div class="balisagedown-col">
+    <div class="plastico">
 <p class="balisagedown-til">Fiable et libre à tous</p>
 <p class="balisagedown-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-<br>
+</div><br>
+        <div class="plastico">
 <p class="balisagedown-til">En synergie avec l'IA</p>
 <p class="balisagedown-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-<br>
+</div><br>
+            <div class="plastico">
 <p class="balisagedown-til">Promouvoir, diffuser et fédérer</p>
 <p class="balisagedown-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-</div>
+</div></div>
     
   </div>
   
@@ -1460,6 +1470,52 @@ display: grid;
     <style>
       
       
+      .plastico  {
+       border: 1px solid #dbe0eb;
+            border-radius: 16px;
+        padding: 15px;
+}
+      
+      
+            .plastico:hover  {
+    transform: scale(1.03);
+    transition-duration: 0.5s;
+              cursor: default;
+}
+      
+      
+      
+      
+      
+      .balisagedown-til {
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
+      
+      
+      
+            
+      .balisagedown-txt {
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
+      
       .dividerz  {
          border-top: 1px solid #dbe0eb;
         }
@@ -1525,7 +1581,7 @@ margin-left: auto;
 margin-right: auto;
 margin-top: 20px;
 margin-bottom: 20px;
-    grid-gap: 20px;
+    grid-gap: 0px;
 }
       
 .balisagedown-col {
