@@ -104,13 +104,14 @@ margin-top: 10px;
   border-radius: 12px !important;
   margin-bottom: 5px;
   color: #2b5bd7 !important;
+  cursor: text !important;
 }
 
     
     
     #search-input:hover {
     box-shadow: 0 0 0px 4px #008eff38;
-    cursor: pointer !important;
+    cursor: text !important;
 }
 #search-input::placeholder {
       color: #8a97bb;
@@ -562,16 +563,16 @@ background-color: #c9366f;
   
 
 <ul class="item-list">
-  <li class="item usernamexd" data-title="paris 1"  data-subtitle="PREVIGOLD" data-tags="Formation">
+  <li class="item" data-title="paris 1"  data-subtitle="PREVIGOLD" data-tags="Formation">
     <a href="https://www.example.com/item1" target="_blank">Item 1</a>
   </li>
-  <li class="item username" data-title="Arbre crabe iris" data-valuation="AAA" data-subtitle="Subtitle fag" data-tags="Défibrillation">
+  <li class="item" data-title="Arbre crabe iris" data-valuation="AAA" data-subtitle="Subtitle fag" data-contact="mail@roesch.blue 0651517065" data-tags="Défibrillation">
+    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe RS6</a>
+  </li>
+    <li class="item" data-title="Voiture crabe iris" data-subtitle="Subtitle fag" data-tags="Formation">
     <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
   </li>
-    <li class="item username" data-title="Voiture crabe iris" data-subtitle="Subtitle fag" data-tags="Formation">
-    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
-  </li>
-  <li class="item username" data-title="Laval item" data-subtitle="Subtitle Laval" data-tags="Incendie">
+  <li class="item" data-title="Laval item" data-subtitle="Subtitle Laval" data-tags="Incendie">
     <a href="https://www.example.com/laval-item" target="_blank">Laval item</a>
   </li>
 </ul>
@@ -609,13 +610,13 @@ background-color: #c9366f;
             // Left content (title and subtitle)
             var leftContent = document.createElement('div');
             leftContent.className = 'left-content';
-            leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div>`;
+            leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div><div>${item.dataset.contact}</div>`;
             dropdownItem.appendChild(leftContent);
 
             // Right content (tag)
             var rightContent = document.createElement('div');
             rightContent.className = 'right-content';
-            rightContent.textContent = tags;
+              rightContent.innerHTML = `<div>${item.dataset.tags}</div><div>${item.dataset.valuation}</div>`;
             dropdownItem.appendChild(rightContent);
 
             dropdownItem.onclick = function() {
