@@ -35,6 +35,11 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+      
+.tag.selected {
+    background-color: green;
+    color: white;
+}
 
         .results {
             max-height: 0;
@@ -71,6 +76,18 @@
         .result-item-left .qualification {
             color: orange;
         }
+      
+      
+      .result-item .additional-info {
+    display: none;
+}
+
+.result-item .show-more {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    margin-top: 5px;
+}
 
         .result-item-left .location-date {
             color: blue;
@@ -148,7 +165,7 @@
                 <h3>Titre de l'annonce 2</h3>
                 <div class="type">Type 2</div>
                 <div class="qualification">Signalisation 2</div>
-                <div class="location-date">Lieu 2 - Date 2</div>
+                <div class="location-date">Toulon, 83000 - Date 2</div>
                 <div class="format">Format 2</div>
                 <div class="company">Entreprise 2</div>
                 <div class="description">Courte description 2</div>
@@ -159,7 +176,10 @@
             </div>
         </div>
     </div>
-<script>
+
+  
+  
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
         const searchButton = document.getElementById('searchButton');
         const tags = document.querySelectorAll('.tag');
@@ -200,7 +220,7 @@
                 const matchesSearchTerm = title.includes(searchTerm) || type.includes(searchTerm) || qualification.includes(searchTerm) ||
                     locationDate.includes(searchTerm) || format.includes(searchTerm) || company.includes(searchTerm) || description.includes(searchTerm);
 
-                const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => result.querySelector(`[data-filter="${tag}"]`));
+                const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => title.includes(tag) || type.includes(tag) || qualification.includes(tag) || description.includes(tag));
 
                 const matchesLocation = selectedLocation === '' || locationDate.includes(selectedLocation);
 
@@ -215,9 +235,32 @@
             // Show/hide results container based on the count
             const resultsContainer = document.querySelector('.results');
             resultsContainer.style.maxHeight = (count > 0) ? '500px' : '0';
+
+            // Update tag styles
+            tags.forEach(tag => {
+                if (selectedTags.includes(tag.getAttribute('data-filter'))) {
+                    tag.classList.add('selected');
+                } else {
+                    tag.classList.remove('selected');
+                }
+            });
         }
+
+        // Add event listeners for "Voir plus" buttons
+        const showMoreButtons = document.querySelectorAll('.toggle-details');
+        showMoreButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const additionalInfo = button.parentNode.querySelector('.additional-info');
+                additionalInfo.classList.toggle('visible');
+                button.textContent = additionalInfo.classList.contains('visible') ? 'Réduire' : 'Voir plus';
+            });
+        });
     });
 </script>
+
+
+
+
 
 
 </body>
