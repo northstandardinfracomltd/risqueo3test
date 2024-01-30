@@ -565,7 +565,7 @@ background-color: #c9366f;
   <li class="item usernamexd" data-title="paris 1"  data-subtitle="PREVIGOLD" data-tags="Formation">
     <a href="https://www.example.com/item1" target="_blank">Item 1</a>
   </li>
-  <li class="item username" data-title="Arbre crabe iris" data-subtitle="Subtitle fag" data-tags="Défibrillation">
+  <li class="item username" data-title="Arbre crabe iris" data-valuation="AAA" data-subtitle="Subtitle fag" data-tags="Défibrillation">
     <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
   </li>
     <li class="item username" data-title="Voiture crabe iris" data-subtitle="Subtitle fag" data-tags="Formation">
@@ -1167,7 +1167,7 @@ display: grid;
 
   
    <h1 class="filtertagtxtmaster">
-    Rechercher sur OuiPrev
+    Rechercher
   </h1>
   <p class="filtertagtxt">
     Commencez à écrire et utilisez au minimum 3 caractères et OuiPrev va montrer en dessous les fournisseurs et formateurs correspondants. Vous pouvez affiner votre recherche en utilisant un filtre de catégorie.
@@ -1240,7 +1240,7 @@ display: grid;
   <div class="divsponso">
 
     <!-- Titre et sous-titre avec classes sponso -->
-    <div class="titlesponso">Intégrer le label</div>
+    <div class="titlesponso">Indexation</div>
     <div class="subtitlesponso">Vous êtes installateur, mainteneur ou formateur Indexation et labellisation; indiquez-nous votre établissement et notre système et membres va collecter les informations afin de valider ou de refuser votre licence pour le label et l'agrément OuiPrev. La licence est valide sur 1 an et nous procéderons à une vérification curative annuelle. </div>
 
     <!-- Formulaires avec classe sponso -->
@@ -1282,11 +1282,62 @@ display: grid;
   <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
   
 
-<div class="divpopup-overlay" id="popupOverlay" onclick="closePopup()">
+<div class="divpopup-overlay" id="popupOverlay">
     <div class="divpopup" id="popupContent">
+      
         <h2>Titre du Popup</h2>
         <p>Sous-titre du Popup</p>
-        <button class="closepopup" onclick="closePopup()">Fermer</button>
+      
+      
+<div class="accordionC">
+    <div class="questionC">Question 1</div>
+    <div class="answerC">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+    </div>
+
+    <div class="questionC">Question 2</div>
+    <div class="answerC">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+    </div>
+
+    <div class="questionC">Question 3</div>
+    <div class="answerC">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+    </div>
+</div>
+
+      
+             <button class="closepopup" onclick="closePopup()">Fermer</button>
+
+      
+      
+<script>
+    var questions = document.querySelectorAll('.questionC');
+    
+    questions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            var answer = this.nextElementSibling;
+
+            // Fermer toutes les réponses
+            questions.forEach(function(q) {
+                var otherAnswer = q.nextElementSibling;
+                if (q !== question && otherAnswer.style.display === 'block') {
+                    otherAnswer.style.display = 'none';
+                }
+            });
+
+            // Toggle pour ouvrir/fermer la réponse actuelle
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        });
+    });
+</script>
+      
+      
+      
     </div>
 </div>
 
@@ -1303,7 +1354,28 @@ display: grid;
 </script>
 
     <style>
+        .accordionC {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 20px;
+        }
 
+        .questionC {
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+            user-select: none;
+        }
+
+        .answerC {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
       
 .radio-container { 
     display: flex; 
