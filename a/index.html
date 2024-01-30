@@ -1,456 +1,224 @@
-  <style>
-    
-
-    input:focus, button:focus {
-    outline: none;
-}
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f6fa;
-    }
-
-    .search-container {
-      display: flex;
-      justify-content: left;
-      margin-top: 20px;
-      position: relative;
-      border: 0px solid transparent;
-      width: 100%;
-      margin-right: auto;
-          padding-left: 6px;
-    padding-right: 6px;
-    margin-top: 25px;
-    }
-
-    #search-input-container {
-      display: block;
-      align-items: left;
-      width: 100% !important;
-      margin-right: auto !important;
-    
-    }
-
-    
-    
-    
-.word {
-  margin-right: 8px;
-    padding: 9px 18px;
-    cursor: pointer;
-    background-color: #000;
-    border-radius: 55px;
-    color: #fff;
-    font-family: "proxima nova semibold" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-    
-    
-   .word:hover {
-    box-shadow: 0 0 0px 4px #008eff38;
-    cursor: pointer !important;
-}
-
-#word-container {
-  display: flex;
-  flex-wrap: wrap;
-      text-align: left !important;
-    justify-content: left;
-  margin-top: -15px;
-}
-    
-    
-#search-input {
-    position: relative;
-margin-top: 10px;
-  padding: 14px 16px !important;
-  font-size: 16px;
-  text-align: left;
-  width: 100% !important;
-  background: #f4f6fa;
-  border: 0.08rem solid #f4f6fa !important;
-  border-radius: 12px !important;
-  margin-bottom: 5px;
-  color: #2b5bd7 !important;
-  cursor: text !important;
-}
-
-    
-    
-    #search-input:hover {
-    box-shadow: 0 0 0px 4px #008eff38;
-    cursor: text !important;
-}
-#search-input::placeholder {
-      color: #8a97bb;
-    font-family: "proxima nova" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    line-height: 28px;
-    font-size: 16.5px;
-}
-
-#search-input:-ms-input-placeholder {
-  /* Styles pour le placeholder sur Internet Explorer */
-  color: #71809f;
-  font-size: 14px;
-}
-
-#search-input::-ms-input-placeholder {
-  /* Styles pour le placeholder sur Microsoft Edge */
-  color: #71809f;
-  font-size: 14px;
-}
-    #tag-display {
-      background-color: #eee;
-      padding: 5px;
-      border-radius: 5px;
-      margin-left: 5px;
-      display: none !important;
-    }
-
-    #search-dropdown {
-      display: none;
-      position: absolute;
-      overflow-y: auto;
-      z-index: 1;
-      width: 97.2%;      
-      margin-top: 100px;
-      
-      
-      background: #ffffff;
-    border: 0px solid transparent !important;
-    border-radius: 16px !important;
-    }
-
-    .dropdown-item {
-      padding: 12px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .left-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .right-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    .dropdown-item:hover {
-      background-color: #f1f1f1;
-    }
-
-    .item-list {
-      list-style: none;
-      padding: 0;
-      display: none;
-    }
-
-    .item {
-      margin-bottom: 10px;
-    }
-
-    
-    .usernamexd {
-      margin-bottom: 10px;
-      background-color: red !important;
-    }
-
-    
-    
-    .item a {
-      text-decoration: none;
-      color: purple;
-      display: block;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    .tag-list {
-      display: flex;
-      justify-content: left;
-      margin-top: 10px;
-    }
-
-    
-    
-        
-    .filtertagtxtmaster
-    {
-      color: #4c587c;
-      font-family: "proxima nova bold" !important;
-      font-weight: 100;
-      letter-spacing: -0.2px;
-      line-height: 28px;
-      font-size: 20px;
-      margin-bottom: -3px;
-      margin-top: 20px;
-      cursor: default;
-      text-align: left;
-       padding-left: 9px;
-    }
-    
-    
-    
-    .filtertagtxt
-    {
-      color: #4c587c;
-      font-family: "proxima nova" !important;
-      font-weight: 100;
-      letter-spacing: -0.2px;
-      line-height: 28px;
-      font-size: 16px;
-      margin-bottom: 18px;
-      cursor: default;
-      text-align: left;
-      padding-left: 9px;
-    }
-    
-    
-    .tag {
-      padding: 9px 18px;
-      margin: 0 5px;
-      cursor: pointer;
-      background-color: #eef2ff;
-      border-radius: 55px;
-      color: #4c587c;
-      font-family: "proxima nova semibold" !important;
-      font-weight: 100;
-      letter-spacing: -0.2px;
-      font-size: 16px;
-    }
-
-    .tag.selected {
-      background-color: #000;
-      color: #fff;
-    }
-    
-    
-    
-        .tag:hover {
-    box-shadow: 0 0 0px 4px #008eff38;
-          cursor: pointer !important;
-    }
-    
-    
-    
-        .iris {
-      
-      border: 0px solid transparent !important;
-    }
-    
-  </style>
-  
-
-<ul class="item-list">
-  <li class="item" data-title="paris 1"  data-subtitle="PREVIGOLD" data-tags="Formation">
-    <a href="https://www.example.com/item1" target="_blank">Item 1</a>
-  </li>
-  <li class="item" data-title="Arbre crabe iris" data-valuation="AAA" data-subtitle="Subtitle fag" data-contact="mail@roesch.blue 0651517065" data-tags="Défibrillation">
-    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe RS6</a>
-  </li>
-    <li class="item" data-title="Voiture crabe iris" data-subtitle="Subtitle fag" data-tags="Formation">
-    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
-  </li>
-  <li class="item" data-title="Laval item" data-subtitle="Subtitle Laval" data-tags="Incendie">
-    <a href="https://www.example.com/laval-item" target="_blank">Laval item</a>
-  </li>
-</ul>
-
-<div class="defibcontainer">
-  
-
-  
-   <h1 class="filtertagtxtmaster">
-    Missions et appels d'offres
-  </h1>
-  <p class="filtertagtxt">
-    Commencez à écrire et utilisez au minimum 3 caractères et OuiPrev va montrer en dessous les fournisseurs et formateurs correspondants. Vous pouvez affiner votre recherche en utilisant un filtre de catégorie.
-  </p>
-  
-  
-
-<script>
-    function masquerDiv() {
-        var div = document.getElementById('maDiv');
-        div.style.display = 'none';
-    }
-</script>
-  
-  
-                    <div class="tag-list">
-                        
-  <div class="tag" onclick="filterByTag(this, 'Défibrillation')">Défibrillateur</div>
-  <div class="tag" onclick="filterByTag(this, 'Incendie')">Détection</div>
-  <div class="tag" onclick="filterByTag(this, 'Formation')">Désenfumage</div>
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Porte coupe-feu</div>
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Éclairage secours</div>
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Systèmes hydrants</div>  
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Extinction automatique</div>  
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Porte coupe-feu</div>
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Plan évacuation</div>                      
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Robinet Icendie Armé</div>  
-<div class="tag" onclick="filterByTag(this, 'Incendie')">Signalisation</div> 
-               <div class="tag" onclick="filterByTag(this, 'Incendie')">Blocs d'Éclairage de Sécurité</div> 
-                             <div class="tag" onclick="filterByTag(this, 'Incendie')">Alarmes</div> 
-                      <div class="tag" onclick="filterByTag(this, 'Incendie')">Compartimentage</div> 
-
-                      
-  </div>
-  
-<div class="search-container">
-  <div id="search-input-container"><div id="word-container"></div>
-
-    <input maxlength="35" type="text" id="search-input" autofocus class="iris" placeholder="Entrez une ville, une qualification, un établissement ..." oninput="filterItems()">
-    <div id="tag-display"></div>
-  </div>
-  <div id="search-dropdown"></div>
-</div>
-<script>
-  function updateWordContainer() {
-    const input = document.getElementById('search-input');
-    const wordContainer = document.getElementById('word-container');
-    const words = input.value.split(/\s+/).filter(word => word.trim() !== '');
-
-    wordContainer.innerHTML = ''; // Efface le contenu précédent
-
-    words.forEach(word => {
-      const wordElement = document.createElement('div');
-      wordElement.textContent = word;
-      wordElement.classList.add('word');
-      wordElement.addEventListener('click', () => removeWord(word, input, wordContainer));
-      wordContainer.appendChild(wordElement);
-    });
-  }
-
-  function removeWord(word, input, wordContainer) {
-    const currentInputValue = input.value;
-    const updatedInputValue = currentInputValue.replace(new RegExp(`\\b${word}\\b\\s*`), '');
-    input.value = updatedInputValue.trim();
-    updateWordContainer(); // Met à jour les mots après la suppression
-  }
-
-  // Ajoutez cet événement pour mettre à jour le conteneur de mots à chaque saisie
-  document.getElementById('search-input').addEventListener('input', updateWordContainer);
-</script>
-        
-  
-    
-
-<ul class="item-list">
-  <li class="item" data-title="paris 1"  data-subtitle="PREVIGOLD" data-tags="Formation">
-    <a href="https://www.example.com/item1" target="_blank">Item 1</a>
-  </li>
-  <li class="item" data-title="Arbre crabe iris" data-valuation="AAA" data-subtitle="Subtitle fag" data-contact="mail@roesch.blue 0651517065" data-tags="Défibrillation">
-    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe RS6</a>
-  </li>
-    <li class="item" data-title="Voiture crabe iris" data-subtitle="Subtitle fag" data-tags="Formation">
-    <a href="https://www.example.com/arbre-crabe-paris" target="_blank">Arbre crabe Paris</a>
-  </li>
-  <li class="item" data-title="Laval item" data-subtitle="Subtitle Laval" data-tags="Incendie">
-    <a href="https://www.example.com/laval-item" target="_blank">Laval item</a>
-  </li>
-</ul>
-
-
-
-<script>
-  function filterItems() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('search-input');
-    filter = input.value.toUpperCase();
-    var tagDisplay = document.getElementById('tag-display');
-    var tag = tagDisplay.textContent.toUpperCase();
-    dropdown = document.getElementById('search-dropdown');
-    items = document.querySelectorAll('.item');
-
-    // Clear previous dropdown content
-    dropdown.innerHTML = '';
-
-    // Display dropdown only if input has 3 or more characters or tag is selected
-    if (filter.length >= 3 || tag) {
-      items.forEach(function(item) {
-        var title = item.dataset.title.toUpperCase();
-        var subtitle = item.dataset.subtitle.toUpperCase();
-        var tags = item.dataset.tags.toUpperCase();
-        var combinedText = title + ' ' + subtitle + ' ' + tags;
-
-        // Check if both filter and tag are present in the combined text
-        if ((filter && combinedText.indexOf(filter) > -1) && (!tag || (tag && tags.indexOf(tag) > -1))) {
-          // Display up to 4 matching items in the dropdown
-          if (dropdown.childElementCount < 4) {
-            var dropdownItem = document.createElement('div');
-            dropdownItem.className = 'dropdown-item';
-
-            // Left content (title and subtitle)
-            var leftContent = document.createElement('div');
-            leftContent.className = 'left-content';
-            leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div><div>${item.dataset.contact}</div>`;
-            dropdownItem.appendChild(leftContent);
-
-            // Right content (tag)
-            var rightContent = document.createElement('div');
-            rightContent.className = 'right-content';
-              rightContent.innerHTML = `<div>${item.dataset.tags}</div><div>${item.dataset.valuation}</div>`;
-            dropdownItem.appendChild(rightContent);
-
-            dropdownItem.onclick = function() {
-              window.open(item.querySelector('a').href, '_blank');
-            };
-            dropdown.appendChild(dropdownItem);
-          }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-      });
 
-      // Show the dropdown
-      dropdown.style.display = 'block';
-    } else {
-      // Hide the dropdown if input has less than 3 characters and no tag selected
-      dropdown.style.display = 'none';
-    }
-  }
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
 
-  function filterByTag(tagElement, tag) {
-    var tags = document.querySelectorAll('.tag');
-    tags.forEach(function(tagElement) {
-      tagElement.classList.remove('selected');
+        .search-bar {
+            margin-bottom: 10px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            cursor: pointer;
+            margin-right: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .results {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .result-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .result-item-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-item-left h3 {
+            color: red;
+            margin: 0;
+        }
+
+        .result-item-left .type {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .result-item-left .qualification {
+            color: orange;
+        }
+
+        .result-item-left .location-date {
+            color: blue;
+            margin-bottom: 5px;
+        }
+
+        .result-item-left .format {
+            color: green;
+        }
+
+        .result-item-left .company {
+            color: red;
+        }
+
+        .result-item-left .description {
+            color: grey;
+        }
+
+        .result-item-right {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .apply-button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Recherche...">
+        <button id="searchButton">Rechercher</button>
+        
+        <div class="tags-container">
+            <div class="tag" data-filter="extincteur">Extincteur</div>
+            <div class="tag" data-filter="systeme">Système intégré</div>
+            <div class="tag" data-filter="signalisation">Signalisation</div>
+            <div class="tag" data-filter="defibrillateur">Défibrillateur</div>
+        </div>
+
+        <select id="location-filter">
+            <option value="">Tous les lieux</option>
+            <option value="rennes">Rennes, 35000</option>
+            <option value="reims">Reims, 51100</option>
+            <option value="lehavre">Le Havre, 76600</option>
+            <option value="saintetienne">Saint-Étienne, 42000</option>
+            <option value="toulon">Toulon, 83000</option>
+            <option value="grenoble">Grenoble, 38000</option>
+        </select>
+    </div>
+
+    <div class="results">
+        <div class="result-item">
+            <div class="result-item-left">
+                <h3>Titre de l'annonce 1</h3>
+                <div class="type">Type 1</div>
+                <div class="qualification">crabe 1</div>
+                <div class="location-date">Lieu 1 - Date 1</div>
+                <div class="format">Format 1</div>
+                <div class="company">Entreprise 1</div>
+                <div class="description">Courte description 1</div>
+                <button class="toggle-details">Voir plus</button>
+            </div>
+            <div class="result-item-right">
+                <a href="#" class="apply-button" target="_blank">Postuler</a>
+            </div>
+        </div>
+
+        <div class="result-item">
+            <div class="result-item-left">
+                <h3>Titre de l'annonce 2</h3>
+                <div class="type">Type 2</div>
+                <div class="qualification">Signalisation 2</div>
+                <div class="location-date">Lieu 2 - Date 2</div>
+                <div class="format">Format 2</div>
+                <div class="company">Entreprise 2</div>
+                <div class="description">Courte description 2</div>
+                <button class="toggle-details">Voir plus</button>
+            </div>
+            <div class="result-item-right">
+                <a href="#" class="apply-button" target="_blank">Postuler</a>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchButton = document.getElementById('searchButton');
+        const tags = document.querySelectorAll('.tag');
+        const locationFilter = document.getElementById('location-filter');
+
+        searchButton.addEventListener('click', function () {
+            performSearch();
+        });
+
+        tags.forEach(tag => {
+            tag.addEventListener('click', function () {
+                tag.classList.toggle('selected');
+                performSearch();
+            });
+        });
+
+        locationFilter.addEventListener('change', function () {
+            performSearch();
+        });
+
+        function performSearch() {
+            const searchTerm = document.querySelector('.search-bar').value.toLowerCase();
+            const selectedTags = Array.from(document.querySelectorAll('.tag.selected')).map(tag => tag.getAttribute('data-filter'));
+            const selectedLocation = locationFilter.value.toLowerCase();
+
+            const results = document.querySelectorAll('.result-item');
+            let count = 0;
+
+            results.forEach(result => {
+                const title = result.querySelector('h3').textContent.toLowerCase();
+                const type = result.querySelector('.type').textContent.toLowerCase();
+                const qualification = result.querySelector('.qualification').textContent.toLowerCase();
+                const locationDate = result.querySelector('.location-date').textContent.toLowerCase();
+                const format = result.querySelector('.format').textContent.toLowerCase();
+                const company = result.querySelector('.company').textContent.toLowerCase();
+                const description = result.querySelector('.description').textContent.toLowerCase();
+
+                const matchesSearchTerm = title.includes(searchTerm) || type.includes(searchTerm) || qualification.includes(searchTerm) ||
+                    locationDate.includes(searchTerm) || format.includes(searchTerm) || company.includes(searchTerm) || description.includes(searchTerm);
+
+                const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => result.querySelector(`[data-filter="${tag}"]`));
+
+                const matchesLocation = selectedLocation === '' || locationDate.includes(selectedLocation);
+
+                if (matchesSearchTerm && matchesTags && matchesLocation) {
+                    result.style.display = 'grid';
+                    count++;
+                } else {
+                    result.style.display = 'none';
+                }
+            });
+
+            // Show/hide results container based on the count
+            const resultsContainer = document.querySelector('.results');
+            resultsContainer.style.maxHeight = (count > 0) ? '500px' : '0';
+        }
     });
-
-    var tagDisplay = document.getElementById('tag-display');
-    if (tagDisplay.textContent === tag) {
-      tagDisplay.textContent = '';
-    } else {
-      tagElement.classList.add('selected');
-      tagDisplay.textContent = tag;
-    }
-
-    document.getElementById('search-input').value = '';
-    filterItems();
-  }
-
-  // Custom :contains() function for selecting tags by text content
-  // This function is not part of standard JavaScript and is added for demonstration purposes
-  NodeList.prototype.forEach = Array.prototype.forEach;
-  Element.prototype.querySelector = Element.prototype.querySelector;
-  Element.prototype.matches = Element.prototype.matches || Element.prototype.msMatchesSelector;
-
-  document.addEventListener('click', function(e) {
-    var container = document.querySelector('.search-container');
-    if (!container.contains(e.target)) {
-      document.getElementById('search-dropdown').style.display = 'none';
-    }
-  });
 </script>
- </div>
+
+
+</body>
+</html>
