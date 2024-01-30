@@ -1308,7 +1308,7 @@ display: grid;
     <div class="formsponso">
 <br>
 <input placeholder="Titre mission" class="jobname" required>
-<input placeholder="Mon email" type="email" id="email" name="email" required>
+<input placeholder="Mon email" class="jobmail" type="email" id="email" name="email" required>
 </div>
 
     <!-- Bouton avec classe sponso et lien vers nouvel onglet -->
@@ -1411,64 +1411,7 @@ display: grid;
     </div>
 <br> <br> <br>  
 
-<div class="divpopup-overlay" id="popupOverlay">
-    <div class="divpopup" id="popupContent">
-      
-        <h2>Titre du Popup</h2>
-        <p>Sous-titre du Popup</p>
-      
-      
-<div class="accordionC">
-    <div class="questionC">Question 1</div>
-    <div class="answerC">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    </div>
 
-    <div class="questionC">Question 2</div>
-    <div class="answerC">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    </div>
-
-    <div class="questionC">Question 3</div>
-    <div class="answerC">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    </div>
-</div>
-
-      
-             <button class="closepopup" onclick="closePopup()">Fermer</button>
-
-      
-      
-<script>
-    var questions = document.querySelectorAll('.questionC');
-    
-    questions.forEach(function(question) {
-        question.addEventListener('click', function() {
-            var answer = this.nextElementSibling;
-
-            // Fermer toutes les réponses
-            questions.forEach(function(q) {
-                var otherAnswer = q.nextElementSibling;
-                if (q !== question && otherAnswer.style.display === 'block') {
-                    otherAnswer.style.display = 'none';
-                }
-            });
-
-            // Toggle pour ouvrir/fermer la réponse actuelle
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        });
-    });
-</script>
-      
-      
-      
-    </div>
-</div>
 
 <script>
     function openPopup() {
@@ -1494,7 +1437,7 @@ display: grid;
     padding: 14px 16px !important;
     font-size: 16px;
     text-align: left;
-    width: 50% !important;
+    width: 45% !important;
     background: #f4f6fa;
     border: 0.08rem solid #f4f6fa !important;
     border-radius: 12px !important;
@@ -1503,6 +1446,87 @@ display: grid;
     cursor: text !important;
 }
       
+            
+      .jobmail
+      
+     {
+    position: flex;
+    margin-top: 10px;
+    padding: 14px 16px !important;
+    font-size: 16px;
+    text-align: left;
+    width: 48% !important;
+    background: #f4f6fa;
+    border: 0.08rem solid #f4f6fa !important;
+    border-radius: 12px !important;
+    margin-bottom: 5px;
+    color: #2b5bd7 !important;
+    cursor: text !important;
+}
+    
+      .jobmail::placeholder {
+      color: #8a97bb;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16.5px;
+}
+
+.jobmail:-ms-input-placeholder {
+  /* Styles pour le placeholder sur Internet Explorer */
+  color: #71809f;
+  font-size: 14px;
+}
+
+.jobmail::-ms-input-placeholder {
+  /* Styles pour le placeholder sur Microsoft Edge */
+  color: #71809f;
+  font-size: 14px;
+}
+      
+      
+      
+        
+      .jobname
+      
+     {
+    position: flex;
+    margin-top: 10px;
+    padding: 14px 16px !important;
+    font-size: 16px;
+    text-align: left;
+    width: 48% !important;
+    background: #f4f6fa;
+    border: 0.08rem solid #f4f6fa !important;
+    border-radius: 12px !important;
+    margin-bottom: 5px;
+    color: #2b5bd7 !important;
+    cursor: text !important;
+       
+           margin-right: 10px;
+}
+    
+      .jobname::placeholder {
+      color: #8a97bb;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16.5px;
+}
+
+.jobname:-ms-input-placeholder {
+  /* Styles pour le placeholder sur Internet Explorer */
+  color: #71809f;
+  font-size: 14px;
+}
+
+.jobname::-ms-input-placeholder {
+  /* Styles pour le placeholder sur Microsoft Edge */
+  color: #71809f;
+  font-size: 14px;
+}
       
       
       .plastico  {
@@ -1671,20 +1695,21 @@ padding: 10px;
 .custom-radio { 
     position: relative; 
     display: inline-block; 
-    width: 20px; 
-    height: 20px; 
+    width: 18px; 
+    height: 18px; 
     background-color: transparent; 
     border-radius: 50%; 
     margin-right: 10px; 
-    border: 2px solid #7df178; 
+    border: 1px solid #2a5bd7; 
     cursor: pointer;
 } 
 
 .radio-text { 
     white-space: nowrap; 
-    font-size: 18px !important; 
-    font-family: "senseistandard" !important; 
-    letter-spacing: 0px; 
+    font-size: 16px !important; 
+    font-family: "proxima nova" !important; 
+  font-weight: 100;
+    letter-spacing: -0.2px;
     color: #000; 
     margin-left: 0px; 
     margin-top: -1px; 
@@ -1703,10 +1728,10 @@ padding: 10px;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    width: 12px; 
-    height: 12px; 
+    width: 10.5px; 
+    height: 10.5px; 
     border-radius: 50%; 
-    background-color: #7df178; 
+    background-color: #2a5bd7; 
     display: none;
 } 
 
@@ -1740,8 +1765,8 @@ a:-webkit-any-link {
       
       
         .sticky-cta-bar {
-            background-color: #333;
-            color: #fff;
+            background-color: #fff;
+          border-top: 1px solid #dbe0eb;
             padding: 15px;
             position: fixed;
             bottom: 0;
@@ -1749,7 +1774,6 @@ a:-webkit-any-link {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .cta-text {
@@ -1784,7 +1808,7 @@ a:-webkit-any-link {
 <div class="sticky-cta-bar"  id="maDiv">
     <div class="cta-text">
   
-     <div class="titreinfoable">À propos</div>
+     <div class="titreinfoable">Le saviez-vous</div>
 <div class="sous-titreinfoable">Moteur de recherche et considéré par ses utilisateurs comme référentiel institutionnel le plus dense et populaire pour trouver des fournisseurs et formateurs en <a href="https://google.com/">prévention</a> et sécurité qualifiés et labelisés OuiPrev à proximité.</div>
    
   
