@@ -33,7 +33,15 @@
     text-decoration: none !important;
         margin-top: 8px;
         margin-bottom: 20px;
-        width: 160px;
+        width: 130px;
+}
+      
+      
+      
+      
+     .search-button:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
 }
       
       
@@ -45,10 +53,10 @@
               border: 1px solid #dbe0eb;
     background-color: #ffffff;
     border-radius: 16px;
-          padding-top: 20px;
+          padding-top: 30px;
                 padding-bottom: 20px;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
         }
 
         .search-bar {
@@ -57,7 +65,7 @@
               margin-top: 10px;
     padding: 14px 16px !important;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     max-width: 100% !important;
     background: #f4f6fa;
     border: 0.08rem solid #f4f6fa !important;
@@ -94,7 +102,41 @@
     line-height: 28px;
     font-size: 16.5px;
 }
+      
+.locatiobutton {
+      
+          background-color: white;
+    color: #007c8c;
+    padding: 7.5px 15px;
+    border: 1px solid #007c8c;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 8px;
+    text-decoration: none !important;
+      
+      }
 
+      
+      
+      .locatiobutton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+}
+
+/* Désactiver l'outline bleu au survol */
+.locatiobutton:hover, .locatiobutton:focus {
+  outline: none;
+  border-color: initial;
+  box-shadow: none;
+}
+      
+      
 .search-bar:-ms-input-placeholder {
   /* Styles pour le placeholder sur Internet Explorer */
   color: #71809f;
@@ -114,17 +156,26 @@
         }
 
         .tag {
-            cursor: pointer;
-            margin-right: 10px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            cursor: pointer;          
+    padding: 9px 18px;
+    margin: 0 5px 10px;
+    background-color: #eef2ff;
+    border-radius: 55px;
+    color: #4c587c;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+
         }
       
-      
+      .tag:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
       
 .tag.selected {
-    background-color: green;
+    background-color: #000;
     color: white;
 }
 
@@ -255,8 +306,8 @@
 <div class="tag" data-filter="coupe">Outils de coupe</div>
 </div>
 
-<select id="location-filter">
-<option value="">Sans préférence</option>
+<select class= "locatiobutton" id="location-filter">
+<option value="">Localisation à proximité</option>
 <option value="grenoble">Grenoble, 38000</option>
 <option value="toulon">Toulon, 83000</option>
 <option value="reims">Reims, 51100</option>
@@ -303,6 +354,23 @@
 
 
         </select>
+      
+      <button id="showButton">Afficher la Div</button>
+<div id="hiddendivx">Contenu de la div masquée</div>
+      
+      
+      <script>
+    document.getElementById('showButton').addEventListener('click', function() {
+        var hiddenDivx = document.getElementById('hiddendivx');
+        if (hiddenDivx.style.display === 'none') {
+            hiddenDivx.style.display = 'block';
+        } else {
+            hiddenDivx.style.display = 'none';
+        }
+    });
+</script>
+      
+      
     </div>
 
     <div class="results">
