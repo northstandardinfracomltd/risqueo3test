@@ -249,11 +249,11 @@ margin-left: auto;
     letter-spacing: -0.2px;
     line-height: 28px;
     font-size: 20px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-top: 2px;
     cursor: default;
     text-align: left;
-    padding-left: 0px;
+    padding-left: 2px;
         }
 
         .result-item-left .type {
@@ -263,10 +263,10 @@ margin-left: auto;
     letter-spacing: -0.2px;
     line-height: 28px;
     font-size: 16px;
-    margin-bottom: 18px;
+    margin-bottom: 5px;
     cursor: default;
     text-align: left;
-    padding-left: 9px;
+    padding-left: 2px;
         }
 
         .result-item-left .qualification {
@@ -335,12 +335,17 @@ margin-left: auto;
     font-size: 16px;
     border-radius: 12px !important;
     text-decoration: none !important;
-    margin-top: 20px !important;
+    margin-top: 23px !important;
     margin-bottom: 20px;
           margin-right: 20px
 
         }
       
+      
+      .apply-button:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
               .hiddenDivs {
             display: none; /* Les divs sont masquées initialement */
 
@@ -489,7 +494,7 @@ margin-left: auto;
         <div class="result-item">
             <div class="result-item-left">
                 <h3>Signalisation de l'annonce 1</h3>
-                <div class="type">Type 1</div>
+                <div class="type hidden-info">Type 1</div>
                 <div class="qualification hidden-info">crabe 1</div>
                 <div class="location-date hidden-info">Toulon, 83000 - Date 1</div>
                 <div class="format hidden-info">Signalisation 1</div>
@@ -505,7 +510,7 @@ margin-left: auto;
         <div class="result-item">
             <div class="result-item-left">
                 <h3>Titre de l'annonce 1</h3>
-                <div class="type">Extincteur 1</div>
+                <div class="type hidden-info">Extincteur 1</div>
                 <div class="qualification hidden-info">crabe 1</div>
                 <div class="location-date hidden-info">Lieu 1 - Date 1</div>
                 <div class="format hidden-info">Format 1</div>
