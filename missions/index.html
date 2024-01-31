@@ -115,11 +115,17 @@
     letter-spacing: -0.2px;
     font-size: 16px;
     border-radius: 12px !important;
-    margin-left: 8px;
+    margin-bottom: 14px;
     text-decoration: none !important;
+    max-width: 200px;
+    text-align: center;
       
       }
-
+      
+      .locatiobutton:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
       
       
       .locatiobutton {
@@ -133,7 +139,6 @@
 .locatiobutton:hover, .locatiobutton:focus {
   outline: none;
   border-color: initial;
-  box-shadow: none;
 }
       
       
@@ -183,6 +188,9 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
+              max-width: 611px;
+margin-left: auto;
+          margin-right: auto;
         }
 
       
@@ -199,6 +207,7 @@
         border: 0px solid white;
         text-align: left;
         cursor: pointer;
+        padding: 0px 0px 0px 3px !important;
 }
       
       
@@ -212,10 +221,19 @@
         .result-item {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
             padding: 10px;
             overflow: hidden;
+          margin-top: 20px;
+              border: 1px solid #dbe0eb;
+    background-color: #ffffff;
+    border-radius: 16px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      
+             .result-item:hover {
+            display: flex;
+            flex-direction: column;
         }
 
         .result-item-left {
@@ -337,6 +355,7 @@
 
 <select class= "locatiobutton hiddenDivs" id="location-filter">
 <option value="">Localisation à proximité</option>
+<option value="">Sans préférence</option>
 <option value="grenoble">Grenoble, 38000</option>
 <option value="toulon">Toulon, 83000</option>
 <option value="reims">Reims, 51100</option>
