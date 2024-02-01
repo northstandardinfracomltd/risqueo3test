@@ -337,7 +337,7 @@ color: #4c587c;
         }
 
         .result-item-left .company {
-color: #4c587c61;
+color: #4c587c;
     font-family: "proxima nova" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
@@ -442,35 +442,13 @@ color: #4c587c;
 }
       
       
-          .format {
-      filter: blur(5px); /* Ajoute un flou initial de 5 pixels */
-      transition: filter 0.5s ease; /* Animation de transition pour une expérience utilisateur plus fluide */
-    }
 
-    .show-button1 {
-      display: block;
-      margin-top: 10px;
-      
-      
-      
-    }
 
       
-      
-      .showbtnstyle  {
-    background-color: white;
-    color: #007c8c;
-    padding: 7.5px 15px;
-    border: 1px solid #007c8c;
-    cursor: pointer;
-    font-family: "proxima nova semibold" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-    border-radius: 12px !important;
-    margin-left: 8px;
-    text-decoration: none !important;
+      .ergalis  {
+            filter: blur(5px);
 }
+
       
       
       
@@ -617,28 +595,10 @@ color: #4c587c;
   
   
   
-  <div class="format hidden-info" id="contactText1">mail@roesch.blue 06 51 51 70 65</div>
-<button class="show-button1 showbtnstyle hidden-info" onclick="showContact1()">Révéler le contact</button>
-
-
-<script>
-  function showContact1() {
-    var contactText1 = document.getElementById('contactText1');
-    contactText1.style.filter = 'blur(0px)';
-    
-    var showButton1 = document.querySelector('.show-button1');
-    showButton1.style.display = 'none';
-
-    // Désactive le bouton de manière permanente
-    showButton1.onclick = null;
-    showButton1.disabled = true;
-  }
-</script>
-  
-
+  <div class="format hidden-info ergalis ergalislink">mail@hidden.com 06 51 51 70 65</div>
   
 <div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
-<div class="company hidden-info">Entreprise SP Enseignement</div>
+<div class="company hidden-info ergalis ergalislink">Entreprise SP Enseignement</div>
 <button class="toggle-details">Voir plus</button>
 </div>
 <div class="result-item-right">
@@ -665,6 +625,21 @@ color: #4c587c;
 <a href="#" class="apply-button" target="_blank">Postuler</a>
 </div>
 </div>
+      
+      
+      
+<script>
+  // Récupère toutes les divs avec la classe spécifiée
+  var divsAvecLien = document.querySelectorAll('.ergalislink');
+
+  // Ajoute un gestionnaire d'événement de clic à chaque div
+  divsAvecLien.forEach(function(div) {
+    div.addEventListener('click', function() {
+      // Redirige vers l'URL souhaitée lors du clic
+      window.location.href = 'https://www.example.com';
+    });
+  });
+</script>
       
       
       
