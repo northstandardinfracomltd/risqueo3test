@@ -257,17 +257,25 @@ margin-left: auto;
         }
 
         .result-item-left .type {
-    color: #4c587c;
-    font-family: "proxima nova" !important;
+    font-family: "proxima nova bold" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
     line-height: 28px;
-    font-size: 16px;
+  
     margin-bottom: 5px;
     cursor: default;
+    text-transform: uppercase;
     text-align: left;
-    padding-left: 2px;
         }
+      
+      
+     .result-item-left .type span {
+  background-color: #feeadf; /* Couleur de fond grise */
+       color: #ff6116 !important;
+       border-radius: 10px;
+         font-size: 1.2rem;
+       p
+}
 
         .result-item-left .qualification {
             color: orange;
@@ -298,20 +306,55 @@ margin-left: auto;
       
 
         .result-item-left .location-date {
-            color: blue;
-            margin-bottom: 5px;
+color: #4c587c61;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 9px;
+    cursor: default;
+    text-align: left;
+    padding-left: 2px; 
         }
 
         .result-item-left .format {
-            color: green;
+color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 9px;
+    cursor: default;
+    text-align: left;
+    padding-left: 2px; 
         }
 
         .result-item-left .company {
-            color: red;
+color: #4c587c61;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 9px;
+    cursor: default;
+    text-align: left;
+    padding-left: 2px; 
         }
 
         .result-item-left .description {
-            color: grey;
+color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 9px;
+    cursor: default;
+    text-align: left;
+    padding-left: 2px; 
         }
 
         .result-item-right {
@@ -344,22 +387,23 @@ margin-left: auto;
 .qualification {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 6px;
+  margin-bottom: 20px;
 }
 
 .qualification span {
   cursor: default;
-    padding: 8px 18px;
-    margin: 0px 9px 10px 0px;
+    padding: 6px 12px;
+    margin: 0px 1.5px 8px 0px;
     border-radius: 55px;
-    font-family: "proxima nova" !important;
+    font-family: "proxima nova semibold" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
-    font-size: 16px;
-  
-  
+    font-size: 14px;
   color: #007c8c;
-  background-color: #ecfdff; /* Couleur de fond grise */
+  background-color: #e7fafd; /* Couleur de fond grise */
 }
+      
 
       .apply-button:hover {
     box-shadow: 0 0 0px 4px #008eff38;
@@ -512,13 +556,19 @@ margin-left: auto;
     <div class="results">
         <div class="result-item">
             <div class="result-item-left">
-                <h3>Signalisation de l'annonce 1</h3>
-                <div class="type hidden-info">CDI</div>
-                <div class="qualification hidden-info">crabe 1</div>
-                <div class="location-date hidden-info">Toulon, 83000 - Date 1</div>
-                <div class="format hidden-info">Signalisation 1</div>
-                <div class="company hidden-info">Entreprise 1</div>
-                <div class="description hidden-info">Courte description 1</div>
+                <h3>Maintenance d'un extincteur</h3>
+                <div class="type hidden-info">Sous-traitant</div>
+               <div class="qualification hidden-info">
+  <span>Signalisation</span>
+  <span>Extincteur</span>
+  <span>Éclairage</span>
+</div>
+
+                <div class="location-date hidden-info">Le 16 janvier 2023 à Angers</div>
+                <div class="format hidden-info">mail@roesch.blue 06 51 51 70 65</div>
+              
+                <div class="description hidden-info">Défibrillateur Mindray C1</div>
+              <div class="company hidden-info">Entreprise Cardiac Safe</div>
                 <button class="toggle-details">Voir plus</button>
             </div>
             <div class="result-item-right">
@@ -529,7 +579,7 @@ margin-left: auto;
         <div class="result-item">
             <div class="result-item-left">
                 <h3>Installation d'un défibrillateur</h3>
-                <div class="type hidden-info">Sous-traitant</div>
+                <div class="type hidden-info"> <span>Sous-traitant</span></div>
                <div class="qualification hidden-info">
   <span>Signalisation</span>
   <span>Extincteur</span>
@@ -538,8 +588,9 @@ margin-left: auto;
 
                 <div class="location-date hidden-info">Le 16 janvier 2023 à Angers</div>
                 <div class="format hidden-info">mail@roesch.blue 06 51 51 70 65</div>
-                <div class="company hidden-info">SP Enseignement</div>
-                <div class="description hidden-info">Défibrillateur Mindray C1</div>
+              
+                <div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
+              <div class="company hidden-info">Entreprise SP Enseignement</div>
                 <button class="toggle-details">Voir plus</button>
             </div>
             <div class="result-item-right">
