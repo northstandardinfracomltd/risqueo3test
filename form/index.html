@@ -1,39 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire</title>
-</head>
-<body>
-  <h1>Formulaire de contact</h1>
-  <form id="myForm">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required>
-    <br>
-    <input type="submit" value="Envoyer">
-  </form>
-
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#myForm').submit(function (e) {
-        e.preventDefault();
-        var nom = $('#nom').val();
-        $.ajax({
-          type: 'POST',
-          url: 'https://script.google.com/macros/s/AKfycbw8o3aVHWRbUmE0czYNUrGruqUSm2gLQViwWiF71GKRC1OatrYkRaTCoJj7_a44ExSI/exec',
-          data: { nom: nom },
-          success: function (data) {
-            alert('Formulaire soumis avec succès!');
-          },
-          error: function (error) {
-            console.error('Erreur lors de la soumission du formulaire:', error);
-          }
-        });
-      });
-    });
-  </script>
-</body>
-</html>
-
+<form 
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbx1LtGD0UWXikrhVTV7zduXw9FKoI7AvNQt6t9icfhqa1LFerFynQpT3yUUyANf97b8/exec"
+>
+  <input name="nom" type="text" placeholder="Nom" required>
+  <button type="submit">Envoyer</button>
+  
+  
+  <script>catch (e) {
+  console.error('Erreur:', e);
+  return ContentService
+    .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
+    .setMimeType(ContentService.MimeType.JSON);
+}</script>
+</form>
