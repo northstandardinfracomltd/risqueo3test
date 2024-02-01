@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 20px;
           background-color: #f4f6fa;
+          padding-bottom: 200px;
         }
 
       
@@ -259,13 +260,15 @@ margin-left: auto;
         .result-item-left .type {
     font-family: "proxima nova bold" !important;
     font-weight: 100;
-    letter-spacing: -0.2px;
+   
     line-height: 28px;
-  
-    margin-bottom: 5px;
+      margin-top: 5px;
+
+    margin-bottom: 15px;
     cursor: default;
     text-transform: uppercase;
     text-align: left;
+        
         }
       
       
@@ -273,8 +276,10 @@ margin-left: auto;
   background-color: #feeadf; /* Couleur de fond grise */
        color: #ff6116 !important;
        border-radius: 10px;
-         font-size: 1.2rem;
-       p
+         font-size: 11px;
+       padding: 6px 10px;
+       padding-top: 6.5px !important;
+        letter-spacing: -0.1px;
 }
 
         .result-item-left .qualification {
@@ -435,6 +440,41 @@ color: #4c587c;
       .toggle-details:hover {
     text-decoration: underline;
 }
+      
+      
+          .format {
+      filter: blur(5px); /* Ajoute un flou initial de 5 pixels */
+      transition: filter 0.5s ease; /* Animation de transition pour une expérience utilisateur plus fluide */
+    }
+
+    .show-button1 {
+      display: block;
+      margin-top: 10px;
+    }
+      
+      
+      .showbtnstyle  {
+    background-color: white;
+    color: #007c8c;
+    padding: 7.5px 15px;
+    border: 1px solid #007c8c;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 8px;
+    text-decoration: none !important;
+}
+      
+      
+      
+      
+      
+      
+      
+      
     </style>
 </head>
 <body>
@@ -554,50 +594,73 @@ color: #4c587c;
   
 
     <div class="results">
-        <div class="result-item">
-            <div class="result-item-left">
-                <h3>Maintenance d'un extincteur</h3>
-                <div class="type hidden-info">Sous-traitant</div>
-               <div class="qualification hidden-info">
-  <span>Signalisation</span>
-  <span>Extincteur</span>
-  <span>Éclairage</span>
+
+      
+      
+<div class="result-item">
+<div class="result-item-left">
+<h3>Installation d'un défibrillateur</h3>
+<div class="type hidden-info"> <span>APPEL D'OFFRE CLIENT</span></div>
+<div class="qualification hidden-info">
+<span>Signalisation</span>
+<span>Extincteur</span>
+<span>Éclairage</span>
 </div>
+<div class="location-date hidden-info">Le 16 janvier 2023 à Angers</div>
 
-                <div class="location-date hidden-info">Le 16 janvier 2023 à Angers</div>
-                <div class="format hidden-info">mail@roesch.blue 06 51 51 70 65</div>
-              
-                <div class="description hidden-info">Défibrillateur Mindray C1</div>
-              <div class="company hidden-info">Entreprise Cardiac Safe</div>
-                <button class="toggle-details">Voir plus</button>
-            </div>
-            <div class="result-item-right">
-                <a href="#" class="apply-button" target="_blank">Postuler</a>
-            </div>
-        </div>
+  
+  
+  
+  
+  
+  <div class="format hidden-info" id="contactText1">mail@roesch.blue 06 51 51 70 65</div>
+<button class="show-button1 showbtnstyle hidden-info" onclick="showContact1()">Révéler le contact</button>
 
-        <div class="result-item">
-            <div class="result-item-left">
-                <h3>Installation d'un défibrillateur</h3>
-                <div class="type hidden-info"> <span>Sous-traitant</span></div>
-               <div class="qualification hidden-info">
-  <span>Signalisation</span>
-  <span>Extincteur</span>
-  <span>Éclairage</span>
+
+  
+  
+  <script>
+  function showContact1() {
+    var contactText1 = document.getElementById('contactText1');
+    contactText1.style.filter = 'blur(0px)';
+    var showButton1 = document.querySelector('.show-button');
+    showButton1.style.display = 'none';
+    showButton1.disabled = true; // Désactive le bouton après le premier clic
+  }
+</script>
+  
+<div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
+<div class="company hidden-info">Entreprise SP Enseignement</div>
+<button class="toggle-details">Voir plus</button>
 </div>
-
-                <div class="location-date hidden-info">Le 16 janvier 2023 à Angers</div>
-                <div class="format hidden-info">mail@roesch.blue 06 51 51 70 65</div>
-              
-                <div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
-              <div class="company hidden-info">Entreprise SP Enseignement</div>
-                <button class="toggle-details">Voir plus</button>
-            </div>
-            <div class="result-item-right">
-                <a href="#" class="apply-button" target="_blank">Postuler</a>
-            </div>
-        </div>
-    </div>
+<div class="result-item-right">
+<a href="#" class="apply-button" target="_blank">Postuler</a>
+</div>
+</div>
+      
+<div class="result-item">
+<div class="result-item-left">
+<h3>Maintenance d'un défibrillateur</h3>
+<div class="type hidden-info"> <span>MISSION SOUS-TRAITANT</span></div>
+<div class="qualification hidden-info">
+<span>Signalisation</span>
+<span>Extincteur</span>
+<span>Éclairage</span>
+</div>
+<div class="location-date hidden-info">Le 16 janvier 2023 à Angers</div>
+<div class="format hidden-info">mail@roesch.blue 06 51 51 70 65</div>
+<div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
+<div class="company hidden-info">Entreprise Sommalev</div>
+<button class="toggle-details">Voir plus</button>
+</div>
+<div class="result-item-right">
+<a href="#" class="apply-button" target="_blank">Postuler</a>
+</div>
+</div>
+      
+      
+      
+</div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
         const searchButton = document.getElementById('searchButton');
