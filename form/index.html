@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
+    <script>
+        function submitForm() {
+            var nom = document.getElementById("nom").value;
+            // Ajoutez d'autres champs du formulaire selon vos besoins
 
+            // Envoie des données à Google Apps Script
+            google.script.run.doPost({ nom: nom /*, Autres champs ici */ });
+
+            // Réinitialisez le formulaire ou effectuez d'autres actions après l'envoi
+            document.getElementById("myForm").reset();
+        }
+    </script>
 </head>
 <body>
-<form 
-  method="POST" 
-  action="https://script.google.com/macros/s/AKfycbxmJi7nwkwXzj7pXN5ohfGH2m5urmGeLjbyDcLWahnlKlIkLQAxqid2PL0RAQ-LXbGr/exec"
->
-  <input name="Email" type="email" placeholder="Email" required>
-  <input name="Name" type="text" placeholder="Name" required>
-  <button type="submit">Send</button>
-</form>
+    <h1>Formulaire</h1>
+
+    <form id="myForm">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <!-- Ajoutez d'autres champs en fonction de vos besoins -->
+        
+        <button type="button" onclick="submitForm()">Envoyer</button>
+    </form>
+
+    <script src="https://www.gstatic.com/webp/js/2.0/webp.js"></script>
+    <script>
+        // Remplacez 'URL_DU_SCRIPT' par le lien de déploiement de votre script
+        google.script.url = 'URL_DU_SCRIPT';
+    </script>
 </body>
 </html>
