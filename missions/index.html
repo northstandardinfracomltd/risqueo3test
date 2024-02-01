@@ -450,7 +450,11 @@ color: #4c587c;
     .show-button1 {
       display: block;
       margin-top: 10px;
+      
+      
+      
     }
+
       
       
       .showbtnstyle  {
@@ -617,17 +621,21 @@ color: #4c587c;
 <button class="show-button1 showbtnstyle hidden-info" onclick="showContact1()">Révéler le contact</button>
 
 
-  
-  
-  <script>
+<script>
   function showContact1() {
     var contactText1 = document.getElementById('contactText1');
     contactText1.style.filter = 'blur(0px)';
-    var showButton1 = document.querySelector('.show-button');
+    
+    var showButton1 = document.querySelector('.show-button1');
     showButton1.style.display = 'none';
-    showButton1.disabled = true; // Désactive le bouton après le premier clic
+
+    // Désactive le bouton de manière permanente
+    showButton1.onclick = null;
+    showButton1.disabled = true;
   }
 </script>
+  
+
   
 <div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
 <div class="company hidden-info">Entreprise SP Enseignement</div>
