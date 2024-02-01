@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
 </head>
 <body>
+  <h1>Formulaire de contact</h1>
+  <form id="myForm">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+    <br>
+    <input type="submit" value="Envoyer">
+  </form>
 
-    <h1>Formulaire</h1>
-
-    <form id="myForm">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
-        <br>
-        <button type="button" onclick="submitForm()">Envoyer</button>
-    </form>
-
-    <script>
-        function submitForm() {
-            var nom = document.getElementById("nom").value;
-            google.script.run.withSuccessHandler(onSuccess).processForm(nom);
-        }
-
-        function onSuccess() {
-            alert("Formulaire envoyé avec succès !");
-            document.getElementById("myForm").reset();
-        }
-    </script>
-
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#myForm').submit(function (e) {
+        e.preventDefault();
+        var nom = $('#nom').val();
+        $.ajax({
+          type: 'POST',
+          url: 'https://script.google.com/macros/s/AKfycbw8o3aVHWRbUmE0czYNUrGruqUSm2gLQViwWiF71GKRC1OatrYkRaTCoJj7_a44ExSI/exec',
+          data: { nom: nom },
+          success: function (data) {
+            alert('Formulaire soumis avec succès!');
+          },
+          error: function (error) {
+            console.error('Erreur lors de la soumission du formulaire:', error);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
