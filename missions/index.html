@@ -260,7 +260,6 @@ margin-left: auto;
         .result-item-left .type {
     font-family: "proxima nova bold" !important;
     font-weight: 100;
-   
     line-height: 28px;
       margin-top: 5px;
 
@@ -276,7 +275,7 @@ margin-left: auto;
   background-color: #feeadf; /* Couleur de fond grise */
        color: #ff6116 !important;
        border-radius: 10px;
-         font-size: 11px;
+         font-size: 11.5px;
        padding: 6px 10px;
        padding-top: 6.5px !important;
         letter-spacing: -0.1px;
@@ -312,7 +311,7 @@ margin-left: auto;
 
         .result-item-left .location-date {
 color: #4c587c61;
-    font-family: "proxima nova" !important;
+    font-family: "proxima nova" ;
     font-weight: 100;
     letter-spacing: -0.2px;
     line-height: 28px;
@@ -325,7 +324,7 @@ color: #4c587c61;
 
         .result-item-left .format {
 color: #4c587c;
-    font-family: "proxima nova" !important;
+    font-family: "proxima nova" ;
     font-weight: 100;
     letter-spacing: -0.2px;
     line-height: 28px;
@@ -338,7 +337,7 @@ color: #4c587c;
 
         .result-item-left .company {
 color: #4c587c;
-    font-family: "proxima nova" !important;
+    font-family: "proxima nova" ;
     font-weight: 100;
     letter-spacing: -0.2px;
     line-height: 28px;
@@ -351,7 +350,7 @@ color: #4c587c;
 
         .result-item-left .description {
 color: #4c587c;
-    font-family: "proxima nova" !important;
+    font-family: "proxima nova" ;
     font-weight: 100;
     letter-spacing: -0.2px;
     line-height: 28px;
@@ -446,11 +445,18 @@ color: #4c587c;
 
       
       .ergalis  {
-            filter: blur(5px);
+            filter: blur(6px);
+        cursor: pointer;
 }
 
       
-      
+            
+      .orelsan  {
+            font-family: "proxima nova" !important;
+                margin-right: 5px;
+
+}
+
       
       
       
@@ -574,6 +580,16 @@ color: #4c587c;
     </div>
   
   
+  
+  <div class="bugsolver">
+      <button onclick="actualiserPage()">Actualiser la Page</button>
+   </div>
+    <script>
+        // Fonction pour actualiser la page
+        function actualiserPage() {
+            location.reload(true); // Cette fonction recharge la page
+        }
+    </script>
 
     <div class="results">
 
@@ -595,10 +611,10 @@ color: #4c587c;
   
   
   
-  <div class="format hidden-info ergalis ergalislink">mail@hidden.com 06 51 51 70 65</div>
   
 <div class="description hidden-info">Défibrillateur Mindray C1. Rémunération inconnue.</div>
-<div class="company hidden-info ergalis ergalislink">Entreprise SP Enseignement</div>
+  <div class="format hidden-info ergalislink"><span class="orelsan">Contact</span><span class="ergalis ergalislink">mail@hidden.com 06 51 51 70 65</span></div>
+  <div class="company hidden-info ergalislink"><span class="orelsan">Entreprise</span><span class="ergalis ergalislink">Entreprise SP Enseignement</span></div>
 <button class="toggle-details">Voir plus</button>
 </div>
 <div class="result-item-right">
@@ -635,89 +651,92 @@ color: #4c587c;
   // Ajoute un gestionnaire d'événement de clic à chaque div
   divsAvecLien.forEach(function(div) {
     div.addEventListener('click', function() {
-      // Redirige vers l'URL souhaitée lors du clic
-      window.location.href = 'https://www.example.com';
+      // Ouvre le lien dans un nouvel onglet
+      window.open('https://www.example.com', '_blank');
     });
   });
 </script>
       
-      
-      
 </div>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const searchButton = document.getElementById('searchButton');
-        const tags = document.querySelectorAll('.tag');
-        const locationFilter = document.getElementById('location-filter');
+ document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.getElementById('searchButton');
+    const tags = document.querySelectorAll('.tag');
+    const locationFilter = document.getElementById('location-filter');
 
-        searchButton.addEventListener('click', function () {
+    // Stocker la div actuellement ouverte
+    let currentOpenDiv = null;
+
+    searchButton.addEventListener('click', function () {
+        performSearch();
+    });
+
+    tags.forEach(tag => {
+        tag.addEventListener('click', function () {
+            tag.classList.toggle('selected');
             performSearch();
         });
+    });
 
+    locationFilter.addEventListener('change', function () {
+        performSearch();
+    });
+
+    function performSearch() {
+        const searchTerm = document.querySelector('.search-bar').value.toLowerCase();
+        const selectedTags = Array.from(document.querySelectorAll('.tag.selected')).map(tag => tag.getAttribute('data-filter'));
+        const selectedLocation = locationFilter.value.toLowerCase();
+
+        const results = document.querySelectorAll('.result-item');
+        let count = 0;
+
+        results.forEach(result => {
+            const title = result.querySelector('h3').textContent.toLowerCase();
+            const type = result.querySelector('.type').textContent.toLowerCase();
+            const qualification = result.querySelector('.qualification').textContent.toLowerCase();
+            const locationDate = result.querySelector('.location-date').textContent.toLowerCase();
+            const format = result.querySelector('.format').textContent.toLowerCase();
+            const company = result.querySelector('.company').textContent.toLowerCase();
+            const description = result.querySelector('.description').textContent.toLowerCase();
+
+            const matchesSearchTerm = title.includes(searchTerm) || type.includes(searchTerm) || qualification.includes(searchTerm) ||
+                locationDate.includes(searchTerm) || format.includes(searchTerm) || company.includes(searchTerm) || description.includes(searchTerm);
+
+            const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => title.includes(tag) || type.includes(tag) || qualification.includes(tag) || description.includes(tag));
+
+            const matchesLocation = selectedLocation === '' || locationDate.includes(selectedLocation);
+
+            if (matchesSearchTerm && matchesTags && matchesLocation) {
+                result.style.display = 'grid';
+                count++;
+            } else {
+                result.style.display = 'none';
+            }
+
+            // Hide additional info initially
+            const hiddenInfoElements = result.querySelectorAll('.hidden-info');
+            hiddenInfoElements.forEach(info => {
+                info.style.display = 'none';
+            });
+        });
+
+        // Show/hide results container based on the count
+        const resultsContainer = document.querySelector('.results');
+        resultsContainer.style.maxHeight = (count > 0) ? '500px' : '0';
+
+        // Update tag styles
         tags.forEach(tag => {
-            tag.addEventListener('click', function () {
-                tag.classList.toggle('selected');
-                performSearch();
-            });
+            if (selectedTags.includes(tag.getAttribute('data-filter'))) {
+                tag.classList.add('selected');
+            } else {
+                tag.classList.remove('selected');
+            }
         });
 
-        locationFilter.addEventListener('change', function () {
-            performSearch();
-        });
+        // Masquer les autres divs quand une nouvelle recherche est effectuée
+        hideAllDivs();
 
-        function performSearch() {
-            const searchTerm = document.querySelector('.search-bar').value.toLowerCase();
-            const selectedTags = Array.from(document.querySelectorAll('.tag.selected')).map(tag => tag.getAttribute('data-filter'));
-            const selectedLocation = locationFilter.value.toLowerCase();
-
-            const results = document.querySelectorAll('.result-item');
-            let count = 0;
-
-            results.forEach(result => {
-                const title = result.querySelector('h3').textContent.toLowerCase();
-                const type = result.querySelector('.type').textContent.toLowerCase();
-                const qualification = result.querySelector('.qualification').textContent.toLowerCase();
-                const locationDate = result.querySelector('.location-date').textContent.toLowerCase();
-                const format = result.querySelector('.format').textContent.toLowerCase();
-                const company = result.querySelector('.company').textContent.toLowerCase();
-                const description = result.querySelector('.description').textContent.toLowerCase();
-
-                const matchesSearchTerm = title.includes(searchTerm) || type.includes(searchTerm) || qualification.includes(searchTerm) ||
-                    locationDate.includes(searchTerm) || format.includes(searchTerm) || company.includes(searchTerm) || description.includes(searchTerm);
-
-                const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => title.includes(tag) || type.includes(tag) || qualification.includes(tag) || description.includes(tag));
-
-                const matchesLocation = selectedLocation === '' || locationDate.includes(selectedLocation);
-
-                if (matchesSearchTerm && matchesTags && matchesLocation) {
-                    result.style.display = 'grid';
-                    count++;
-                } else {
-                    result.style.display = 'none';
-                }
-
-                // Hide additional info initially
-                const hiddenInfoElements = result.querySelectorAll('.hidden-info');
-                hiddenInfoElements.forEach(info => {
-                    info.style.display = 'none';
-                });
-            });
-
-            // Show/hide results container based on the count
-            const resultsContainer = document.querySelector('.results');
-            resultsContainer.style.maxHeight = (count > 0) ? '500px' : '0';
-
-            // Update tag styles
-            tags.forEach(tag => {
-                if (selectedTags.includes(tag.getAttribute('data-filter'))) {
-                    tag.classList.add('selected');
-                } else {
-                    tag.classList.remove('selected');
-                }
-            });
-        }
-
-        // Add event listeners for "Voir plus" buttons
+        // Ajouter des écouteurs aux boutons "Voir plus" des résultats actuels
         const showMoreButtons = document.querySelectorAll('.toggle-details');
         showMoreButtons.forEach(button => {
             button.addEventListener('click', function () {
@@ -726,10 +745,48 @@ color: #4c587c;
                 hiddenInfo.forEach(info => {
                     info.style.display = (info.style.display === 'none') ? 'block' : 'none';
                 });
+
+                // Mettre à jour la div actuellement ouverte
+                currentOpenDiv = (hiddenInfo[0].style.display === 'none') ? null : hiddenInfo[0];
+
+                // Mettre à jour le texte du bouton en conséquence
                 button.textContent = (button.textContent === 'Réduire') ? 'Voir plus' : 'Réduire';
+
+                // Masquer les autres divs quand un "Voir plus" est cliqué
+                hideOtherDivs(resultItem);
             });
         });
-    });
+    }
+
+    function hideAllDivs() {
+        // Masquer toutes les div et mettre à jour le texte des boutons
+        const showMoreButtons = document.querySelectorAll('.toggle-details');
+        showMoreButtons.forEach(button => {
+            const resultItem = button.closest('.result-item');
+            const hiddenInfo = resultItem.querySelectorAll('.hidden-info');
+            hiddenInfo.forEach(info => {
+                info.style.display = 'none';
+            });
+            button.textContent = 'Voir plus';
+        });
+    }
+
+    function hideOtherDivs(currentResult) {
+        // Masquer les autres divs sauf celle actuellement ouverte
+        const showMoreButtons = document.querySelectorAll('.toggle-details');
+        showMoreButtons.forEach(button => {
+            const resultItem = button.closest('.result-item');
+            if (resultItem !== currentResult) {
+                const hiddenInfo = resultItem.querySelectorAll('.hidden-info');
+                hiddenInfo.forEach(info => {
+                    info.style.display = 'none';
+                });
+                button.textContent = 'Voir plus';
+            }
+        });
+    }
+});
+
 </script>
 
 
