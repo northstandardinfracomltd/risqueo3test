@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Licence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #licenceForm {
+            text-align: center;
+        }
+
+        #licenceCode {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #publierBtn, #acheterBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #publierBtn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        #acheterBtn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            10%, 90% {
+                transform: translateX(-5px);
+            }
+
+            20%, 80% {
+                transform: translateX(5px);
+            }
+
+            30%, 50%, 70% {
+                transform: translateX(-10px);
+            }
+
+            40%, 60% {
+                transform: translateX(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="licenceForm">
+  <p class="balisagedown-til">Utilisez votre licence pour publier la mission ou obtenez-en une</p>
+    <input type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
+    <button id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
+    <button id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
+
+    <div id="licencesValides" class="hidden">
+        <p>Licences valides :</p>
+        <ul>
+            <li>9263xkel7452plzm8551</li>
+            <li>6621xkel7452plzm8852</li>
+            <li>8261xkel7452plzm1122</li>
+            <li>7733xkel7452plzm9621</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function publierAvecLicence() {
+        var licenceCode = document.getElementById('licenceCode').value;
+        var licencesValides = ['9263xkel7452plzm8551', '6621xkel7452plzm8852', '8261xkel7452plzm1122', '7733xkel7452plzm9621'];
+        var publierBtn = document.getElementById('publierBtn');
+
+        if (licencesValides.includes(licenceCode)) {
+            window.location.href = '/publier-mission/paiement/confirmation';
+        } else {
+            publierBtn.classList.add('shake');
+            setTimeout(function () {
+                publierBtn.classList.remove('shake');
+            }, 500);
+        }
+    }
+
+    function acheterLicence() {
+        window.location.href = '/souscription-licence-client';
+    }
+</script>
+
+</body>
+</html>

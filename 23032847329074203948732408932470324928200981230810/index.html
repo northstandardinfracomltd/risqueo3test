@@ -1,6 +1,10 @@
+<p class="balisagedown-til">Partagez votre intérêt pour la mission</p>
+
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbz8_dO_g_tBY7f1fGfO_S2md69TmwvbtkX5120VokRS7NehpTXnW98OHqZ_IS37zAE_4Q/exec">
   <input name="Email" type="email" placeholder="Email" required>
   <input name="Name" type="text" placeholder="Name" required>
+  <input name="Entreprise" type="text" placeholder="Entreprise" required>
+    <input name="Commentaire" type="text" placeholder="Commentaire" required>
   <button type="submit">Send</button>
   
   <script type = "text/javascript" >
@@ -14,7 +18,7 @@
                 method: 'POST',
                 body: data,
             }).then(() => {
-                window.location.replace('https://www.YOUR_WEBSITE.com/thanks')
+                window.location.replace('/23032847329074203948732408932470324928200981230810/confirmation')
             })
         })
     }); 
