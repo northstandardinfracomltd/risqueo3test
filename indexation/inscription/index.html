@@ -43,14 +43,115 @@
 <input name="adresseprincipale" type="text" placeholder="Adresse principale" required>
 
 
-<select name="color" id="color" required>
-<option value="" disabled selected hidden>Localisation</option>
-<option value="autre">Autre</option>
-<option value="grenoble">Ne pas mentionner</option>
-
+<select name="qualiopi" id="qualiopi" required>
+<option value="" disabled selected hidden>Certification qualiopi</option>
+<option value="autre">Certifié Qualiopi</option>
+<option value="grenoble">Non certifié Qualiopi</option>
 </select>
   
-  <button type="submit">Send</button>
+  
+  <select name="qualiopi" id="iso9001" required>
+<option value="" disabled selected hidden>ISO 9001</option>
+<option value="autre">Certifié ISO 9001</option>
+<option value="grenoble">Non certifié ISO 9001</option>
+</select>
+  
+  
+    <select name="qualiopi" id="iso14001" required>
+<option value="" disabled selected hidden>ISO 14001</option>
+<option value="autre">Certifié ISO 14001</option>
+<option value="grenoble">Non certifié ISO 14001</option>
+</select>
+  
+  
+      <select name="qualiopi" id="iso45001" required>
+<option value="" disabled selected hidden>ISO 45001</option>
+<option value="autre">Certifié ISO 45001</option>
+<option value="grenoble">Non certifié ISO 45001</option>
+</select>
+  
+  
+        <select name="qualiopi" id="iso50001" required>
+<option value="" disabled selected hidden>ISO 50001</option>
+<option value="autre">Certifié ISO 50001</option>
+<option value="grenoble">Non certifié ISO 50001</option>
+</select>
+  
+  
+  
+          <select name="qualiopi" id="ECOVADIS" required>
+<option value="" disabled selected hidden>Certification ECOVADIS</option>
+<option value="autre">Certifié ECOVADIS</option>
+<option value="grenoble">Non certifié ECOVADIS</option>
+</select>
+  
+  
+  
+            <select name="APSAD0" id="APSAD0" required>
+<option value="" disabled selected hidden>Certification APSAD Désenfumage</option>
+<option value="autre">Certifié APSAD Désenfumage</option>
+<option value="grenoble">Non certifié APSAD Désenfumage</option>
+</select>
+  
+  
+    
+            <select name="APSAD1" id="APSAD1" required>
+<option value="" disabled selected hidden>Certification APSAD Compartimentage</option>
+<option value="autre">Certifié APSAD Compartimentage</option>
+<option value="grenoble">Non certifié APSAD Compartimentage</option>
+</select>
+  
+  
+  
+      
+            <select name="APSAD2" id="APSAD2" required>
+<option value="" disabled selected hidden>Certification APSAD Extincteurs</option>
+<option value="autre">Certifié APSAD Extincteurs</option>
+<option value="grenoble">Non certifié APSAD Extincteurs</option>
+</select>
+  
+  
+  
+  
+  
+            <select name="GEFPI" id="GEFPI" required>
+<option value="" disabled selected hidden>Certification GEFPI</option>
+<option value="autre">Certifié GEFPI</option>
+<option value="grenoble">Non certifié GEFPI</option>
+</select>
+  
+  
+  
+            <select name="bcorporation" id="bcorporation" required>
+<option value="" disabled selected hidden>Certification B Corporation</option>
+<option value="autre">Certifié B Corporation</option>
+<option value="grenoble">Non certifié B Corporation</option>
+</select>
+  
+  
+    
+            <select name="effectif" id="effectif" required>
+<option value="" disabled selected hidden>Nombre d'employés</option>
+<option value="autre">1 à 5</option>
+<option value="autre">5 à 20</option>
+      <option value="autre">20 à 60</option>
+      <option value="autre">60 et+</option>
+              </select>
+              
+              
+                  
+            <select name="assu" id="assu" required>
+<option value="" disabled selected hidden>Assurance Responsabilité Professionnelle</option>
+<option value="autre">Assurance Responsabilité Professionnelle</option>
+<option value="autre">Assurance Responsabilité Professionnelle</option>
+              </select>
+  
+
+  
+  
+  <button type="submit">Confirmer</button>
+  
+  <p class="balisagedown-til">Le frais annuel est de 99£</p>
   
   <script type = "text/javascript" >
     window.addEventListener("DOMContentLoaded", function() {
@@ -63,7 +164,7 @@
                 method: 'POST',
                 body: data,
             }).then(() => {
-                window.location.replace('/publier-mission/paiement')
+                window.location.replace('/stripe')
             })
         })
     }); 
