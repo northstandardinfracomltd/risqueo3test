@@ -379,183 +379,214 @@ margin-top: 10px;
 
 </style>
   
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #f4f6fa;
+        border-bottom: 1px solid #dbe0eb;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        padding-left: 17px !important;
+        padding-right: 17px !important;
+      }
 
+      .logo-container img {
+        max-height: 50px;
+        margin-bottom: -5px;
+      }
 
-.navbar {
-  overflow: hidden;
-  background-color: #f4f6fa;
-  border-bottom: 1px solid #dbe0eb;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
+      @media only screen and (min-width: 301px) and (max-width: 768px) {
+        .logo-container {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+      }
 
-.logo-container img {
-  max-height: 50px;
-}
+      .logo-container:hover {
+        transform: scale(1.05);
+        transition-duration: 0.2s;
+        cursor: pointer !important;
+      }
 
-.links {
-  display: flex;
-  align-items: center;
-}
+      .links {
+        display: flex;
+        align-items: center;
+      }
 
-.links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
+      .links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
 
-@media only screen and (max-width: 600px) {
-  .navbar {
-    justify-content: center;
-    text-align: center;
-  }
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          justify-content: center;
+          text-align: center;
+        }
 
-  .links {
-    display: none;
-  }
-}
+        .links {
+          display: none;
+        }
+      }
 
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .links a:not(:last-child) {
-    display: none;
-  }
-}
+      @media only screen and (min-width: 301px) and (max-width: 768px) {
+        .links {
+          display: none;
+        }
+      }
 
-@media only screen and (min-width: 769px) {
-  .links {
-    margin-left: auto;
-  }
-}
+      @media only screen and (min-width: 769px) {
+        .links {
+          margin-left: auto;
+        }
+      }
 
-    
-    .custom-button {
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #3498db; /* Button background color */
-    color: #fff; /* Button text color */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
+      .custom-button {
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
 
-/* Hover effect for the button */
-.custom-button:hover {
-    background-color: #2980b9; /* Darker background color on hover */
-}
-    
-    
-    .iso {
-      display: grid;
-      grid-template-columns: 50% 50%;
-          width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-      padding-top: 55px;
-      padding-bottom: 55px;
-    }
-    
-        .plug {
-      width: 100%;
-          opacity: 0.2;
-          
-    }
-    
-    
-            .link1 {
-background-color: #007c8c;
-    color: #fff;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    font-family: "proxima nova semibold" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-    border-radius: 12px !important;
-    margin: 0 5px !important;
-    text-decoration: none !important;   
-    }
-    
-    
-        
-            .link2 {
-background-color: #2a5bd7;
-    color: #fff;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    font-family: "proxima nova semibold" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-    border-radius: 12px !important;
-     margin: 0 5px !important;
-    text-decoration: none !important;   
-    }
-    
-    
-        
-            .link3 {
-background-color: #c9366f;
-    color: #fff;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    font-family: "proxima nova semibold" !important;
-    font-weight: 100;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-    border-radius: 12px !important;
-     margin: 0 5px !important;
-    text-decoration: none !important;   
-    }
-    
-    
-    
-    .link3:hover {
-    box-shadow: 0 0 0px 4px #008eff38;
-    cursor: pointer !important;
-}
-    
-        .link2:hover {
-    box-shadow: 0 0 0px 4px #008eff38;
-    cursor: pointer !important;
-}
-    
-        .link1:hover {
-    box-shadow: 0 0 0px 4px #008eff38;
-    cursor: pointer !important;
-}
-  </style>
-  <title>Sticky NavBar</title>
-</head>
-<body>
-  <div class="navbar">
-    <div class="logo-container">
-      <img src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883" alt="Logo">
+      .custom-button:hover {
+        background-color: #2980b9;
+      }
+
+      .iso {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
+
+      .plug {
+        width: 100%;
+        opacity: 0.2;
+      }
+
+      .link1 {
+        background-color: #007c8c;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        margin: 0 5px !important;
+        text-decoration: none !important;
+      }
+
+      .link2 {
+        background-color: #2a5bd7;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        margin: 0 5px !important;
+        text-decoration: none !important;
+      }
+
+      .link3 {
+        background-color: #c9366f;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        margin: 0 5px !important;
+        text-decoration: none !important;
+      }
+
+      .link3:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+
+      .link2:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+
+      .link1:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+
+      .solevita {
+        margin-right: 10px !important;
+      }
+
+      .lazyload {
+        transition: filter 0s ease;
+      }
+
+      .blur {
+        filter: blur(4px);
+        transition: filter 0s ease;
+      }
+    </style>
+
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="/" class="linkineos lazyload">
+          <img
+            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <div class="links">
+        <a class="link1 solevita lazyload" href="/missions"
+          >Consulter le registre</a
+        >
+        <a class="link3 lazyload" href="/indexation"
+          >Participer à l'indexation</a
+        >
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var lazyElements = document.querySelectorAll(".lazyload");
+
+          lazyElements.forEach(function (element) {
+            element.classList.add("blur");
+          });
+
+          setTimeout(function () {
+            lazyElements.forEach(function (element) {
+              element.classList.remove("blur");
+            });
+          }, 2000);
+        });
+      </script>
     </div>
-    <div class="links">
-<a class="link2" href="/missions">Missions ouvertes</a>
-<a class="link1" href="/ouiprev">Indexation et contrôle</a>
-       <a class="link3" href="#">Assistance</a>
-    </div>
-  </div>
-</body>
-</html>
-
   
 
 
@@ -910,8 +941,7 @@ button {
     border-radius: 14px;
             display: flex;
             justify-content: space-between;
-              grid-template-columns: 1fr 1fr;
-          display: grid;
+          display: block;
               width: 100%;
     max-width: 1100px;
     margin-left: auto;
@@ -1210,7 +1240,14 @@ display: grid;
       
 </div>
 
-    <div class="column">
+  
+  
+  
+
+</footer>
+  
+  
+      <div class="column">
       
 <div class="balisagedown">
 <div class="balisagedown-col">
@@ -1225,74 +1262,8 @@ display: grid;
       
       
     </div>
+
   
-  
-  
-
-</footer>
-  
-
-  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
-  
-
-<div class="divpopup-overlay" id="popupOverlay">
-    <div class="divpopup" id="popupContent">
-      
-        <h2>Titre du Popup</h2>
-        <p>Sous-titre du Popup</p>
-      
-      
-<div class="accordionC">
-    <div class="questionC">Question 1</div>
-    <div class="answerC">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    </div>
-
-    <div class="questionC">Question 2</div>
-    <div class="answerC">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    </div>
-
-    <div class="questionC">Question 3</div>
-    <div class="answerC">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    </div>
-</div>
-
-      
-             <button class="closepopup" onclick="closePopup()">Fermer</button>
-
-      
-      
-<script>
-    var questions = document.querySelectorAll('.questionC');
-    
-    questions.forEach(function(question) {
-        question.addEventListener('click', function() {
-            var answer = this.nextElementSibling;
-
-            // Fermer toutes les réponses
-            questions.forEach(function(q) {
-                var otherAnswer = q.nextElementSibling;
-                if (q !== question && otherAnswer.style.display === 'block') {
-                    otherAnswer.style.display = 'none';
-                }
-            });
-
-            // Toggle pour ouvrir/fermer la réponse actuelle
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        });
-    });
-</script>
-      
-      
-      
-    </div>
-</div>
 
 <script>
     function openPopup() {
@@ -1472,17 +1443,77 @@ a:-webkit-any-link {
 
 
 
-<div class="sticky-cta-bar"  id="maDiv">
-    <div class="cta-text">
-  
-     <div class="titreinfoable">À propos</div>
-<div class="sous-titreinfoable">Moteur de recherche et considéré par ses utilisateurs comme référentiel institutionnel le plus dense et populaire pour trouver des fournisseurs et formateurs en <a href="https://google.com/">prévention</a> et sécurité qualifiés et labelisés OuiPrev à proximité.</div>
-   
-  
-  </div>
-  <button class="fermerinfoable" onclick="masquerDiv()">Fermer l'annonce</button>
-</div>
+    
+    
+        <div class="dividerz"><br /></div>
 
+    <div class="grid-containerineos">
+      <div class="links-containerineos lazyload">
+        <a href="/" class="linkineos">© 2024 Risqueo</a>
+        <a href="/accord-utilisation" class="linkineos">Accord d'utilisation</a>
+        <a href="/confidentialite" class="linkineos">Confidentialité</a>
+        <a href="/support" class="linkineos">Ouvrir un ticket d'assistance</a>
+      </div>
+    </div>
+    
+    <style>
+    
+      
+            @media only screen and (min-width: 301px) and (max-width: 768px) {
+        .links-containerineos {
+      display: block !important;
+          line-height: 30px !important;
+        }
+      }
+      
+      
+      .linkineos {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #adb5ca;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16px;
+        transition-duration: 0s;
+        cursor: pointer; 
+      }
+
+      .linkineos:hover {
+        text-decoration: none;
+        color: #2a5bd7;
+        transition-duration: 0s;
+        cursor: pointer; 
+      }
+      
+        .dividerz {
+        border-top: 1px solid #dbe0eb;
+          margin-top: 100px;
+      }
+    
+            .grid-containerineos {
+        display: grid;
+        gap: 20px;
+        align-items: center;
+
+        width: 100%;
+        max-width: 1030px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+              margin-bottom: 40px;
+      }
+
+      .links-containerineos {
+        grid-column: 1 / 2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
 
   
 </body>
