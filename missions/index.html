@@ -191,7 +191,7 @@
       </div>
       <div class="links">
         <a class="link1 solevita lazyload" href="/missions"
-          >Parcourir les fournisseurs</a
+          >Consulter le registre</a
         >
         <a class="link3 lazyload" href="/indexation"
           >Participer à l'indexation</a
@@ -242,8 +242,34 @@
         text-decoration: none !important;
         margin-top: 12px;
         margin-bottom: 26px;
-        width: 130px;
+        width: 120px;
+            position: relative;
+    overflow: hidden;
       }
+      
+      
+      .search-button:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
 
       .search-button:hover {
         box-shadow: 0 0 0px 4px #008eff38;
@@ -702,9 +728,9 @@
             setTimeout(function () {
               currentPlaceholder = (currentPlaceholder + 1) % placeholders.length;
               updatePlaceholder();
-            }, 510); // Ajoutez un délai avant de passer au prochain placeholder
+            }, 1200); // Ajoutez un délai avant de passer au prochain placeholder
           }
-        }, index * 130); // Ajustez la vitesse de typing en modifiant ce nombre
+        }, index * 120); // Ajustez la vitesse de typing en modifiant ce nombre
       })(i, currentText);
     }
   }
@@ -811,7 +837,7 @@
         <option value="ajaccio">Ajaccio, 20000</option>
       </select>
 
-      <button class="filtermania lazyload" id="toggleButton">Tous les filtres</button>
+      <button class="filtermania lazyload" id="toggleButton">Filtres suivants</button>
 
       <script>
         var toggleButton = document.getElementById("toggleButton");
@@ -839,7 +865,7 @@
 
     <div class="bugsolver">
       <button class="bugsolverbtn lazyload" onclick="actualiserPage()">
-        Actualiser les missions
+        Actualiser
       </button>
     </div>
     <script>
