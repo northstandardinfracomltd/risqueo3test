@@ -1,0 +1,71 @@
+
+<style>
+
+  /* CRÉER NOUVEAU SPREADSHEET EN RÉUTILISANT TEMPLATE */
+
+</style>
+
+
+<p class="balisagedown-til">Inscription à l'indexation</p>
+
+<p class="balisagedown-til">Paragraphe, nous alons contrôler pour ....</p>
+
+<form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbz8_dO_g_tBY7f1fGfO_S2md69TmwvbtkX5120VokRS7NehpTXnW98OHqZ_IS37zAE_4Q/exec">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <select name="typestructure" id="typejob" required>
+<option value="" disabled selected hidden>Type de structure</option>
+<option value="autre">ONF</option>
+<option value="grenoble">Mainteneur/Installateur</option>
+<option value="grenoble">Indépendant</option>
+<option value="grenoble">Autre</option>
+</select>
+  
+  
+  
+<input name="raisonsociale" type="text" placeholder="Raison sociale" required>
+<input name="debutactivite" type="text" placeholder="Date début d'activité" required>
+<input name="formejuridique" type="text" placeholder="Forme juridique (Ex : sarl)" required>
+<input name="siren" type="text" placeholder="Numéro de SIREN" required>
+<input name="siren" type="text" placeholder="Numéro de TVA intracommunautaire" required>
+
+  
+  <input name="responsable" type="text" placeholder="Nom et prénom" required>
+<input name="email" type="text" placeholder="Email de contact" required>
+<input name="telefon" type="text" placeholder="Téléphone de contact" required>
+<input name="adresseprincipale" type="text" placeholder="Adresse principale" required>
+
+
+<select name="color" id="color" required>
+<option value="" disabled selected hidden>Localisation</option>
+<option value="autre">Autre</option>
+<option value="grenoble">Ne pas mentionner</option>
+
+</select>
+  
+  <button type="submit">Send</button>
+  
+  <script type = "text/javascript" >
+    window.addEventListener("DOMContentLoaded", function() {
+        const yourForm = document.getElementById('FORM_ID');
+        yourForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(yourForm);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                window.location.replace('/publier-mission/paiement')
+            })
+        })
+    }); 
+</script>
+</form>
