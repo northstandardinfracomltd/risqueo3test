@@ -1,9 +1,228 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remerciements pour votre commande</title>
+  
+  
+    
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #f4f6fa;
+        border-bottom: 1px solid #dbe0eb;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        padding-left: 17px !important;
+        padding-right: 17px !important;
+      }
+
+      .logo-container img {
+        max-height: 50px;
+        margin-bottom: -5px;
+      }
+
+      @media only screen and (min-width: 301px) and (max-width: 768px) {
+        .logo-container {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+      }
+
+      .logo-container:hover {
+        transform: scale(1.05);
+        transition-duration: 0.2s;
+        cursor: pointer !important;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+      }
+
+      .links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          justify-content: center;
+          text-align: center;
+        }
+
+        .links {
+          display: none;
+        }
+      }
+
+      @media only screen and (min-width: 301px) and (max-width: 768px) {
+        .links {
+          display: none;
+        }
+      }
+
+      @media only screen and (min-width: 769px) {
+        .links {
+          margin-left: auto;
+        }
+      }
+
+      .custom-button {
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .custom-button:hover {
+        background-color: #2980b9; 
+      }
+
+      .iso {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
+
+      .plug {
+        width: 100%;
+        opacity: 0.2;
+      }
+
+      .link1 {
+        background-color: #007c8c;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        margin: 0 5px !important;
+        text-decoration: none !important;
+      }
+
+      .link2 {
+        background-color: #2a5bd7;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        margin: 0 5px !important;
+        text-decoration: none !important;
+      }
+
+      .link3 {
+        background-color: #c9366f;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        margin: 0 5px !important;
+        text-decoration: none !important;
+      }
+
+      .link3:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+
+      .link2:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+
+      .link1:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+
+      .solevita {
+        margin-right: 10px !important;
+      }
+
+      .lazyload {
+        transition: filter 0s ease; 
+      }
+
+      .blur {
+        filter: blur(
+          4px
+        ); 
+        transition: filter 0s ease;
+      }
+    </style>
+
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="/" class="linkineos lazyload">
+          <img
+            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <div class="links">
+        <a class="link1 solevita lazyload" href="/missions"
+          >Répondre aux missions</a
+        >
+        <a class="link3 lazyload" href="/indexation"
+          >Participer à l'indexation</a
+        >
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        
+          var lazyElements = document.querySelectorAll(".lazyload");
+
+          
+          lazyElements.forEach(function (element) {
+            element.classList.add("blur");
+          });
+
+         
+          setTimeout(function () {
+            lazyElements.forEach(function (element) {
+              element.classList.remove("blur");
+            });
+          }, 3500);
+        });
+      </script>
+    </div>
+    
+  
+  
+  
     <style>
 
         .container {
