@@ -1,108 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page avec Gradient</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #ccc; /* Fond gris */
-        }
-
-        .content {
-            text-align: center;
-            color: #000; /* Couleur du texte */
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        input {
-            padding: 10px;
-            margin-bottom: 10px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1.2em;
-            background-color: #fff; /* Fond blanc pour le bouton */
-            color: #000; /* Couleur du texte du bouton */
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            /* Désactive le bouton par défaut */
-            pointer-events: none;
-            opacity: 0.5;
-        }
-
-        /* Active le bouton si le radio check est sélectionné */
-        input[type="radio"]:checked + button {
-            pointer-events: auto;
-            opacity: 1;
-        }
-
-        /* Style du radio check */
-        input[type="radio"] {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #000;
-            border-radius: 50%;
-            outline: none;
-            margin-right: 10px;
-            position: relative;
-            top: 5px;
-        }
-
-        input[type="radio"]:checked {
-            background-color: #000;
-        }
-
-        input[type="radio"]:checked::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <div class="content">
-        <h1>Titre</h1>
-        <h2>Formulaire script de l'emploi</h2>
-        <input type="email" placeholder="Entrez votre e-mail">
-        <input type="text" placeholder="Entrez le nom de l'entreprise">
-        <input type="radio" id="conditions" name="acceptConditions" required>
-        <label for="conditions">J'accepte les <a href="#">conditions générales</a></label>
-        <button href="#">S'abonner pour 99</button>
-      <br><br><br>
-      Déjà client?<br><br>
-          <a href="/upgrade-as-client" target="_blank" class="btnsponso">Se connecter</a>
-
-    </div>
+<form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbz8_dO_g_tBY7f1fGfO_S2md69TmwvbtkX5120VokRS7NehpTXnW98OHqZ_IS37zAE_4Q/exec">
+  <input name="Email" type="email" placeholder="Email" required>
+  <input name="Name" type="text" placeholder="Name" required>
   
-</body>
-</html>
+  
+  
+  
+  
+<input name="titlejob" type="text" placeholder="Titre de la mission" required>
+<input name="descriptionjob" type="text" placeholder="Description de la mission" required>
+<input name="descriptionjob" type="text" placeholder="Da" required>
+  
+<select name="typejob" id="typejob" required>
+<option value="" disabled selected hidden>Type de mission</option>
+<option value="autre">Appel d'offre</option>
+<option value="grenoble">Sous-traitant</option>
+<option value="grenoble">CDD</option>
+<option value="grenoble">Autre</option>
+</select>
+  
+<select name="color" id="color" required>
+<option value="" disabled selected hidden>Localisation</option>
+<option value="autre">Autre</option>
+<option value="grenoble">Ne pas mentionner</option>
+<option value="grenoble">Grenoble, 38000</option>
+<option value="toulon">Toulon, 83000</option>
+<option value="reims">Reims, 51100</option>
+<option value="rennes">Rennes, 35000</option>
+<option value="dijon">Dijon, 21000</option>
+<option value="angers">Angers, 49000</option>
+<option value="nîmes">Nîmes, 30000</option>
+<option value="villeurbanne">Villeurbanne, 69100</option>
+<option value="mans">Le Mans, 72000</option>
+<option value="brest">Brest, 29200</option>
+<option value="tours">Tours, 37000</option>
+<option value="amiens">Amiens, 80000</option>
+<option value="limoges">Limoges, 87000</option>
+<option value="annecy">Annecy, 74000</option>
+<option value="perpignan">Perpignan, 66000</option>
+<option value="metz">Metz, 57000</option>
+<option value="besançon">Besançon, 25000</option>
+<option value="caen">Caen, 14000</option>
+<option value="orleans">Orléans, 45000</option>
+<option value="mulhouse">Mulhouse, 68100</option>
+<option value="rouen">Rouen, 76000</option>
+<option value="nancy">Nancy, 54000</option>
+<option value="argenteuil">Argenteuil, 95100</option>
+<option value="montreuil">Montreuil, 93100</option>
+<option value="roubaix">Roubaix, 59100</option>
+<option value="avignon">Avignon, 84000</option>
+<option value="tourcoing">Tourcoing, 59200</option>
+<option value="creteil">Créteil, 94000</option>
+<option value="poitiers">Poitiers, 86000</option>
+<option value="nanterre">Nanterre, 92000</option>
+<option value="versailles">Versailles, 78000</option>
+<option value="pau">Pau, 64000</option>
+<option value="bordeaux">Bordeaux, 33000</option>
+<option value="nantes">Nantes, 44000</option>
+<option value="laval">Laval, 53000</option>
+<option value="merignac">Mérignac, 33700</option>
+<option value="calais">Calais, 62100</option>
+<option value="strasbourg">Strasbourg, 67000</option>
+<option value="montpellier">Montpellier, 34000</option>
+<option value="toulouse">Toulouse, 31000</option>
+<option value="quimper">Quimper, 29000</option>
+<option value="ajaccio">Ajaccio, 20000</option>
+</select>
+  
+  <button type="submit">Send</button>
+  
+  <script type = "text/javascript" >
+    window.addEventListener("DOMContentLoaded", function() {
+        const yourForm = document.getElementById('FORM_ID');
+        yourForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(yourForm);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                window.location.replace('https://www.YOUR_WEBSITE.com/thanks')
+            })
+        })
+    }); 
+</script>
+</form>
