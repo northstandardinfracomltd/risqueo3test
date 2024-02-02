@@ -1,14 +1,20 @@
+
+<style>
+
+  /* CRÉER NOUVEAU SPREADSHEET EN RÉUTILISANT TEMPLATE */
+
+</style>
+
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbz8_dO_g_tBY7f1fGfO_S2md69TmwvbtkX5120VokRS7NehpTXnW98OHqZ_IS37zAE_4Q/exec">
-  <input name="Email" type="email" placeholder="Email" required>
-  <input name="Name" type="text" placeholder="Name" required>
-  
-  
   
   
   
 <input name="titlejob" type="text" placeholder="Titre de la mission" required>
 <input name="descriptionjob" type="text" placeholder="Description de la mission" required>
-<input name="descriptionjob" type="text" placeholder="Da" required>
+<input name="datejob" type="text" placeholder="Date, créneau, (...)" required>
+<input name="contactjob" type="text" placeholder="Mail et téléphone" required>
+<input name="entreprisejob" type="text" placeholder="Entreprise à mentionner" required>
+
   
 <select name="typejob" id="typejob" required>
 <option value="" disabled selected hidden>Type de mission</option>
@@ -79,7 +85,7 @@
                 method: 'POST',
                 body: data,
             }).then(() => {
-                window.location.replace('https://www.YOUR_WEBSITE.com/thanks')
+                window.location.replace('/publier-mission/paiement')
             })
         })
     }); 
