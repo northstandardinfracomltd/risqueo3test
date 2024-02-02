@@ -73,10 +73,12 @@
 <body>
 
 <div id="licenceForm">
-  <p class="balisagedown-til">Utilisez votre licence pour publier la mission ou obtenez-en une</p>
+  <p class="balisagedown-til">Utilisez votre licence pour accéder à toutes les informations obtenez-en une</p>
     <input type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
-    <button id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
-    <button id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
+    <button id="publierBtn" onclick="publierAvecLicence()">Accéder</button><br>
+    <p class="balisagedown-til">ou</p>
+    <button id="acheterBtn" onclick="acheterLicence()">Acheter ma licence</button><br>
+  <p class="balisagedown-til">L'abonnement de la licence est de 99£/an</p>
 
     <div id="licencesValides" class="hidden">
         <p>Licences valides :</p>
@@ -106,7 +108,7 @@
     }
 
     function acheterLicence() {
-        window.location.href = '/souscription-licence-client';
+        window.location.href = '/stripe';
     }
 </script>
 
