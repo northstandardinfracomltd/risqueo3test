@@ -84,6 +84,21 @@
     padding-left: 9px;
 }
       
+      
+                  .filtertagtxt2 {
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+                    margin-top: 10px;
+    margin-bottom: 5px;
+    cursor: default;
+    text-align: center;
+    padding-left: 9px;
+}
+      
       .filtertagtxtmaster {
     color: #4c587c;
     font-family: "proxima nova bold" !important;
@@ -302,7 +317,7 @@
       
             
    .subfilebtn    {
-    background-color: #007c8c;
+    background-color: #007c8c !important;
     color: #fff;
     padding: 8px 15px;
     border: none;
@@ -320,6 +335,30 @@
 
       
       .subfilebtn:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
+      
+         .subfilebtn2    {
+    background-color: #c9366f !important;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 0px;
+     margin-top: 10px;
+     margin-bottom: -18px !important;
+    text-decoration: none !important;
+}
+
+      
+      .subfilebtn2:hover {
     box-shadow: 0 0 0px 4px #008eff38;
     cursor: pointer !important;
 }
@@ -347,23 +386,7 @@
             margin-bottom: 10px;
         }
 
-        #publierBtn, #acheterBtn {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
 
-        #publierBtn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-        }
-
-        #acheterBtn {
-            background-color: #2196F3;
-            color: white;
-            border: none;
-        }
 
         .hidden {
             display: none;
@@ -400,14 +423,22 @@
                <h1 class="filtertagtxtmaster">Facturation</h1>
           <p class="filtertagtxt">
             Utilisez votre licence pour publier la mission ou obtenez-en une
-            <a href="https://google.com/"
-              >demander une indexation et contrôle.</a
-            >
+           
           </p>
     <input class="f1" type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
     <button class="subfilebtn" id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
-    <button class="subfilebtn" id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
-
+        <br>    <p class="filtertagtxt2">
+            Ou
+           
+          </p>
+  
+  
+  <button class="subfilebtn2" id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
+ <p class="filtertagtxt2"><br>
+           Facturé 99£ par an<br>Publications illimités
+           
+          </p>
+ 
     <div id="licencesValides" class="hidden">
         <p>Licences valides :</p>
         <ul>
