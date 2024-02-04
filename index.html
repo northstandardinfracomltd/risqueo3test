@@ -1361,7 +1361,10 @@
           
           
         </div>
+          <button id="boutonMontrerPlus">Montrer plus</button>
       </div>
+      
+      
 
       <div class="column">
         <!-- Div principale avec classes sponso -->
@@ -1402,8 +1405,23 @@
       </div>
     </footer>
 
-    <div class="dividerz funky"><br /></div>
 
+        <style>
+        .dwayne {
+            display: none; /* Par défaut, la div est masquée */
+        }
+          
+    </style>
+    
+        <script>
+        document.getElementById('boutonMontrerPlus').addEventListener('click', function() {
+            var dwayneDiv = document.querySelector('.dwayne');
+            // Changez le style de la div pour la rendre visible
+            dwayneDiv.style.display = 'block';
+        });
+    </script>
+    <div class="dwayne">
+    
     <div class="balisagedown">
       <div class="balisagedown-col">
         <div class="plastico">
@@ -1468,7 +1486,7 @@
       </div>
     </div>
 
-
+    </div>
     
         <div class="dividerz"><br /></div>
 
@@ -1744,7 +1762,7 @@
       }
 
       .balisagedown {
-        grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
         display: grid;
         width: 100%;
         max-width: 1050px;
