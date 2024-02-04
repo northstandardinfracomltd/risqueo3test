@@ -192,6 +192,13 @@
         filter: blur(4px);
         transition: filter 0s ease;
       }
+      
+      
+      .logo-container img {
+    max-height: 85px;
+    margin-top: -17px;
+    margin-bottom: -30px;
+}
     </style>
 
     <div class="navbar">
@@ -204,8 +211,8 @@
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
-          >Consulter le registre</a
+        <a class="link1 science solevita lazyload" href="/missions"
+          >Parcourir les prestataires</a
         >
         <a class="link3 lazyload" href="/indexation"
           >Participer à l'indexation</a
@@ -332,10 +339,15 @@
         src: url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
       }
       @font-face {
-        font-family: proxima nova bold;
+        font-family: ouiprevxxx;
         src: url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
       }
+      @font-face {
+        font-family: proxima nova extrabold;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
+      }
 
+      
       .search-bar:hover {
         box-shadow: 0 0 0px 4px #008eff38;
         cursor: text !important;
@@ -410,7 +422,7 @@
         background-color: #eef2ff;
         border-radius: 55px;
         color: #4c587c;
-        font-family: "proxima nova semibold" !important;
+        font-family: "proxima nova" !important;
         font-weight: 100;
         letter-spacing: -0.2px;
         font-size: 16px;
@@ -700,10 +712,69 @@
         margin-right: 5px;
         color: #4c587c61 !important;
       }
+      
+      
+      
+            
+                  .backz {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2a5bd7;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    background: white;
+    border: 0px solid white;
+    text-align: left;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px !important;
+        margin-bottom: 15px;
+}
+      
+      
+            .backz:hover {
+   text-decoration: underline;
+}
+      
+      
+      
+            
+            .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
     </style>
-  </head>
   <body>
     <div class="search-container">
+      
+                 <a href="/publier-mission" class="backz lazyload">Retour</a>
+
+      
+      
       <input
         type="text"
         class="search-bar lazyload"
