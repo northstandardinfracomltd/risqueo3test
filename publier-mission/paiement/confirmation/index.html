@@ -230,6 +230,33 @@
       
       
       
+            .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
+      
     </style>
 
     <div class="navbar">
@@ -242,7 +269,7 @@
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
+        <a class="link1 solevita lazyload science" href="/missions"
           >Répondre aux missions</a
         >
         <a class="link3 lazyload" href="/indexation"
@@ -282,30 +309,45 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .thank-you-icon {
-            font-size: 50px;
-            color: #28a745;
-        }
+      
+      
+      .subfilebtn {
+    background-color: #007c8c !important;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-right: auto;
+    text-decoration: none !important;
+}
+      
+      
+      .subfilebtn:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
     </style>
 </head>
 <body>
 
    <div class="formblock">
-    <h1 class="filtertagtxt">Mission en cours de modération</h1>
-    <p class="filtertagtxtmaster">Nous avons bien reçu votre commande et nous la traiterons dans les plus brefs délais.</p>
-    <p>Un email de confirmation vous sera envoyé avec les détails de votre commande.</p>
-
-      <a href="/" class="btnsponso">Retour à la plateforme</a>
+     
+                    <h1 class="filtertagtxtmaster lazyload">Modération en cours</h1>
+          <p class="filtertagtxt lazyload">
+           Un email de confirmation vous sera envoyé avec les détails de votre commande.
+           
+          </p>
+     
   
+      <a href="/" class="subfilebtn science lazyload">Retour à la recherche</a>
+  <br>  <br>
   </div>
   
   

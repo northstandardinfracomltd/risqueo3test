@@ -359,6 +359,38 @@
     -webkit-appearance: none; /* Chrome, Safari, Edge */
     appearance: none; /* Standard */
 }
+      
+      
+      
+      
+            .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
+      
+      
     </style>
 
     <div class="navbar">
@@ -371,7 +403,7 @@
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
+        <a class="link1 science solevita lazyload" href="/missions"
           >Répondre aux missions</a
         >
         <a class="link3 lazyload" href="/indexation"
@@ -408,8 +440,8 @@
 
  <div class="formblock">
    
-             <h1 class="filtertagtxtmaster">Publier une mission</h1>
-          <p class="filtertagtxt">
+             <h1 class="filtertagtxtmaster lazyload">Publier une mission</h1>
+          <p class="filtertagtxt lazyload">
             Idéal pour trouver à proximité un installateur ou mainteneur de
             défibrillateurs, extincteurs
             <a href="https://google.com/"
@@ -421,14 +453,14 @@
   
   
   
-<input class="f1" name="titlejob" type="text" placeholder="Titre de la mission" required>
-<textarea class="f2" name="descriptionjob" placeholder="Description de la mission" required></textarea>
-<input class="f1" name="datejob" type="text" placeholder="Date, créneau, (...)" required>
-<input class="f1" name="contactjob" type="text" placeholder="Mail et téléphone" required>
-<input class="f1" name="entreprisejob" type="text" placeholder="Entreprise à mentionner" required>
+<input class="f1 lazyload" name="titlejob" type="text" placeholder="Titre de la mission" required>
+<textarea class="f2 lazyload" name="descriptionjob" placeholder="Description de la mission" required></textarea>
+<input class="f1 lazyload" name="datejob" type="text" placeholder="Date, créneau, (...)" required>
+<input class="f1 lazyload" name="contactjob" type="text" placeholder="Mail et téléphone" required>
+<input class="f1 lazyload" name="entreprisejob" type="text" placeholder="Entreprise à mentionner" required>
 
   
-<select class="f3" name="typejob" id="typejob" required>
+<select class="f3 lazyload" name="typejob" id="typejob" required>
 <option value="" disabled selected hidden>Type de mission</option>
 <option value="autre">Appel d'offre</option>
 <option value="grenoble">Sous-traitant</option>
@@ -436,7 +468,7 @@
 <option value="grenoble">Autre</option>
 </select>
   
-<select  class="f3" name="color" id="color" required>
+<select  class="f3 lazyload" name="color" id="color" required>
 <option value="" disabled selected hidden>Localisation</option>
 <option value="autre">Autre</option>
 <option value="grenoble">Ne pas mentionner</option>
@@ -484,7 +516,7 @@
 <option value="ajaccio">Ajaccio, 20000</option>
 </select>
   
-  <button class= "subfilebtn" type="submit">Enregister</button>
+  <button class= "subfilebtn science lazyload" type="submit">Enregister</button>
   
   <script type = "text/javascript" >
     window.addEventListener("DOMContentLoaded", function() {

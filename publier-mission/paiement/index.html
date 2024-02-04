@@ -253,7 +253,7 @@
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
+        <a class="link1 science solevita lazyload" href="/missions"
           >Répondre aux missions</a
         >
         <a class="link3 lazyload" href="/indexation"
@@ -413,6 +413,37 @@
                 transform: translateX(10px);
             }
         }
+      
+      
+      
+      
+            .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
+      
     </style>
 </head>
 <body>
@@ -420,21 +451,21 @@
   
    <div class="formblock">
 <div id="licenceForm">
-               <h1 class="filtertagtxtmaster">Facturation</h1>
-          <p class="filtertagtxt">
+               <h1 class="filtertagtxtmaster lazyload">Facturation</h1>
+          <p class="filtertagtxt lazyload">
             Utilisez votre licence pour publier la mission ou obtenez-en une
            
           </p>
-    <input class="f1" type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
-    <button class="subfilebtn" id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
-        <br>    <p class="filtertagtxt2">
+    <input class="f1 lazyload" type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
+    <button class="subfilebtn science lazyload" id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
+        <br>    <p class="filtertagtxt2 lazyload">
             Ou
            
           </p>
   
   
-  <button class="subfilebtn2" id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
- <p class="filtertagtxt2"><br>
+  <button class="subfilebtn2 science lazyload" id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
+ <p class="filtertagtxt2 lazyload"><br>
            Facturé 99£ par an<br>Publications illimités
            
           </p>
