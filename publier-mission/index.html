@@ -190,6 +190,175 @@
         ); 
         transition: filter 0s ease;
       }
+      
+            .f1 {
+        margin-top: 10px;
+        padding: 14px 16px !important;
+        font-size: 16px;
+        text-align: left;
+        width: 100% !important;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #2b5bd7 !important;
+        cursor: text !important;
+              font-family: "proxima nova" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f1:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+     .f1::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+      
+      
+      
+           
+            .f2 {
+        margin-top: 10px;
+        padding: 14px 16px !important;
+        font-size: 16px;
+        text-align: left;
+        width: 100% !important;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #2b5bd7 !important;
+        cursor: text !important;
+              font-family: "proxima nova" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f2:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+     .f2::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+      
+
+      
+                 
+            .f3 {
+        margin-top: 10px;
+        padding: 7.5px 15px !important;
+        font-size: 16px;
+        text-align: left;
+        width: 100% !important;
+        background: transparent;
+        border: 0.08rem solid #007c8c !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #007c8c !important;
+        cursor: pointer !important;
+              font-family: "proxima nova semibold" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f3:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+     .f3::placeholder {
+        color: #007c8c;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+           font-weight: 100;
+    letter-spacing: -0.2px;
+      }
+      
+      
+   .subfilebtn    {
+    background-color: #007c8c;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 0px;
+     margin-top: 10px;
+     margin-bottom: -18px !important;
+    text-decoration: none !important;
+}
+
+      
+      .subfilebtn:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
+            input:focus,
+        textarea:focus,
+       select:focus,
+      button:focus {
+        outline: none !important;
+      }
+      
+      .filtertagtxt {
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
+      
+      .filtertagtxtmaster {
+    color: #4c587c;
+    font-family: "proxima nova bold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: -3px;
+    margin-top: 20px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
+      
+      select {
+    /* Utilisez la propriété "appearance" avec la valeur "none" */
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    appearance: none; /* Standard */
+}
     </style>
 
     <div class="navbar">
@@ -238,19 +407,28 @@
 
 
  <div class="formblock">
+   
+             <h1 class="filtertagtxtmaster">Publier une mission</h1>
+          <p class="filtertagtxt">
+            Idéal pour trouver à proximité un installateur ou mainteneur de
+            défibrillateurs, extincteurs
+            <a href="https://google.com/"
+              >demander une indexation et contrôle.</a
+            >
+          </p>
 
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbz8_dO_g_tBY7f1fGfO_S2md69TmwvbtkX5120VokRS7NehpTXnW98OHqZ_IS37zAE_4Q/exec">
   
   
   
-<input class="name="titlejob" type="text" placeholder="Titre de la mission" required>
-<input name="descriptionjob" type="text" placeholder="Description de la mission" required>
-<input name="datejob" type="text" placeholder="Date, créneau, (...)" required>
-<input name="contactjob" type="text" placeholder="Mail et téléphone" required>
-<input name="entreprisejob" type="text" placeholder="Entreprise à mentionner" required>
+<input class="f1" name="titlejob" type="text" placeholder="Titre de la mission" required>
+<textarea class="f2" name="descriptionjob" placeholder="Description de la mission" required></textarea>
+<input class="f1" name="datejob" type="text" placeholder="Date, créneau, (...)" required>
+<input class="f1" name="contactjob" type="text" placeholder="Mail et téléphone" required>
+<input class="f1" name="entreprisejob" type="text" placeholder="Entreprise à mentionner" required>
 
   
-<select name="typejob" id="typejob" required>
+<select class="f3" name="typejob" id="typejob" required>
 <option value="" disabled selected hidden>Type de mission</option>
 <option value="autre">Appel d'offre</option>
 <option value="grenoble">Sous-traitant</option>
@@ -258,7 +436,7 @@
 <option value="grenoble">Autre</option>
 </select>
   
-<select name="color" id="color" required>
+<select  class="f3" name="color" id="color" required>
 <option value="" disabled selected hidden>Localisation</option>
 <option value="autre">Autre</option>
 <option value="grenoble">Ne pas mentionner</option>
@@ -306,7 +484,7 @@
 <option value="ajaccio">Ajaccio, 20000</option>
 </select>
   
-  <button type="submit">Send</button>
+  <button class= "subfilebtn" type="submit">Enregister</button>
   
   <script type = "text/javascript" >
     window.addEventListener("DOMContentLoaded", function() {
@@ -401,7 +579,7 @@
         margin-right: auto;
       }
       
-            @font-face {
+      @font-face {
         font-family: proxima nova;
         src: url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
       }
@@ -410,12 +588,8 @@
         src: url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
       }
       @font-face {
-        font-family: ouiprev;
+        font-family: proxima nova bold;
         src: url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
-      }
-      @font-face {
-        font-family: proxima nova extrabold;
-        src: url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
       }
 
     </style>
