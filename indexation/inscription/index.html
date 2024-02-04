@@ -1113,7 +1113,22 @@ width: 90% !important;
           </p>
   
   
-
+  <script type = "text/javascript" >
+    window.addEventListener("DOMContentLoaded", function() {
+        const yourForm = document.getElementById('FORM_ID');
+        yourForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(yourForm);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                window.location.replace('https://buy.stripe.com/7sIg0z9UteLK7FmcNv')
+            })
+        })
+    }); 
+</script>
 </form>
   </div>
 
