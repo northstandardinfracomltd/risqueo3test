@@ -23,10 +23,26 @@
         padding-left: 17px !important;
         padding-right: 17px !important;
       }
+      
+      
+            .formblock {
+    width: 93%;
+        max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    border: 1px solid #dbe0eb;
+    background-color: #ffffff;
+    border-radius: 16px;
+    text-align: left;
+    padding: 25px;
+        display: block;
+      }
 
       .logo-container img {
-        max-height: 50px;
-        margin-bottom: -5px;
+    max-height: 85px;
+    margin-top: -15px;
+    margin-bottom: -30px;
       }
 
       @media only screen and (min-width: 301px) and (max-width: 768px) {
@@ -53,6 +69,34 @@
         text-decoration: none;
         margin: 0 15px;
       }
+      
+      
+            .filtertagtxt {
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
+      
+      .filtertagtxtmaster {
+    color: #4c587c;
+    font-family: "proxima nova bold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: -3px;
+    margin-top: 20px;
+    cursor: default;
+    text-align: left;
+    padding-left: 9px;
+}
 
       @media only screen and (max-width: 600px) {
         .navbar {
@@ -188,7 +232,7 @@
       <div class="logo-container">
         <a href="/" class="linkineos lazyload">
           <img
-            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883"
+            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/Risqueo.com.svg?v=1707003952801"
             alt="Logo"
           />
         </a>
@@ -223,6 +267,71 @@
     </div>
     
     <style>
+      
+                  .f1 {
+        margin-top: 10px;
+        padding: 14px 16px !important;
+        font-size: 16px;
+        text-align: left;
+        width: 100% !important;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #2b5bd7 !important;
+        cursor: text !important;
+              font-family: "proxima nova" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f1:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+     .f1::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+      
+            
+   .subfilebtn    {
+    background-color: #007c8c;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 0px;
+     margin-top: 10px;
+     margin-bottom: -18px !important;
+    text-decoration: none !important;
+}
+
+      
+      .subfilebtn:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
+            input:focus,
+        textarea:focus,
+       select:focus,
+      button:focus {
+        outline: none !important;
+      }
+      
+      
         body {
             background-color: #f4f6fa;
             margin: 0;
@@ -285,11 +394,19 @@
 </head>
 <body>
 
+  
+   <div class="formblock">
 <div id="licenceForm">
-  <p class="balisagedown-til">Utilisez votre licence pour publier la mission ou obtenez-en une</p>
-    <input type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
-    <button id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
-    <button id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
+               <h1 class="filtertagtxtmaster">Facturation</h1>
+          <p class="filtertagtxt">
+            Utilisez votre licence pour publier la mission ou obtenez-en une
+            <a href="https://google.com/"
+              >demander une indexation et contrôle.</a
+            >
+          </p>
+    <input class="f1" type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
+    <button class="subfilebtn" id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
+    <button class="subfilebtn" id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
 
     <div id="licencesValides" class="hidden">
         <p>Licences valides :</p>
@@ -301,7 +418,7 @@
         </ul>
     </div>
 </div>
-
+</div>
 <script>
     function publierAvecLicence() {
         var licenceCode = document.getElementById('licenceCode').value;
@@ -394,7 +511,8 @@
         margin-right: auto;
       }
       
-            @font-face {
+      
+      @font-face {
         font-family: proxima nova;
         src: url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
       }
@@ -410,7 +528,6 @@
         font-family: proxima nova extrabold;
         src: url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
       }
-
     </style>
 </body>
 </html>
