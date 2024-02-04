@@ -1245,12 +1245,7 @@
             >
           </p>
 
-          <script>
-            function masquerDiv() {
-              var div = document.getElementById("maDiv");
-              div.style.display = "none";
-            }
-          </script>
+
 
           <div class="tag-list">
             <div class="tag" onclick="filterByTag(this, 'Défibrillation')">
@@ -1532,7 +1527,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 30px;
-              margin-bottom: 40px;
+              margin-bottom: 0px;
       }
 
       .links-containerineos {
@@ -1719,51 +1714,19 @@
         padding-left: 9px;
       }
 
-      .dividerz {
-        border-top: 1px solid #dbe0eb;
-      }
 
       .funky {
         margin-top: 40px;
       }
 
-      .grid-containerineos {
-        display: grid;
-        gap: 20px;
-        align-items: center;
 
-        width: 100%;
-        max-width: 1030px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-      }
-
-      .links-containerineos {
-        grid-column: 1 / 2;
-        display: flex;
-        align-items: center;
-      }
 
       .contact-buttonineos {
         grid-column: 2 / 3;
         text-align: right;
       }
 
-      .linkineos {
-        margin-right: 20px;
-        text-decoration: none;
-        color: #2a5bd7;
-        font-family: "proxima nova" !important;
-        font-weight: 100;
-        letter-spacing: -0.2px;
-        line-height: 28px;
-        font-size: 16px;
-      }
 
-      .linkineos:hover {
-        text-decoration: underline;
-      }
 
       .buttonineos {
         padding: 10px 20px;
@@ -1950,7 +1913,7 @@
 
     <div class="sticky-cta-bar" id="maDiv">
       <div class="cta-text">
-        <div class="titreinfoable">Le saviez-vous</div>
+        <div class="titreinfoable">Cookies</div>
         <div class="sous-titreinfoable">
           Moteur de recherche et considéré par ses utilisateurs comme
           référentiel institutionnel le plus dense et populaire pour trouver des
@@ -1960,8 +1923,33 @@
         </div>
       </div>
       <button class="fermerinfoable" onclick="masquerDiv()">
-        Fermer l'annonce
+        Accepter
       </button>
+      
+  <script>
+    function masquerDiv() {
+      var div = document.getElementById("maDiv");
+      div.style.display = "none";
+
+      // Enregistrez l'information dans un cookie qui expire dans 1 jour
+      var dateExpiration = new Date();
+      dateExpiration.setTime(dateExpiration.getTime() + (1 * 24 * 60 * 60 * 1000)); // 1 jour en millisecondes
+      document.cookie = "annonceMasquee=true; expires=" + dateExpiration.toUTCString() + "; path=/";
+    }
+
+    // Vérifiez si le cookie existe au chargement de la page
+    window.onload = function () {
+      var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)annonceMasquee\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
+      if (cookieValue === "true") {
+        // Si le cookie existe, masquez la div
+        var div = document.getElementById("maDiv");
+        div.style.display = "none";
+      }
+    };
+  </script>
+      
+      
     </div>
   </body>
 </html>
