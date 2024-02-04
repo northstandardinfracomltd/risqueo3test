@@ -357,7 +357,7 @@
       
             .f1 {
                   width: 93% !important;
-    max-width: 300px !important;
+    max-width: 240px !important;
         margin-top: 10px;
         padding: 14px 16px !important;
         font-size: 16px;
@@ -390,6 +390,74 @@
       
       
       
+      
+                  .f1x {
+                  width: 93% !important;
+    max-width: 280px !important;
+        margin-top: 10px;
+        padding: 14px 16px !important;
+        font-size: 16px;
+        text-align: left;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #4c587c !important;
+        cursor: text !important;
+              font-family: "proxima nova" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f1x:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+     .f1x::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+      
+      
+      
+                        .f1xx {
+                  width: 93% !important;
+    max-width: 330px !important;
+        margin-top: 10px;
+        padding: 14px 16px !important;
+        font-size: 16px;
+        text-align: left;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #4c587c !important;
+        cursor: text !important;
+              font-family: "proxima nova" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f1xx:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+     .f1xx::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
       
       
             
@@ -544,12 +612,11 @@
                  
             .f3 {
 width: 90% !important;
-    max-width: 170px !important;
+    max-width: 220px !important;
         margin-top: 10px;
         padding: 7.5px 15px !important;
         font-size: 16px;
         text-align: left;
-        width: 100% !important;
         background: transparent;
         border: 0.08rem solid #007c8c !important;
         border-radius: 12px !important;
@@ -578,6 +645,42 @@ width: 90% !important;
     letter-spacing: -0.2px;
       }
       
+      
+      
+                  .f3x {
+width: 90% !important;
+    max-width: 260px !important;
+        margin-top: 10px;
+        padding: 7.5px 15px !important;
+        font-size: 16px;
+        text-align: left;
+        background: transparent;
+        border: 0.08rem solid #007c8c !important;
+        border-radius: 12px !important;
+        margin-bottom: 5px;
+        color: #007c8c !important;
+        cursor: pointer !important;
+              font-family: "proxima nova semibold" !important;
+              letter-spacing: -0.2px;
+              font-weight: 100;
+      
+            }
+      
+      
+           .f3x:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: pointer !important;
+      }
+     .f3x::placeholder {
+        color: #007c8c;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+           font-weight: 100;
+    letter-spacing: -0.2px;
+      }
       
       
                        
@@ -744,6 +847,11 @@ width: 90% !important;
    text-decoration: underline;
 }
       
+      
+      .ouzgood  {  background: -webkit-linear-gradient(50deg,#4e62d5, #3949a2, #4e62d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      }
     </style>
 
 
@@ -810,10 +918,10 @@ width: 90% !important;
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbz8_dO_g_tBY7f1fGfO_S2md69TmwvbtkX5120VokRS7NehpTXnW98OHqZ_IS37zAE_4Q/exec">
   
   
+     <br>  
   
   
-  
-  <select class="f3" name="typestructure" id="typejob" required>
+  <select class="f3x lazyload" name="typestructure" id="typejob" required>
 <option value="" disabled selected hidden>Type de structure</option>
 <option value="autre">ONF</option>
 <option value="grenoble">Mainteneur/Installateur</option>
@@ -821,7 +929,7 @@ width: 90% !important;
 <option value="grenoble">Autre</option>
 </select><br>
   
-                <select class="f3" name="effectif" id="effectif" required>
+                <select class="f3 lazyload" name="effectif" id="effectif" required>
 <option value="" disabled selected hidden>Nombre d'employés</option>
 <option value="autre">1 à 5</option>
 <option value="autre">5 à 20</option>
@@ -829,58 +937,62 @@ width: 90% !important;
       <option value="autre">60 et+</option>
               </select><br>
   
-<input class="f1" name="marquecom" type="text" placeholder="Marque commerciale" required>
-<input class="f1" name="raisonsociale" type="text" placeholder="Raison sociale" required>
-<input class="f1" name="debutactivite" type="text" placeholder="Date début d'activité" required>
-<input class="f1" name="formejuridique" type="text" placeholder="Forme juridique (Ex : sarl)" required>
-<input class="f1" name="siren" type="text" placeholder="Numéro de SIREN" required>
-<input class="f1" name="tva" type="text" placeholder="Numéro de TVA intracommunautaire" required>
-         <br>
+<input class="f1xx lazyload" name="marquecom" type="text" placeholder="Marque commerciale" required>
+<input class="f1xx lazyload" name="raisonsociale" type="text" placeholder="Raison sociale" required>
+<input class="f1 lazyload" name="debutactivite" type="text" placeholder="Date début d'activité" required>
+<input class="f1x lazyload" name="formejuridique" type="text" placeholder="Forme juridique (Ex : sarl)" required>
+<input class="f1 lazyload" name="siren" type="text" placeholder="Numéro de SIREN" required>
+<input class="f1 lazyload" name="tva" type="text" placeholder="Numéro de TVA intracommunautaire" required>
+    <textarea class="f2 lazyload" name="descriptioncompany" placeholder="Présentez votre entreprise" required></textarea>
+    <textarea class="f2 lazyload" name="descriptionwork" placeholder="Décrivez vos activités" required></textarea>
+
+  <br>
 
   
   <p class="filtertagtxt lazyload">
+    <br>
             Vos coordonnées
           </p>
   
-<input class="f1" name="responsable" type="text" placeholder="Nom et prénom" required>
-<input class="f1" name="email" type="text" placeholder="Email de contact" required>
-<input class="f1" name="telefon" type="text" placeholder="Téléphone de contact" required>
-<input class="f1" name="adresseprincipale" type="text" placeholder="Adresse principale" required>
-<input class="f1" name="website" type="text" placeholder="Site internet" required>
+<input class="f1 lazyload" name="responsable" type="text" placeholder="Nom et prénom" required>
+<input class="f1 lazyload" name="email" type="text" placeholder="Email de contact" required>
+<input class="f1 lazyload" name="telefon" type="text" placeholder="Téléphone de contact" required>
+<input class="f1 lazyload" name="adresseprincipale" type="text" placeholder="Adresse principale" required>
+<input class="f1 lazyload" name="website" type="text" placeholder="Site internet" required>
   
-              <p class="filtertagtxt lazyload">
+              <p class="filtertagtxt lazyload">   <br>
             Votre certifications
           </p>
 
-<select class="f3" name="qualiopi" id="qualiopi" required>
+<select class="f3 lazyload" name="qualiopi" id="qualiopi" required>
 <option value="" disabled selected hidden>Certification qualiopi</option>
 <option value="autre">Certifié Qualiopi</option>
 <option value="grenoble">Non certifié Qualiopi</option>
 </select><br>
   
   
-  <select class="f3" name="qualiopi" id="iso9001" required>
+  <select class="f3 lazyload" name="qualiopi" id="iso9001" required>
 <option value="" disabled selected hidden>ISO 9001</option>
 <option value="autre">Certifié ISO 9001</option>
 <option value="grenoble">Non certifié ISO 9001</option>
 </select><br>
   
   
-    <select class="f3" name="qualiopi" id="iso14001" required>
+    <select class="f3 lazyload" name="qualiopi" id="iso14001" required>
 <option value="" disabled selected hidden>ISO 14001</option>
 <option value="autre">Certifié ISO 14001</option>
 <option value="grenoble">Non certifié ISO 14001</option>
 </select><br>
   
   
-      <select class="f3" name="qualiopi" id="iso45001" required>
+      <select class="f3 lazyload" name="qualiopi" id="iso45001" required>
 <option value="" disabled selected hidden>ISO 45001</option>
 <option value="autre">Certifié ISO 45001</option>
 <option value="grenoble">Non certifié ISO 45001</option>
 </select><br>
   
   
-        <select class="f3" name="qualiopi" id="iso50001" required>
+        <select class="f3 lazyload" name="qualiopi" id="iso50001" required>
 <option value="" disabled selected hidden>ISO 50001</option>
 <option value="autre">Certifié ISO 50001</option>
 <option value="grenoble">Non certifié ISO 50001</option>
@@ -888,7 +1000,7 @@ width: 90% !important;
   
   
   
-          <select class="f3" name="qualiopi" id="ECOVADIS" required>
+          <select class="f3 lazyload" name="qualiopi" id="ECOVADIS" required>
 <option value="" disabled selected hidden>Certification ECOVADIS</option>
 <option value="autre">Certifié ECOVADIS</option>
 <option value="grenoble">Non certifié ECOVADIS</option>
@@ -896,7 +1008,7 @@ width: 90% !important;
   
   
   
-            <select class="f3" name="APSAD0" id="APSAD0" required>
+            <select class="f3 lazyload" name="APSAD0" id="APSAD0" required>
 <option value="" disabled selected hidden>Certification APSAD Désenfumage</option>
 <option value="autre">Certifié APSAD Désenfumage</option>
 <option value="grenoble">Non certifié APSAD Désenfumage</option>
@@ -904,7 +1016,7 @@ width: 90% !important;
   
   
     
-            <select class="f3" name="APSAD1" id="APSAD1" required>
+            <select class="f3 lazyload" name="APSAD1" id="APSAD1" required>
 <option value="" disabled selected hidden>Certification APSAD Compartimentage</option>
 <option value="autre">Certifié APSAD Compartimentage</option>
 <option value="grenoble">Non certifié APSAD Compartimentage</option>
@@ -913,7 +1025,7 @@ width: 90% !important;
   
   
       
-            <select class="f3" name="APSAD2" id="APSAD2" required>
+            <select class="f3 lazyload" name="APSAD2" id="APSAD2" required>
 <option value="" disabled selected hidden>Certification APSAD Extincteurs</option>
 <option value="autre">Certifié APSAD Extincteurs</option>
 <option value="grenoble">Non certifié APSAD Extincteurs</option>
@@ -923,7 +1035,7 @@ width: 90% !important;
   
   
   
-            <select class="f3" name="GEFPI" id="GEFPI" required>
+            <select class="f3 lazyload" name="GEFPI" id="GEFPI" required>
 <option value="" disabled selected hidden>Certification GEFPI</option>
 <option value="autre">Certifié GEFPI</option>
 <option value="grenoble">Non certifié GEFPI</option>
@@ -931,7 +1043,7 @@ width: 90% !important;
   
   
   
-            <select class="f3" name="bcorporation" id="bcorporation" required>
+            <select class="f3 lazyload" name="bcorporation" id="bcorporation" required>
 <option value="" disabled selected hidden>Certification B Corporation</option>
 <option value="autre">Certifié B Corporation</option>
 <option value="grenoble">Non certifié B Corporation</option>
@@ -942,7 +1054,7 @@ width: 90% !important;
               
               
                   
-            <select class="f3" name="assu" id="assu" required>
+            <select class="f3 lazyload" name="assu" id="assu" required>
 <option value="" disabled selected hidden>Assurance Responsabilité Professionnelle</option>
 <option value="autre">Assurance Responsabilité Professionnelle</option>
 <option value="autre">Assurance Responsabilité Professionnelle</option>
@@ -950,13 +1062,13 @@ width: 90% !important;
   
 
  
-  
+  <div class="lazyload">
   <button type="submit">Confirmer</button>
-  
+  </div>
   
   
    <p class="filtertagtxt22 lazyload"><br>
-           Facturé 99£ par an<br>Publications illimités
+           Facturé 99£ par an. Inclus une licence et candidature attributation du label Risqueo France.
            
           </p>
   
@@ -995,6 +1107,46 @@ width: 90% !important;
 
     <style>
     
+      
+      button {
+    background-color: #007c8c;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "proxima nova semibold";
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px ;
+    text-decoration: none;
+}
+     
+            button:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
+      
+            .filtertagtxt22 {
+    color: #4c587cb8;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    cursor: default;
+    text-align: left;
+    padding-left: 0px;
+}
+      
+      
+      
               body {
             background-color: #f4f6fa;
                 margin: 0px;
