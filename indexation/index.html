@@ -26,27 +26,24 @@
   <style>
     
     
-          
-@font-face {
-font-family: saasduoTIL;
-font-weight: bold;
-src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
-format("opentype");
-}
+      @font-face {
+        font-family: proxima nova;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
+      }
+      @font-face {
+        font-family: proxima nova semibold;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
+      }
+      @font-face {
+        font-family: ouiprev;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
+      }
+      @font-face {
+        font-family: proxima nova extrabold;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
+      }
 
-@font-face {
-font-family: saasduoPAR;
-font-weight: bold;
-src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
-format("opentype");
-}
-
-@font-face {
-font-family: saasduoBTN;
-font-weight: bold;
-src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Button?v=1692822927520")
-format("opentype");
-}
+    
     input:focus, button:focus {
     outline: none;
 }
@@ -570,39 +567,50 @@ margin-top: 10px;
         filter: blur(4px);
         transition: filter 0s ease;
       }
+      
+      .logo-container img {
+    max-height: 85px;
+    margin-top: -17px;
+    margin-bottom: -30px;
+}
+      
     </style>
+
 
     <div class="navbar">
       <div class="logo-container">
         <a href="/" class="linkineos lazyload">
-          <img
-            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883"
-            alt="Logo"
+          <img 
+            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/Risqueo.com.svg?v=1707003952801"
+            alt="Logo" 
           />
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
+        <a class="link1 science solevita lazyload" href="/missions"
           >Répondre aux missions</a
         >
-        <a class="link3 lazyload" href="/"
-          >Rechercher indexation</a
+        <a class="link3 lazyload" href="/indexation"
+          >Participer à l'indexation</a
         >
       </div>
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
+        
           var lazyElements = document.querySelectorAll(".lazyload");
 
+          
           lazyElements.forEach(function (element) {
             element.classList.add("blur");
           });
 
+         
           setTimeout(function () {
             lazyElements.forEach(function (element) {
               element.classList.remove("blur");
             });
-          }, 2000);
+          }, 3500);
         });
       </script>
     </div>
@@ -739,20 +747,7 @@ margin-top: 10px;
 }
 
       
-      
-      
-      @font-face { 
-  font-family:proxima nova;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
-} 
-@font-face { 
-  font-family:proxima nova semibold;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
-} 
-@font-face { 
-  font-family:proxima nova bold;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
-} 
+
   body {  
     color:#273144;
     font-size:1.4rem;
@@ -1011,23 +1006,7 @@ button {
         }
       
       
-      
-      @font-face { 
-  font-family:proxima nova;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
-} 
-@font-face { 
-  font-family:proxima nova semibold;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
-} 
-@font-face { 
-  font-family:ouiprev;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
-} 
-@font-face { 
-  font-family:proxima nova extrabold;
-  src:url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
-} 
+
 
         .divinfoable {
           
@@ -1165,7 +1144,7 @@ display: grid;
     letter-spacing: -0.2px;
     font-size: 16px;
     border-radius: 12px !important;
-    margin-left: 8px;
+    margin-left: 0px;
       text-decoration: none !important;
     }
       .btnsponso:hover {
@@ -1218,6 +1197,100 @@ display: grid;
             border-radius: 5px;
             cursor: pointer;
         }
+      
+      
+            .backz {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2a5bd7;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    background: white;
+    border: 0px solid white;
+    text-align: left;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px !important;
+        margin-bottom: -15px;
+}
+      
+      
+            .backz:hover {
+   text-decoration: underline;
+}
+      
+            .filtertagtxt {
+    color: #4c587cb8;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: default;
+    text-align: left;
+    padding-left: 0px;
+}
+      
+      .filtertagtxtmaster {
+    color: #4c587c;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: -3px;
+    margin-top: 20px;
+    cursor: default;
+    text-align: left;
+    padding-left: 0px;
+}
+      
+      
+      
+                 .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
+      
+            .grisnardo {
+    color: #2a5bd7;
+    text-decoration: none;
+}
+      
+            
+      .grisnardo:hover {
+    color: #2a5bd7;
+    text-decoration: underline;
+        cursor: pointer;
+}
+      
+      
+      
     </style>
 
   
@@ -1230,11 +1303,16 @@ display: grid;
         <!-- Div principale avec classes sponso -->
   <div class="divsponso">
 
-    <!-- Titre et sous-titre avec classes sponso -->
-    <div class="titlesponso lazyload">Indexation</div>
-    <div class="subtitlesponso lazyload">Vous êtes installateur, mainteneur ou formateur Indexation et labellisation; indiquez-nous votre établissement et notre système et membres va collecter les informations afin de valider ou de refuser votre licence pour le label et l'agrément OuiPrev. La licence est valide sur 1 an et nous procéderons à une vérification curative annuelle. </div>
-
-
+    <a href="/" class="backz lazyload">Annuler</a>
+   
+             <h1 class="filtertagtxtmaster lazyload">Participer à l'indexation</h1>
+          <p class="filtertagtxt lazyload">
+            Idéal pour trouver à proximité un installateur ou mainteneur de
+            défibrillateurs, extincteurs
+            <a class="grisnardo" href="https://google.com/"
+              >demander une indexation et contrôle.</a
+            >
+          </p>
     <!-- Bouton avec classe sponso et lien vers nouvel onglet -->
     
     <div class="radio-container snipcss-YDHU2 lazyload">
@@ -1253,7 +1331,7 @@ display: grid;
   </label>
 </div>
     
-    <a href="/indexation/inscription"  class="btnsponso lazyload">Inscription</a>
+    <a href="/indexation/inscription"  class="btnsponso lazyload science">Inscription</a>
 
   </div>
       
@@ -1322,62 +1400,71 @@ padding: 10px;
             border-top: 1px solid #ccc;
         }
       
-.radio-container { 
-    display: flex; 
-    align-items: center; 
-    margin-top: 10px;
-} 
 
-:selection { 
-    background-color: #ffd00082; 
-    color: #2a2a32;
-} 
+      .radio-container {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
 
-.custom-radio { 
-    position: relative; 
-    display: inline-block; 
-    width: 20px; 
-    height: 20px; 
-    background-color: transparent; 
-    border-radius: 50%; 
-    margin-right: 10px; 
-    border: 2px solid #7df178; 
-    cursor: pointer;
-} 
+      :selection {
+        background-color: #ffd00082;
+        color: #2a2a32;
+      }
 
-.radio-text { 
-    white-space: nowrap; 
-    font-size: 18px !important; 
-    font-family: "senseistandard" !important; 
-    letter-spacing: 0px; 
-    color: #000; 
-    margin-left: 0px; 
-    margin-top: -1px; 
-    line-height: 37px; 
-    cursor: pointer;
-} 
+      .custom-radio {
+        position: relative;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: 1px solid #2a5bd7;
+        cursor: pointer;
+      }
 
-.custom-radio input  { 
-    position: absolute; 
-    opacity: 0; 
-    cursor: pointer;
-} 
+      .custom-radio:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+      }
 
-.radio-bullet { 
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 12px; 
-    height: 12px; 
-    border-radius: 50%; 
-    background-color: #7df178; 
-    display: none;
-} 
+      .radio-text {
+        white-space: nowrap;
+        font-size: 16px !important;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        color: #000;
+        margin-left: -3px;
+        margin-top: 1.2px;
+        line-height: 37px;
+        cursor: pointer;
+      }
 
-.custom-radio input:checked ~ .radio-bullet  { 
-    display: block;
-} 
+      .custom-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .radio-bullet {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10.5px;
+        height: 10.5px;
+        border-radius: 50%;
+        background-color: #2a5bd7;
+        display: none;
+      }
+
+      .custom-radio input:checked ~ .radio-bullet {
+        display: block;
+      }
 
 .link-span { 
     text-decoration: none; 
