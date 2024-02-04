@@ -509,19 +509,48 @@
         ); 
         transition: filter 0s ease;
       }
+      
+      
+      
+      .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
     </style>
 
     <div class="navbar">
       <div class="logo-container">
         <a href="/" class="linkineos lazyload">
-          <img
+          <img 
             src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/Risqueo.com.svg?v=1707003952801"
             alt="Logo"
           />
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
+        <a class="link1 science solevita lazyload" href="/missions"
           >Répondre aux missions</a
         >
         <a class="link3 lazyload" href="/indexation"
@@ -1248,6 +1277,9 @@
                 placeholder="Entrez une ville, une qualification, un établissement ..."
                 oninput="filterItems()"
               />
+              
+              
+              
               <div id="tag-display"></div>
             </div>
             <div id="search-dropdown"></div>
@@ -1318,7 +1350,7 @@
             </label>
           </div>
 
-          <a href="/upgrade-as-client" target="_blank" class="btnsponso"
+          <a href="/upgrade-as-client" target="_blank" class="btnsponso science"
             >Partager ma recherche</a
           >
           <p class="othertify">ou</p>
