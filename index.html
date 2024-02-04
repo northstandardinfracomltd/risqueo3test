@@ -1360,7 +1360,8 @@
           
           
         </div>
-          <button id="boutonMontrerPlus" class="btnsqueeze">Pourquoi Risqueo?</button>
+    <button id="boutonMontrerPlus" onclick="toggleVisibility()" class="btnsqueeze">Pourquoi Risqueo</button>
+
       </div>
       
       
@@ -1411,6 +1412,17 @@
         }
           
           
+
+        .visible {
+            display: block !important;
+        }
+
+        .invisible {
+            display: none;
+        }
+
+          
+          
           .btnsqueeze {
             padding: 0px;
             color: #2a5bd7;
@@ -1421,6 +1433,7 @@
             font-weight: 100;
             letter-spacing: -0.2px;
             font-size: 16px;
+            margin-top: 30px;
         }
           
           
@@ -1434,13 +1447,22 @@
           
     </style>
     
-        <script>
-        document.getElementById('boutonMontrerPlus').addEventListener('click', function() {
+    
+    
+    <script>
+        function toggleVisibility() {
             var dwayneDiv = document.querySelector('.dwayne');
-            // Changez le style de la div pour la rendre visible
-            dwayneDiv.style.display = 'block';
-        });
+            var boutonMontrerPlus = document.getElementById('boutonMontrerPlus');
+
+            // Ajoute ou supprime la classe 'visible' pour montrer ou masquer la div
+            dwayneDiv.classList.toggle('visible');
+
+            // Ajoute ou supprime la classe 'invisible' pour masquer ou montrer le bouton
+            boutonMontrerPlus.classList.toggle('invisible');
+        }
     </script>
+    
+    
     <div class="dwayne">
     
     <div class="balisagedown">
