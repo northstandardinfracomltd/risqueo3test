@@ -413,6 +413,50 @@ Utilisez votre licence pour accéder à toutes les informations obtenez-en une
           width: 200px;
       }
 
+            
+                  #licenceCode::placeholder {
+        color: #4c587c;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+      #licenceCode::-ms-input-placeholder {
+        color: #4c587c;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+
+      .#licenceCode::-ms-input-placeholder {
+        color: #4c587c;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+            
+      #publierBtn:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+
 
         #publierBtn {
         background-color: #007c8c;
@@ -454,6 +498,23 @@ Utilisez votre licence pour accéder à toutes les informations obtenez-en une
             position: relative;
     overflow: hidden;
         }
+            
+      #acheterBtn:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
 
         .hidden {
             display: none;
@@ -480,14 +541,29 @@ Utilisez votre licence pour accéder à toutes les informations obtenez-en une
                 transform: translateX(10px);
             }
         }
+      
+      
+      .blackhawk {
+    color: #4c587cb8;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    cursor: default;
+    text-align: left;
+    padding-left: 0px;
+}
     </style>
 
-<div id="licenceForm">
+
     <input type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
     <button id="publierBtn" onclick="publierAvecLicence()">Accéder</button><br>
-    <p class="balisagedown-til">ou</p>
+    <p class="blackhawk">ou</p>
     <button id="acheterBtn" onclick="acheterLicence()">Acheter ma licence</button><br>
-  <p class="balisagedown-til">L'abonnement de la licence est de 99£/an</p>
+  <p class="blackhawk">L'abonnement de la licence est de 99£/an</p>
 
     <div id="licencesValides" class="hidden">
         <p>Licences valides :</p>
@@ -498,7 +574,7 @@ Utilisez votre licence pour accéder à toutes les informations obtenez-en une
             <li>7733xkel7452plzm9621</li>
         </ul>
     </div>
-</div>
+
 
 <script>
     function publierAvecLicence() {
