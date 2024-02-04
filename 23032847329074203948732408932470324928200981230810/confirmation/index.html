@@ -22,6 +22,7 @@
   
   
   
+    
     <style>
       .navbar {
         overflow: hidden;
@@ -37,10 +38,26 @@
         padding-left: 17px !important;
         padding-right: 17px !important;
       }
+      
+      
+            .formblock {
+    width: 93%;
+        max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    border: 1px solid #dbe0eb;
+    background-color: #ffffff;
+    border-radius: 16px;
+    text-align: left;
+    padding: 25px;
+        display: block;
+      }
 
       .logo-container img {
-        max-height: 50px;
-        margin-bottom: -5px;
+    max-height: 85px;
+    margin-top: -17px;
+    margin-bottom: -30px;
       }
 
       @media only screen and (min-width: 301px) and (max-width: 768px) {
@@ -196,19 +213,79 @@
         ); 
         transition: filter 0s ease;
       }
+      
+      
+                  .filtertagtxt {
+    color: #4c587cb8;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    cursor: default;
+    text-align: left;
+    padding-left: 0px;
+}
+      
+
+      
+      .filtertagtxtmaster {
+    color: #4c587c;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: -3px;
+    margin-top: 20px;
+    cursor: default;
+    text-align: left;
+    padding-left: 0px;
+}
+      
+      
+      
+            .science {
+        position: relative;
+    overflow: hidden;}
+            
+      .science:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+      
+      
     </style>
 
     <div class="navbar">
       <div class="logo-container">
         <a href="/" class="linkineos lazyload">
           <img
-            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/1e6db3_1732a9d57f5a46e98d74ee66bcc24845~mv2.png?v=1706544181883"
+            src="https://cdn.glitch.global/10c74d6c-4cac-4191-87bb-1b89d3d69416/Risqueo.com.svg?v=1707003952801"
             alt="Logo"
           />
         </a>
       </div>
       <div class="links">
-        <a class="link1 solevita lazyload" href="/missions"
+        <a class="link1 solevita lazyload science" href="/missions"
           >Répondre aux missions</a
         >
         <a class="link3 lazyload" href="/indexation"
@@ -237,6 +314,7 @@
     </div>
     
   
+  
     <style>
 
         .container {
@@ -247,37 +325,82 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .thank-you-icon {
-            font-size: 50px;
-            color: #28a745;
-        }
+      
+      
+      .subfilebtn {
+    background-color: #007c8c !important;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    border-radius: 12px !important;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-right: auto;
+    text-decoration: none !important;
+}
+      
+      
+      .subfilebtn:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
+      
+                  .backz {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2a5bd7;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+    background: white;
+    border: 0px solid white;
+    text-align: left;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px !important;
+        margin-bottom: -15px;
+}
+      
+      
+            .backz:hover {
+   text-decoration: underline;
+}
+      
+      
     </style>
-</head>
 <body>
 
-<div class="container">
-    <i class="thank-you-icon">&#10003;</i>
-    <h1>Vous avez postulé</h1>
-    <p>Nous avons bien reçu votre commande et nous la traiterons dans les plus brefs délais.</p>
-    <p>Un email de confirmation vous sera envoyé avec les détails de votre commande.</p>
+   <div class="formblock">
+     
+           <a href="/missions" class="backz lazyload">Autres missions</a>
 
-      <a href="/" class="btnsponso">Retour à la plateforme</a>
-  <br>  <br>
-      <p>Souhaitez-vous épingler en premier votre candidature?</p>
-
-    <a href="/stripe" class="btnsponso">Booster pour £6</a>
+     
+                    <h1 class="filtertagtxtmaster lazyload">Vous avez postulé</h1>
+          <p class="filtertagtxt lazyload">
+           La modération est en cours Un email de confirmation vous sera envoyé avec les détails de votre commande.
+           
+          </p>
+     
   
+      <a href="/" class="subfilebtn lazyload">Revenir au site</a>
+     
+               <p class="filtertagtxt lazyload">
+           Souhaitez-vous épingler en premier votre candidature?
+           
+          </p>
+     
+          <a href="/" class="subfilebtn science lazyload">Booster pour £6</a>
+  <br>  <br>
   </div>
-
+  
+  
   
   
   
@@ -373,7 +496,13 @@
       }
 
     </style>
-  
-  
+
 </body>
-</html>
+  <script>
+if (location.protocol != "https:") {
+location.href =
+"https:" +
+window.location.href.substring(window.location.protocol.length);
+}
+</script>
+  </html>
