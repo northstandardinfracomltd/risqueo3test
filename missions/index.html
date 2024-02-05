@@ -808,6 +808,10 @@
     text-align: left;
     padding-left: 0px;
 }
+      
+      
+
+
     </style>
   <body>
     <div class="search-container">
@@ -921,6 +925,9 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
                 <div class="tag hiddenDivs" data-filter="afgsu">AFGSU</div>
       </div>
 
+
+
+      
       <select class="locatiobutton hiddenDivs lazyload" id="location-filter">
         <option value="">Localisation à proximité</option>
         <option value="">Sans préférence</option>
@@ -1346,12 +1353,19 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
         });
 
         tags.forEach((tag) => {
+         
           tag.addEventListener("click", function () {
             tag.classList.toggle("selected");
             performSearch();
           });
         });
+        
+        
+        
 
+        
+        
+        
         locationFilter.addEventListener("change", function () {
           performSearch();
         });
@@ -1438,6 +1452,10 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
               tag.classList.remove("selected");
             }
           });
+          
+          
+  
+        
 
           // Masquer les autres divs quand une nouvelle recherche est effectuée
           hideAllDivs();
@@ -1495,6 +1513,7 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
           });
         }
       });
+
     </script>
     
     
