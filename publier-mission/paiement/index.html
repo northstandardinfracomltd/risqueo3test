@@ -311,7 +311,7 @@ margin-top: 10px;
         border: 0.08rem solid #f4f6fa !important;
         border-radius: 12px !important;
         margin-bottom: 5px;
-        color: #2b5bd7 !important;
+        color: #4c587c !important;
         cursor: text !important;
               font-family: "proxima nova" !important;
               letter-spacing: -0.2px;
@@ -522,12 +522,12 @@ margin-top: 10px;
 
                <h1 class="filtertagtxtmaster lazyload">Encore une étape</h1>
           <p class="filtertagtxt lazyload">
-            Utilisez votre licence pour publier la mission ou obtenez-en une  <a class="grisnardo" href="https://google.com/"
-              >obtenir de l'aide</a
+Utilisez votre licence Risqueo existante pour publier l'annonce gratuitement. Pour toute remarque ou question concernant nos services, veuillez <a class="grisnardo" href="/support"
+              >ouvrir un ticket auprès du support.</a
             >
            
           </p>
-    <input class="f1 lazyload" type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
+    <input autofocus class="f1 lazyload" type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
     <button class="subfilebtn science lazyload" id="publierBtn" onclick="publierAvecLicence()">Publier avec ma licence</button><br>
         <br>    <p class="filtertagtxt2 lazyload">
             Ou
@@ -535,9 +535,9 @@ margin-top: 10px;
           </p>
   
   
-  <button class="subfilebtn2 science lazyload" id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
+  <button class="subfilebtn2 science lazyload" id="acheterBtn" onclick="acheterLicence()">Payer 29€</button><br>
  <p class="filtertagtxt22 lazyload"><br>
-           Facturé 99£ par an<br>Publications illimités
+Risqueo facture un frais unique de 29€ hors taxes pour publier une annonce spontanée et la maintenir en ligne jusqu'à 1 mois.
            
           </p>
  
@@ -564,12 +564,12 @@ margin-top: 10px;
             publierBtn.classList.add('shake');
             setTimeout(function () {
                 publierBtn.classList.remove('shake');
-            }, 500);
+            }, 200);
         }
     }
 
     function acheterLicence() {
-        window.location.href = 'https://buy.stripe.com/28o5lV6IhcDC8Jq14M';
+        window.location.href = 'https://buy.stripe.com/4gw01B6IhfPO4ta7te';
     }
 </script>
 
