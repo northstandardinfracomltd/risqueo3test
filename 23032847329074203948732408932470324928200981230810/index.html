@@ -374,6 +374,84 @@
 }
       
       
+            .gum {
+        margin-top: 14px;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        padding: 15px 16px 14px 16px !important;
+        font-size: 16.5px;
+        text-align: left;
+        width: 80% !important;
+        max-width: 230px;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        color: #4c587c !important;
+        cursor: text !important;
+      }
+
+
+
+      
+      .gum:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+      .gum::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+
+      
+      
+           button {
+        background-color: #007c8c;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        text-decoration: none !important;
+        margin-top: 15px;
+        margin-bottom: -2px;
+        width: 93px;
+            position: relative;
+    overflow: hidden;
+      }
+      
+          input:focus,
+      button:focus {
+        outline: none;
+      }
+
+      
+      
+      button:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      
     </style>
 <body>
 
@@ -384,7 +462,7 @@
      
                     <h1 class="filtertagtxtmaster lazyload">Postuler</h1>
           <p class="filtertagtxt lazyload">
-          Partagez votre intérêt pour la mission
+L'annonceur est à la recherche d'un prestataire ; la candidature est simple et transmise instantanément à l'annonceur.
            
           </p>
      
@@ -393,11 +471,16 @@
 
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbxg9PsBsHRUzxochFBhbmeKIV4yJcLwk80Pv_q77vlkOy9WzHHRrMOCKRmLD15NScDHgQ/exec">
  
-  <input name="Email" type="email" placeholder="Email" required>
-  <input name="Name" type="text" placeholder="Name" required>
-  <input name="Entreprise" type="text" placeholder="Entreprise" required>
-    <input name="Commentaire" type="text" placeholder="Commentaire" required>
-  <button type="submit">Send</button>
+  <input class="gum" name="Email" type="email" placeholder="Email" required><br>
+  <input class="gum" name="Name" type="text" placeholder="Nom" required><br>
+  <input class="gum" name="Entreprise" type="text" placeholder="Entreprise" required><br>
+    <input class="gum" name="Commentaire" type="text" placeholder="Commentaire libre" required><br>
+  
+  
+  <textarea class="f2 lazyload" name="descriptionjob" placeholder="Description de la mission" required></textarea>
+  
+  
+  <button type="submit">Envoyer</button>
   
   <script type = "text/javascript" >
     window.addEventListener("DOMContentLoaded", function() {
