@@ -548,7 +548,7 @@ width: 90% !important;
         margin-top: 10px;
         padding: 7.5px 15px !important;
         font-size: 16px;
-        text-align: left;
+        text-align: center;
         width: 100% !important;
         background: transparent;
         border: 0.08rem solid #007c8c !important;
@@ -587,7 +587,7 @@ width: 90% !important;
         margin-top: 10px;
         padding: 7.5px 15px !important;
         font-size: 16px;
-        text-align: left;
+        text-align: center;
         width: 100% !important;
         background: transparent;
         border: 0.08rem solid #007c8c !important;
@@ -800,10 +800,9 @@ width: 90% !important;
    
              <h1 class="filtertagtxtmaster lazyload">Publier une annonce</h1>
           <p class="filtertagtxt lazyload">
-            Idéal pour trouver à proximité un installateur ou mainteneur de
-            défibrillateurs, extincteurs
+Idéal pour recevoir des offres d'installateurs ou de mainteneurs de défibrillateurs, d'extincteurs, de formateurs ou d'autres professionnels qui correspondent à vos critères. Publiez une mission spécifique ou un appel d'offres en complétant ce formulaire. Pour toute remarque ou question concernant nos services, veuillez 
             <a class="grisnardo" href="https://google.com/"
-              >demander une indexation et contrôle.</a
+              >ouvrir un ticket auprès du support.</a
             >
           </p>
 
@@ -811,67 +810,69 @@ width: 90% !important;
   
   
   
-<input class="f1 lazyload" name="titlejob" type="text" placeholder="Titre de la mission" required>
-<textarea class="f2 lazyload" name="descriptionjob" placeholder="Description de la mission" required></textarea>
-<input class="f4 lazyload" name="datejob" type="text" placeholder="Date, créneau, (...)" required>
+<input class="f1 lazyload" name="titlejob" type="text" placeholder="Titre" required>
+<textarea class="f2 lazyload" name="descriptionjob" placeholder="Description" required></textarea>
+<input class="f4 lazyload" name="datejob" type="text" placeholder="Date ou période" required>
 <input class="f5 lazyload" name="contactjob" type="text" placeholder="Mail et téléphone" required>
 <input class="f6 lazyload" name="entreprisejob" type="text" placeholder="Entreprise à mentionner" required>
 
   <br>
-<select class="f3 lazyload" name="typejob" id="typejob" required>
-<option value="" disabled selected hidden>Type de mission</option>
-<option value="autre">Appel d'offre</option>
-<option value="grenoble">Sous-traitant</option>
-<option value="grenoble">CDD</option>
-<option value="grenoble">Autre</option>
+<select class="f16 lazyload" name="typejob" id="typejob" required>
+<option value="" disabled selected hidden>Type d'annonce</option>
+<option value="mission">Mission spécifique</option>
+<option value="appeloffre">Appel d'offres</option>
+<option value="soustraitance">Sous-traitance</option>
+<option value="CDD">CDD</option>
+<option value="autre">Autre</option>
 </select><br>
   
 <select  class="f16 lazyload" name="color" id="color" required>
 <option value="" disabled selected hidden>Localisation</option>
 <option value="autre">Autre</option>
-<option value="grenoble">Ne pas mentionner</option>
-<option value="grenoble">Grenoble, 38000</option>
-<option value="toulon">Toulon, 83000</option>
-<option value="reims">Reims, 51100</option>
-<option value="rennes">Rennes, 35000</option>
-<option value="dijon">Dijon, 21000</option>
-<option value="angers">Angers, 49000</option>
-<option value="nîmes">Nîmes, 30000</option>
-<option value="villeurbanne">Villeurbanne, 69100</option>
-<option value="mans">Le Mans, 72000</option>
-<option value="brest">Brest, 29200</option>
-<option value="tours">Tours, 37000</option>
-<option value="amiens">Amiens, 80000</option>
-<option value="limoges">Limoges, 87000</option>
-<option value="annecy">Annecy, 74000</option>
-<option value="perpignan">Perpignan, 66000</option>
-<option value="metz">Metz, 57000</option>
-<option value="besançon">Besançon, 25000</option>
-<option value="caen">Caen, 14000</option>
-<option value="orleans">Orléans, 45000</option>
-<option value="mulhouse">Mulhouse, 68100</option>
-<option value="rouen">Rouen, 76000</option>
-<option value="nancy">Nancy, 54000</option>
-<option value="argenteuil">Argenteuil, 95100</option>
-<option value="montreuil">Montreuil, 93100</option>
-<option value="roubaix">Roubaix, 59100</option>
-<option value="avignon">Avignon, 84000</option>
-<option value="tourcoing">Tourcoing, 59200</option>
-<option value="creteil">Créteil, 94000</option>
-<option value="poitiers">Poitiers, 86000</option>
-<option value="nanterre">Nanterre, 92000</option>
-<option value="versailles">Versailles, 78000</option>
-<option value="pau">Pau, 64000</option>
-<option value="bordeaux">Bordeaux, 33000</option>
-<option value="nantes">Nantes, 44000</option>
-<option value="laval">Laval, 53000</option>
-<option value="merignac">Mérignac, 33700</option>
-<option value="calais">Calais, 62100</option>
-<option value="strasbourg">Strasbourg, 67000</option>
-<option value="montpellier">Montpellier, 34000</option>
-<option value="toulouse">Toulouse, 31000</option>
-<option value="quimper">Quimper, 29000</option>
-<option value="ajaccio">Ajaccio, 20000</option>
+  <option value="sanspreference">Sans préférence</option>
+<option value="nepasmentionner">Ne pas mentionner</option>
+        <option value="caen">Caen, 14000</option>
+        <option value="ajaccio">Ajaccio, 20000</option>
+        <option value="dijon">Dijon, 21000</option>
+        <option value="besançon">Besançon, 25000</option>
+        <option value="quimper">Quimper, 29000</option>
+        <option value="brest">Brest, 29200</option>
+        <option value="nîmes">Nîmes, 30000</option>
+        <option value="toulouse">Toulouse, 31000</option>
+        <option value="bordeaux">Bordeaux, 33000</option>
+        <option value="merignac">Mérignac, 33700</option>
+        <option value="montpellier">Montpellier, 34000</option>
+        <option value="rennes">Rennes, 35000</option>
+        <option value="tours">Tours, 37000</option>
+        <option value="grenoble">Grenoble, 38000</option>
+        <option value="nantes">Nantes, 44000</option>
+        <option value="orleans">Orléans, 45000</option>
+        <option value="angers">Angers, 49000</option>
+        <option value="reims">Reims, 51100</option>
+        <option value="laval">Laval, 53000</option>
+        <option value="nancy">Nancy, 54000</option>
+        <option value="metz">Metz, 57000</option>
+        <option value="roubaix">Roubaix, 59100</option>
+        <option value="tourcoing">Tourcoing, 59200</option>
+        <option value="calais">Calais, 62100</option>
+        <option value="pau">Pau, 64000</option>
+        <option value="perpignan">Perpignan, 66000</option>
+        <option value="strasbourg">Strasbourg, 67000</option>
+        <option value="mulhouse">Mulhouse, 68100</option>
+        <option value="villeurbanne">Villeurbanne, 69100</option>
+        <option value="mans">Le Mans, 72000</option>
+        <option value="annecy">Annecy, 74000</option>
+        <option value="rouen">Rouen, 76000</option>
+        <option value="versailles">Versailles, 78000</option>
+        <option value="amiens">Amiens, 80000</option>
+        <option value="toulon">Toulon, 83000</option>
+        <option value="avignon">Avignon, 84000</option>
+        <option value="poitiers">Poitiers, 86000</option>
+        <option value="limoges">Limoges, 87000</option>
+        <option value="nanterre">Nanterre, 92000</option>
+        <option value="montreuil">Montreuil, 93100</option>
+        <option value="creteil">Créteil, 94000</option>
+        <option value="argenteuil">Argenteuil, 95100</option>
 </select><br>
   
   <button class= "subfilebtn science lazyload" type="submit">Enregister</button>
