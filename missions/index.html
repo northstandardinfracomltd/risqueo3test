@@ -21,6 +21,25 @@
 </head>
 
     <style>
+      
+            @font-face {
+        font-family: proxima nova;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
+      }
+      @font-face {
+        font-family: proxima nova semibold;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
+      }
+      @font-face {
+        font-family: proxima nova bold;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
+      }
+      @font-face {
+        font-family: proxima nova extrabold;
+        src: url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
+      }
+      
+      
       .navbar {
         overflow: hidden;
         background-color: #f4f6fa;
@@ -331,22 +350,7 @@
         cursor: text !important;
       }
 
-      @font-face {
-        font-family: proxima nova;
-        src: url(https://d1ayxb9ooonjts.cloudfront.net/fc3fa84bad39c1906ab5f12edfeeda77.otf);
-      }
-      @font-face {
-        font-family: proxima nova semibold;
-        src: url(https://d1ayxb9ooonjts.cloudfront.net/847b2e2eaaeffe475d49ab8586ed0938.otf);
-      }
-      @font-face {
-        font-family: ouiprevxxx;
-        src: url(https://d1ayxb9ooonjts.cloudfront.net/ff059c404b36c9ba4b07629da5c63673.otf);
-      }
-      @font-face {
-        font-family: proxima nova extrabold;
-        src: url(https://d1ayxb9ooonjts.cloudfront.net/80cc6392abe5652b5227ecff51ad2526.otf);
-      }
+
 
       
       .search-bar:hover {
@@ -427,6 +431,7 @@
         font-weight: 100;
         letter-spacing: -0.2px;
         font-size: 16px;
+            white-space: nowrap;
       }
 
       .tag:hover {
@@ -450,6 +455,8 @@
       }
 
       .filtermania {
+        margin-top: -10px;
+        margin-bottom: 5px;
         margin-right: 20px;
         text-decoration: none;
         color: #2a5bd7;
@@ -827,8 +834,7 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
     "Maintenance défibrillateur",
     "Installation extincteur",
     "Formation secourisme",
-     "Maintenance extincteur",
-     "Formation "
+     "Maintenance extincteur"
   ];
 
   // Index du placeholder actuel
@@ -872,25 +878,21 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
       <button class="search-button lazyload" id="searchButton">Rechercher</button>
 
       <div class="tags-container lazyload">
-        <div class="tag" data-filter="extincteur">Extincteur</div>
-        <div class="tag" data-filter="systeme">Système intégré</div>
-        <div class="tag" data-filter="signalisation">Signalisation</div>
-        <div class="tag" data-filter="éclairage">Éclairage</div>
-        <div class="tag" data-filter="balisage">Balisage</div>
-        <div class="tag" data-filter="defibrillateur">
-          Défibrillateur
+        <div class="tag hiddenDivs" data-filter="extincteur">Extincteur</div>
+        <div class="tag hiddenDivs" data-filter="systeme">Système Intégré</div>
+        <div class="tag hiddenDivs" data-filter="signalisation">Signalisation</div>
+        <div class="tag hiddenDivs" data-filter="éclairage">Éclairage</div>
+        <div class="tag hiddenDivs" data-filter="balisage">Balisage</div>
+        <div class="tag hiddenDivs" data-filter="défibrillateur">Défibrillateur
         </div>
-        <div class="tag" data-filter="désenfumage">Désenfumage</div>
-        <div class="tag hiddenDivs" data-filter="porte">Porte coupe-feu</div>
+        <div class="tag hiddenDivs" data-filter="désenfumage">Désenfumage</div>
+        <div class="tag hiddenDivs" data-filter="porte">Porte Coupe-feu</div>
         <div class="tag hiddenDivs" data-filter="hydrants">
-          Systèmes hydrants
+          Systèmes Hydrants
         </div>
         <div class="tag hiddenDivs" data-filter="évacuation">
-          Plan d'évacuation
+          Plan d'Évacuation
         </div>
-        <div class="tag hiddenDivs" data-filter="ria">RIA</div>
-        <div class="tag hiddenDivs" data-filter="bes">BES</div>
-        <div class="tag hiddenDivs" data-filter="blocs">Blocs d'éclairage</div>
         <div class="tag hiddenDivs" data-filter="compartimentage">
           Compartimentage
         </div>
@@ -900,20 +902,21 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
         <div class="tag hiddenDivs" data-filter="maintenance">Maintenance</div>
         <div class="tag hiddenDivs" data-filter="étude">Étude</div>
         <div class="tag hiddenDivs" data-filter="formation">Formation</div>
-        <div class="tag hiddenDivs" data-filter="sst">SST</div>
+    
         <div class="tag hiddenDivs" data-filter="secourisme">Secourisme</div>
         <div class="tag hiddenDivs" data-filter="routière">
-          Prévention routière
+          Prévention Routière
         </div>
+                <div class="tag hiddenDivs" data-filter="electrique">Habilitation Électrique</div>
+        <div class="tag hiddenDivs" data-filter="coupe">Outils de Coupe</div>
+            <div class="tag hiddenDivs" data-filter="sst">SST</div>
         <div class="tag hiddenDivs" data-filter="ssiap">SSIAP</div>
         <div class="tag hiddenDivs" data-filter="prap">PRAP</div>
         <div class="tag hiddenDivs" data-filter="qvt">QVT</div>
         <div class="tag hiddenDivs" data-filter="rps">RPS</div>
-        <div class="tag hiddenDivs" data-filter="electrique">
-          Habilitation Électrique
-        </div>
-        <div class="tag hiddenDivs" data-filter="afgsu">AFGSU</div>
-        <div class="tag hiddenDivs" data-filter="coupe">Outils de coupe</div>
+                <div class="tag hiddenDivs" data-filter="ria">RIA</div>
+        <div class="tag hiddenDivs" data-filter="bes">BES</div>
+                <div class="tag hiddenDivs" data-filter="afgsu">AFGSU</div>
       </div>
 
       <select class="locatiobutton hiddenDivs lazyload" id="location-filter">
