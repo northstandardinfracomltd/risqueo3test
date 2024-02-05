@@ -823,6 +823,26 @@ width: 90% !important;
 }
       
       
+                 button {
+        position: relative;
+    overflow: hidden;}
+            
+      button:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
       
       
             .science {
@@ -935,7 +955,6 @@ width: 90% !important;
     
 <style>
 
-  /* CRÉER NOUVEAU SPREADSHEET EN RÉUTILISANT TEMPLATE */
 
 </style>
 
@@ -946,9 +965,9 @@ width: 90% !important;
    
              <h1 class="filtertagtxtmaster lazyload">Vos informations</h1>
           <p class="filtertagtxt lazyload">
-Complétez ce formulaire pour transmettre votre contribution et participer au programme Risqueo. Des remarques ou questions sur nos services ? 
+Complétez ce formulaire pour transmettre votre contribution et participer au programme Risqueo. Il n'existe pas de bonnes ou de mauvaises réponses. Des remarques ou questions sur nos services ; 
             <a class="grisnardo" href="/support" target="_blank"
-              >Ouvrez un ticket auprès du support Risqueo.</a
+              >ouvrez un ticket auprès du support.</a
             >
           </p>
 
@@ -958,28 +977,39 @@ Complétez ce formulaire pour transmettre votre contribution et participer au pr
      <br>  
   
   
-  <select class="f3 lazyload" name="typestructure" id="typejob" required>
-<option value="" disabled selected hidden>Type de structure</option>
-<option value="autre">ONF</option>
-<option value="grenoble">Mainteneur/Installateur</option>
-<option value="grenoble">Indépendant</option>
-<option value="grenoble">Autre</option>
+<select class="f3 lazyload" name="typestructure" id="typejob" required>
+<option value="" disabled selected hidden>Vous êtes ...</option>
+<option value="ONF">ONF</option>
+<option value="Technicien">Technicien</option>
+<option value="Formateur">Formateur</option>
+<option value="InstallateurMainteneur">Installateur et mainteneur</option>
+<option value="Fournisseur">Fournisseur</option>
+<option value="Fabricant">Fabricant</option>
+<option value="Fabricant">Spécialiste</option>
+<option value="Fabricant">Consultant</option>
+<option value="Autre">Autre</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
-                <select class="f3 lazyload" name="effectif" id="effectif" required>
-<option value="" disabled selected hidden>Nombre d'employés</option>
-<option value="autre">1 à 5</option>
-<option value="autre">5 à 20</option>
-      <option value="autre">20 à 60</option>
-      <option value="autre">60 et+</option>
-              </select><br>
+<select class="f3 lazyload" name="effectif" id="effectif" required>
+<option value="" disabled selected hidden>Taille d'entreprise</option>
+<option value="1employé">1 employé</option>
+<option value="1plusemployé">1+ employé(s)</option>
+<option value="5plusemployé">5+ employés</option>
+<option value="10plusemployé">10+ employés</option>
+<option value="20plusemployé">20+ employés</option>
+<option value="50plusemployé">50+ employés</option>
+<option value="100plusemployé">100+ employés</option>
+<option value="Autre">Autre</option>
+<option value="unknow">Je ne sais pas</option>
+</select><br>
   
 <input class="f1xx lazyload" name="marquecom" type="text" placeholder="Marque commerciale" required>
 <input class="f1xx lazyload" name="raisonsociale" type="text" placeholder="Raison sociale" required>
-<input class="f1 lazyload" name="debutactivite" type="text" placeholder="Date début d'activité" required>
-<input class="f1x lazyload" name="formejuridique" type="text" placeholder="Forme juridique (Ex : sarl)" required>
-<input class="f1 lazyload" name="siren" type="text" placeholder="Numéro de SIREN" required>
-<input class="f1 lazyload" name="tva" type="text" placeholder="Numéro de TVA intracommunautaire" required>
+<input class="f1 lazyload" name="debutactivite" type="text" placeholder="Date de début d'activité" required>
+<input class="f1x lazyload" name="formejuridique" type="text" placeholder="Forme juridique" required>
+<input class="f1 lazyload" name="siren" type="text" placeholder="N° SIREN" required>
+<input class="f1 lazyload" name="tva" type="text" placeholder="N° TVA intracommunautaire" required>
     <textarea class="f2 lazyload" name="descriptioncompany" placeholder="Présentez votre entreprise" required></textarea>
     <textarea class="f2 lazyload" name="descriptionwork" placeholder="Décrivez vos activités" required></textarea>
 
@@ -988,93 +1018,123 @@ Complétez ce formulaire pour transmettre votre contribution et participer au pr
   
   <p class="filtertagtxt lazyload">
     <br>
-            Vos coordonnées
+            Renseignez vos coordonnées
           </p>
   
-<input class="f1xx lazyload" name="responsable" type="text" placeholder="Nom et prénom" required>
-<input class="f1x lazyload" name="email" type="text" placeholder="Email de contact" required>
-<input class="f1 lazyload" name="telefon" type="text" placeholder="Téléphone de contact" required>
-<input class="f1xx lazyload" name="adresseprincipale" type="text" placeholder="Adresse principale" required>
-<input class="f1x lazyload" name="website" type="text" placeholder="Site internet" required>
+<input class="f1xx lazyload" name="responsable" type="text" placeholder="Représentant(e)" required>
+<input class="f1x lazyload" name="email" type="text" placeholder="Email entreprise" required>
+<input class="f1 lazyload" name="telefon" type="text" placeholder="Téléphone entreprise" required>
+<input class="f1xx lazyload" name="adresseprincipale" type="text" placeholder="Adresse entreprise" required>
+<input class="f1x lazyload" name="website" type="text" placeholder="Site internet entreprise" required>
   
               <p class="filtertagtxt lazyload">   <br>
-            Votre certifications
+            Mentionnez vos certifications
           </p>
 
 
 <select class="f3 lazyload" name="qualiopi" id="qualiopi" required>
-<option value="" disabled selected hidden>Certification qualiopi</option>
-<option value="autre">Certifié Qualiopi</option>
-<option value="grenoble">Non certifié Qualiopi</option>
+<option value="" disabled selected hidden>Qualiopi</option>
+<option value="ouicertifie">Certifié Qualiopi</option>
+<option value="noncertifieq">Non certifié Qualiopi</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
   <select class="f3 lazyload" name="iso9001" id="iso9001" required>
 <option value="" disabled selected hidden>ISO 9001</option>
-<option value="autre">Certifié ISO 9001</option>
-<option value="grenoble">Non certifié ISO 9001</option>
+<option value="ouicertifie">Certifié ISO 9001</option>
+<option value="noncertifieq">Non certifié ISO 9001</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
     <select class="f3 lazyload" name="iso14001" id="iso14001" required>
 <option value="" disabled selected hidden>ISO 14001</option>
-<option value="autre">Certifié ISO 14001</option>
-<option value="grenoble">Non certifié ISO 14001</option>
+<option value="ouicertifie">Certifié ISO 14001</option>
+<option value="noncertifieq">Non certifié ISO 14001</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
       <select class="f3 lazyload" name="iso45001" id="iso45001" required>
 <option value="" disabled selected hidden>ISO 45001</option>
-<option value="autre">Certifié ISO 45001</option>
-<option value="grenoble">Non certifié ISO 45001</option>
+<option value="ouicertifie">Certifié ISO 45001</option>
+<option value="noncertifieq">Non certifié ISO 45001</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
         <select class="f3 lazyload" name="iso50001" id="iso50001" required>
 <option value="" disabled selected hidden>ISO 50001</option>
-<option value="autre">Certifié ISO 50001</option>
-<option value="grenoble">Non certifié ISO 50001</option>
+<option value="ouicertifie">Certifié ISO 50001</option>
+<option value="noncertifieq">Non certifié ISO 50001</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
   
           <select class="f3 lazyload" name="ecovadis" id="ECOVADIS" required>
-<option value="" disabled selected hidden>Certification ECOVADIS</option>
-<option value="autre">Certifié ECOVADIS</option>
-<option value="grenoble">Non certifié ECOVADIS</option>
+<option value="" disabled selected hidden>ECOVADIS</option>
+<option value="ouicertifie">Certifié ECOVADIS</option>
+<option value="noncertifieq">Non certifié ECOVADIS</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
     
   
             <select class="f3 lazyload" name="GEFPI" id="GEFPI" required>
-<option value="" disabled selected hidden>Certification GEFPI</option>
-<option value="autre">Certifié GEFPI</option>
-<option value="grenoble">Non certifié GEFPI</option>
+<option value="" disabled selected hidden>GEFPI</option>
+<option value="ouicertifie">Certifié GEFPI</option>
+<option value="noncertifieq">Non certifié GEFPI</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
   
             <select class="f3xx lazyload" name="apsaddesenfumage" id="APSAD0" required>
-<option value="" disabled selected hidden>Certification APSAD Désenfumage</option>
-<option value="autre">Certifié APSAD Désenfumage</option>
-<option value="grenoble">Non certifié APSAD Désenfumage</option>
+<option value="" disabled selected hidden>APSAD Désenfumage</option>
+<option value="ouicertifie">Certifié APSAD Désenfumage</option>
+<option value="noncertifieq">Non certifié APSAD Désenfumage</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
     
             <select class="f3xx lazyload" name="APSAD1" id="APSAD1" required>
-<option value="" disabled selected hidden>Certification APSAD Compartimentage</option>
-<option value="autre">Certifié APSAD Compartimentage</option>
-<option value="grenoble">Non certifié APSAD Compartimentage</option>
+<option value="" disabled selected hidden>APSAD Compartimentage</option>
+<option value="ouicertifie">Certifié APSAD Compartimentage</option>
+<option value="noncertifieq">Non certifié APSAD Compartimentage</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
   
       
             <select class="f3xx lazyload" name="APSAD2" id="APSAD2" required>
-<option value="" disabled selected hidden>Certification APSAD Extincteurs</option>
-<option value="autre">Certifié APSAD Extincteurs</option>
-<option value="grenoble">Non certifié APSAD Extincteurs</option>
+<option value="" disabled selected hidden>APSAD Extincteurs</option>
+<option value="ouicertifie">Certifié APSAD Extincteurs</option>
+<option value="noncertifieq">Non certifié APSAD Extincteurs</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
@@ -1083,9 +1143,12 @@ Complétez ce formulaire pour transmettre votre contribution et participer au pr
   
   
             <select class="f3xx lazyload" name="bcorporation" id="bcorporation" required>
-<option value="" disabled selected hidden>Certification B Corporation</option>
-<option value="autre">Certifié B Corporation</option>
-<option value="grenoble">Non certifié B Corporation</option>
+<option value="" disabled selected hidden>B Corporation</option>
+<option value="ouicertifie">Certifié B Corporation</option>
+<option value="noncertifieq">Non certifié B Corporation</option>
+<option value="nonapproprie">Non appropriée</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
 </select><br>
   
   
@@ -1095,22 +1158,24 @@ Complétez ce formulaire pour transmettre votre contribution et participer au pr
                   
             <select class="f3xx lazyload" name="assu" id="assu" required>
 <option value="" disabled selected hidden>Assurance Responsabilité Professionnelle</option>
-<option value="autre">Assurance Responsabilité Professionnelle</option>
-<option value="autre">Assurance Responsabilité Professionnelle</option>
+<option value="autre">ARP valide et en cours</option>
+<option value="autre">Sans ARP</option>
+<option value="encoursobtention">En cours d'obtention</option>
+<option value="unknow">Je ne sais pas</option>
               </select><br>
   
   
-     <textarea class="f2 lazyload" name="descriptioncertifs" placeholder="Autres certifications, assurances ou labels"></textarea>
+     <textarea class="f2 lazyload" name="descriptioncertifs" placeholder="Autres certifications, assurances, labels et commentaires libres"></textarea>
 
   
   
   <div class="lazyload">
-  <button type="submit">Submit</button>
+  <button type="submit">Contribuer</button>
   </div>
   
   
    <p class="filtertagtxt22 lazyload"><br>
-           Facturé 99£ par an. Inclus une licence et candidature attributation du label Risqueo France.
+Risqueo facture 199€ hors taxes tous les 12 mois pour le service d'indexation, ainsi que la licence et l'obtention éventuelle du label Risqueo.
            
           </p>
   
