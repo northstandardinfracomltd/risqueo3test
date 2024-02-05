@@ -88,12 +88,13 @@
         padding: 14px 16px !important;
         font-size: 16px;
         text-align: left;
-        width: 100% !important;
+        width: 80%;
+        max-width: 230px;
         background: #f4f6fa;
         border: 0.08rem solid #f4f6fa !important;
         border-radius: 12px !important;
         margin-bottom: 5px;
-        color: #2b5bd7 !important;
+        color: #4c587c !important;
         cursor: text !important;
       }
 
@@ -147,6 +148,10 @@
         cursor: pointer;
         display: flex;
         justify-content: space-between;
+        border: 1px solid #dbe0eb;
+    background-color: #ffffff;
+    border-radius: 16px;
+    
       }
 
       .left-content {
@@ -162,7 +167,7 @@
       }
 
       .dropdown-item:hover {
-        background-color: #f1f1f1;
+        background-color: #f1f1f169;
       }
 
       .item-list {
@@ -249,7 +254,7 @@
         border: 0px solid transparent !important;
       }
     </style>
-  </head>
+
   <body>
     <style>
       .style-0 {
@@ -736,32 +741,87 @@
     <style>
       /* Styles for data-title */
       .left-content div:nth-child(1) {
-        color: red;
+    color: #4c587c;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0px;
+        white-space: nowrap;
       }
 
       /* Styles for data-valuation */
       .left-content div:nth-child(2) {
-        color: pink;
+    color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0px;
+        white-space: nowrap;
       }
 
       /* Styles for data-contact */
       .left-content div:nth-child(3) {
-        color: blue;
+    color: #4c587c73;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0px;
+        white-space: nowrap;
       }
 
       /* Styles for data-tags */
       .left-content div:nth-child(4) {
-        color: yellow;
+     color: #4c587c;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0px;
+        white-space: nowrap;
       }
 
       /* Styles for data-contact */
       .right-content div:nth-child(1) {
-        color: orange;
+    cursor: default;
+    padding: 6px 12px;
+    margin: 0px 1.5px 8px 0px;
+    border-radius: 10px;
+    font-family: "proxima nova semibold" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    font-size: 14px;
+    color: #007c8c;
+    background-color: #e7fafd;
+    white-space: nowrap;
       }
 
       /* Styles for data-tags */
       .right-content div:nth-child(2) {
-        color: green;
+background-color: #c9366f17;
+    color: #c9366f !important;
+    border-radius: 10px;
+    font-size: 11.5px;
+    font-weight: 100;
+    padding: 6px 10px;
+    padding-top: 6.5px !important;
+    letter-spacing: -0.1px;
+    font-family: "proxima nova bold";
+                white-space: nowrap;
       }
 
       @font-face {
@@ -1250,8 +1310,8 @@
     <footer>
       <div class="column viking">
         <div class="defibcontainer">
-          <h1 class="filtertagtxtmaster">Rechercher un prestataire</h1>
-          <p class="filtertagtxt">
+          <h1 class="filtertagtxtmaster lazyload">Rechercher un prestataire</h1>
+          <p class="filtertagtxt lazyload">
             Idéal pour trouver à proximité un installateur ou mainteneur de
             défibrillateurs, extincteurs, systèmes d'incendie, organisation
             d'évacutation, (...) ou un formateur ; et vérifier la conformité du
@@ -1264,7 +1324,7 @@
 
 
 
-          <div class="tag-list">
+          <div class="tag-list lazyload">
             <div class="tag" onclick="filterByTag(this, 'Défibrillation')">
               Défibrillation
             </div>
@@ -1285,7 +1345,7 @@
     type="text"
     id="search-input"
     autofocus
-    class="iris"
+    class="iris lazyload"
     placeholder=""
     oninput="filterItems()"
               />
@@ -1378,7 +1438,7 @@
           
           
         </div>
-    <button id="boutonMontrerPlus" onclick="toggleVisibility()" class="btnsqueeze">Pourquoi Risqueo</button>
+    <button id="boutonMontrerPlus" onclick="toggleVisibility()" class="btnsqueeze lazyload">Pourquoi Risqueo</button>
 
       </div>
       
@@ -1396,7 +1456,7 @@
 
           <!-- Bouton avec classe sponso et lien vers nouvel onglet -->
 
-          <div class="radio-container snipcss-YDHU2">
+          <div class="radio-container snipcss-YDHU2 lazyload">
             <label for="termsRadio" class="custom-radio">
               <input type="radio" id="termsRadio" name="termsRadio" />
               <span class="radio-bullet"> </span>
@@ -1411,11 +1471,11 @@
             </label>
           </div>
 
-          <a href="/publier-mission" class="btnsponso science"
+          <a href="/publier-mission" class="btnsponso science lazyload"
             >Partager une mission</a
           >
-          <p class="othertify">ou</p>
-          <a href="/missions"  class="btnsponso2"
+          <p class="othertify lazyload">ou</p>
+          <a href="/missions"  class="btnsponso2 lazyload"
             >Parcourir les missions</a
           >
           <br /><br />
@@ -1984,8 +2044,8 @@
 
     <div class="sticky-cta-bar" id="maDiv">
       <div class="cta-text">
-        <div class="titreinfoable">Cookies</div>
-        <div class="sous-titreinfoable">
+        <div class="titreinfoable lazyload">Cookies</div>
+        <div class="sous-titreinfoable lazyload">
           Moteur de recherche et considéré par ses utilisateurs comme
           référentiel institutionnel le plus dense et populaire pour trouver des
           fournisseurs et formateurs en
@@ -1993,7 +2053,7 @@
           labelisés OuiPrev à proximité.
         </div>
       </div>
-      <button class="fermerinfoable" onclick="masquerDiv()">
+      <button class="fermerinfoable lazyload" onclick="masquerDiv()">
         Accepter
       </button>
       
