@@ -1295,7 +1295,7 @@ background-color: #c9366f17;
       }
 
       .titreinfoable {
-        color: #4c587c;
+        color: #f4f6fa;
         font-family: "proxima nova bold" !important;
         font-weight: 100;
         letter-spacing: -0.2px;
@@ -1309,7 +1309,7 @@ background-color: #c9366f17;
       }
 
       .sous-titreinfoable {
-        color: #4c587c;
+        color: #f4f6fa;
         font-family: "proxima nova" !important;
         font-weight: 100;
         letter-spacing: -0.2px;
@@ -1322,7 +1322,7 @@ background-color: #c9366f17;
       }
 
       .fermerinfoable {
-        background-color: #007c8c;
+        background-color: #c9366f;
         color: #fff;
         padding: 8px 15px;
         border: none;
@@ -2194,8 +2194,7 @@ background-color: #c9366f17;
       }
 
       .sticky-cta-bar {
-        background-color: #fff;
-        border-top: 1px solid #dbe0eb;
+        background-color: #191b1f;
         padding: 15px;
         position: fixed;
         bottom: 0;
@@ -2231,8 +2230,14 @@ background-color: #c9366f17;
         }
       }
       
-      a {
-         color: yellow;
+     .linkcookies {
+         color: #4ebccb !important;
+                text-decoration: none;
+
+        }
+      
+        .linkcookies:hover {
+         text-decoration: underline;
         }
     </style>
 
@@ -2241,13 +2246,11 @@ background-color: #c9366f17;
         <div class="titreinfoable lazyload">Cookies</div>
         <div class="sous-titreinfoable lazyload">
           
-          <a href="/accord-utilisation" class="link-span2" target="_blank">
-                  conditions d'utilisation
-                </a>
-          Nous utilisons des cookies et des technologies similaires pour mémoriser vos préférences, comprendre votre parcours et mesurer l'efficacité des fonctions. À l’aide de tiers (<a target="_blank" href="https://support.google.com/analytics/answer/12159447?hl=fr">Google Analytics</a> et <a target="_blank" class"linkcookies" href="https://saasduo.com/">SaaSduo</a>) nous stockons des données dépersonnalisées pour récupérer des statistiques et ainsi améliorer les performances de notre site. Si vous utilisez risqueo.com, vous acceptez l’utilisation de tous les cookies et notre politique de confidentialité, ainsi nous vous invitons aussi à la lecture de notre <a target="_blank" href="/confidentialite">politique de confidentialité.</a>
+ 
+          Nous utilisons des cookies et des technologies similaires pour mémoriser vos préférences, comprendre votre parcours et mesurer l'efficacité des fonctions. À l’aide de tiers (<a target="_blank" href="https://support.google.com/analytics/answer/12159447?hl=fr" class="linkcookies">Google Analytics</a> et <a target="_blank" href="https://saasduo.com/" class="linkcookies">SaaSduo</a>) nous stockons des données dépersonnalisées pour récupérer des statistiques et ainsi améliorer les performances de notre site. Si vous utilisez risqueo.com, vous acceptez l’utilisation de tous les cookies et notre politique de confidentialité, ainsi nous vous invitons aussi à la lecture de notre <a target="_blank" href="/confidentialite" class="linkcookies">politique de confidentialité.</a>
         </div>
       </div>
-      <button class="fermerinfoable lazyload" onclick="masquerDiv()">
+      <button class="fermerinfoable lazyload science" onclick="masquerDiv()">
         Fermer
       </button>
       
