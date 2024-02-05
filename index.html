@@ -579,8 +579,47 @@
     100% {left: 100%}
 }
       
-    </style>
+          .top-bar {
+      background-color: #007c8c;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      z-index: 999; /* Pour s'assurer que la top-bar est au-dessus du contenu */
+    }
 
+    .announcement {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .announcement-title {
+    color: #fff;
+    font-family: "proxima nova" !important;
+    font-weight: 100;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .contribute-button {
+      background-color: #FFD700; /* Couleur de fond pour le bouton */
+      color: black; /* Couleur du texte pour le bouton */
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+      
+    </style>
+  <div class="top-bar">
+    <div class="announcement">
+      <span class="announcement-title">Utilisez le code <span style="color: #FFD700;">10INDEX</span> pour bénéficier de 10% de réduction pour ajouter votre contribution à l’indexation</span>
+      <a href="/indexation" class="contribute-button">Contribuer</a>
+    </div>
+  </div>
+    
+    
     <div class="navbar">
       <div class="logo-container">
         <a href="/" class="linkineos lazyload">
