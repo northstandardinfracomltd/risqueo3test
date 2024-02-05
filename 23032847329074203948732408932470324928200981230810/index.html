@@ -383,13 +383,20 @@
         font-size: 16.5px;
         text-align: left;
         width: 80% !important;
-        max-width: 230px;
+        max-width: 200px;
         background: #f4f6fa;
         border: 0.08rem solid #f4f6fa !important;
         border-radius: 12px !important;
         color: #4c587c !important;
         cursor: text !important;
       }
+
+      
+                  .gumtxtplus {
+height: 100px !important;
+                     max-width: 250px !important;
+      }
+
 
 
 
@@ -428,7 +435,13 @@
     overflow: hidden;
       }
       
+      button:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
           input:focus,
+      textarea:focus,
       button:focus {
         outline: none;
       }
@@ -452,6 +465,13 @@
 }
       
       
+            textarea {
+    resize: none;
+}
+      
+      
+      
+      
     </style>
 <body>
 
@@ -472,12 +492,9 @@ L'annonceur est à la recherche d'un prestataire ; la candidature est simple et 
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbxg9PsBsHRUzxochFBhbmeKIV4yJcLwk80Pv_q77vlkOy9WzHHRrMOCKRmLD15NScDHgQ/exec">
  
   <input class="gum" name="Email" type="email" placeholder="Email" required><br>
-  <input class="gum" name="Name" type="text" placeholder="Nom" required><br>
-  <input class="gum" name="Entreprise" type="text" placeholder="Entreprise" required><br>
-    <input class="gum" name="Commentaire" type="text" placeholder="Commentaire libre" required><br>
-  
-  
-  <textarea class="f2 lazyload" name="descriptionjob" placeholder="Description de la mission" required></textarea>
+  <input class="gum" name="Name" type="text" placeholder="Téléphone" required><br>
+  <input class="gum" name="Entreprise" type="text" placeholder="Entreprise" required><br>  
+  <textarea class="gum gumtxtplus" name="Commentaire" placeholder="Commentaire libre" required></textarea><br>
   
   
   <button type="submit">Envoyer</button>
