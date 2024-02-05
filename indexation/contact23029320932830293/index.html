@@ -374,6 +374,102 @@
 }
       
       
+      
+                  .gum {
+        margin-top: 14px;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        padding: 15px 16px 14px 16px !important;
+        font-size: 16.5px;
+        text-align: left;
+        width: 80% !important;
+        max-width: 200px;
+        background: #f4f6fa;
+        border: 0.08rem solid #f4f6fa !important;
+        border-radius: 12px !important;
+        color: #4c587c !important;
+        cursor: text !important;
+      }
+
+      
+                  .gumtxtplus {
+height: 100px !important;
+                     max-width: 250px !important;
+      }
+
+
+
+
+      
+      .gum:hover {
+        box-shadow: 0 0 0px 4px #008eff38;
+        cursor: text !important;
+      }
+      .gum::placeholder {
+        color: #8a97bb;
+        font-family: "proxima nova" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        line-height: 28px;
+        font-size: 16.5px;
+      }
+
+      
+      
+           button {
+        background-color: #007c8c;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-family: "proxima nova semibold" !important;
+        font-weight: 100;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+        border-radius: 12px !important;
+        text-decoration: none !important;
+        margin-top: 15px;
+        margin-bottom: -2px;
+        width: 93px;
+            position: relative;
+    overflow: hidden;
+      }
+      
+      button:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer !important;
+}
+      
+          input:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+      }
+
+      
+      
+      button:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255,255,255, 0) 10%,
+        rgba(255,255,255, .1),
+        rgba(255,255,255, 0) 100%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+      
+      
+            textarea {
+    resize: none;
+}
+      
     </style>
 <body>
 
@@ -382,9 +478,9 @@
            <a href="/" class="backz lazyload">Annuler</a>
 
      
-                    <h1 class="filtertagtxtmaster lazyload">Contact</h1>
+                    <h1 class="filtertagtxtmaster lazyload">Envoyer un message</h1>
           <p class="filtertagtxt lazyload">
-          Contacter le prestataire
+Avec ce formulaire sur Risqueo, vous pouvez envoyer un message directement au prestataire gratuitement.
            
           </p>
      
@@ -393,12 +489,14 @@
 
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbxExcwJamxPxazN4FL95ubNRsllwFF4WziBb8Ehugtz-E8hhm-FVPwiAUYD1k9FLSdw/exec">
  
-  <input name="Email" type="email" placeholder="Email" required>
-    <input name="Tel" type="text" placeholder="Téléphone" required>
-  <input name="Entreprise" type="text" placeholder="Entreprise" required>
-    <input name="Correspondant" type="text" placeholder="Commentaire" required>
+  <input class="gum lazyload" name="Email" type="email" placeholder="Email" required>
+    <input class="gum lazyload" name="Tel" type="text" placeholder="Téléphone" required>
+  <input class="gum lazyload" name="Entreprise" type="text" placeholder="Entreprise" required>
+    <input class="gum lazyload" name="Correspondant" type="text" placeholder="Sujet" required>
   
-<textarea class="f2 lazyload" name="demande" placeholder="Présentez votre demande"></textarea>
+  
+
+<textarea class="gum gumtxtplus f2 lazyload" name="demande" placeholder="Précisez votre demande"></textarea><br>
 
   
   
@@ -415,7 +513,7 @@
                 method: 'POST',
                 body: data,
             }).then(() => {
-                window.location.replace('/indexation/contact23029320932830293/ok')
+                window.location.replace('/indexation/contact23029320932830293/confirmation')
             })
         })
     }); 
