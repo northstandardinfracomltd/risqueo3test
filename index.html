@@ -234,6 +234,7 @@
         cursor: default;
         text-align: left;
         padding-left: 9px;
+         padding-right: 9px;
       }
 
       .filtertagtxt {
@@ -247,6 +248,7 @@
         cursor: default;
         text-align: left;
         padding-left: 9px;
+                padding-right: 9px;
       }
 
       .tag {
@@ -720,14 +722,6 @@
     <ul class="item-list">
       <li
         class="item"
-        data-title="paris 1"
-        data-subtitle="PREVIGOLD"
-        data-tags="Formation"
-      >
-        <a href="/indexation/contact23029320932830293/" target="_blank">Item 1</a>
-      </li>
-      <li
-        class="item"
         data-title="Arbre crabe iris"
         data-valuation="AAA"
         data-subtitle="Subtitle fag"
@@ -838,22 +832,7 @@
           >SP Enseignement</a
         >
       </li>
-      <li
-        class="item"
-        data-title="Voiture crabe iris"
-        data-subtitle="Subtitle fag"
-        data-tags="Formation"
-      >
-        <a href="/indexation/contact23029320932830293/" target="_blank">Cardiac Safe</a>
-      </li>
-      <li
-        class="item"
-        data-title="Laval item"
-        data-subtitle="Subtitle Laval"
-        data-tags="Incendie"
-      >
-        <a href="/indexation/contact23029320932830293/" target="_blank">Laval item</a>
-      </li>
+
     </ul>
 
     <script>
@@ -866,10 +845,10 @@
         dropdown = document.getElementById("search-dropdown");
         items = document.querySelectorAll(".item");
 
-        // Clear previous dropdown content
+   
         dropdown.innerHTML = "";
 
-        // Display dropdown only if input has 3 or more characters or tag is selected
+      
         if (filter.length >= 3 || tag) {
           items.forEach(function (item) {
             var title = item.dataset.title.toUpperCase();
@@ -877,24 +856,24 @@
             var tags = item.dataset.tags.toUpperCase();
             var combinedText = title + " " + subtitle + " " + tags;
 
-            // Check if both filter and tag are present in the combined text
+            
             if (
               filter &&
               combinedText.indexOf(filter) > -1 &&
               (!tag || (tag && tags.indexOf(tag) > -1))
             ) {
-              // Display up to 4 matching items in the dropdown
-              if (dropdown.childElementCount < 4) {
+           
+              if (dropdown.childElementCount < 3) {
                 var dropdownItem = document.createElement("div");
                 dropdownItem.className = "dropdown-item";
 
-                // Left content (title and subtitle)
+               
                 var leftContent = document.createElement("div");
                 leftContent.className = "left-content";
                 leftContent.innerHTML = `<div>${item.dataset.title}</div><div>${item.dataset.subtitle}</div><div>${item.dataset.contact}</div>`;
                 dropdownItem.appendChild(leftContent);
 
-                // Right content (tag)
+               
                 var rightContent = document.createElement("div");
                 rightContent.className = "right-content";
                 rightContent.innerHTML = `<div>${item.dataset.tags}</div><div>${item.dataset.valuation}</div>`;
@@ -908,10 +887,10 @@
             }
           });
 
-          // Show the dropdown
+         
           dropdown.style.display = "block";
         } else {
-          // Hide the dropdown if input has less than 3 characters and no tag selected
+       
           dropdown.style.display = "none";
         }
       }
@@ -950,37 +929,36 @@
     </script>
 
     <style>
-      /* Styles for data-title */
       .left-content div:nth-child(1) {
     color: #4c587c;
-    font-family: "proxima nova semibold" !important;
+    font-family: "proxima nova bold" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-bottom: 6px;
     cursor: pointer;
     text-align: left;
     padding-left: 0px;
-        white-space: nowrap;
+    white-space: nowrap;
+    text-transform: uppercase;
       }
 
-      /* Styles for data-valuation */
       .left-content div:nth-child(2) {
-    color: #2a5bd7;
+    color: #007c8c;
     font-family: "proxima nova" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     cursor: pointer;
     text-align: left;
     padding-left: 0px;
-        white-space: nowrap;
+    white-space: nowrap;
       }
 
-      /* Styles for data-contact */
       .left-content div:nth-child(3) {
-    color: #4c587c73;
+    color: #4c587c4d;
     font-family: "proxima nova" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
@@ -992,7 +970,6 @@
         white-space: nowrap;
       }
 
-      /* Styles for data-tags */
       .left-content div:nth-child(4) {
      color: #4c587c;
     font-family: "proxima nova" !important;
@@ -1006,9 +983,8 @@
         white-space: nowrap;
       }
 
-      /* Styles for data-contact */
       .right-content div:nth-child(1) {
-    cursor: default;
+    cursor: pointer;
     padding: 6px 12px;
     margin: 0px 1.5px 8px 0px;
     border-radius: 10px;
@@ -1021,7 +997,6 @@
     white-space: nowrap;
       }
 
-      /* Styles for data-tags */
       .right-content div:nth-child(2) {
 background-color: #c9366f17;
     color: #c9366f !important;
@@ -1382,6 +1357,7 @@ background-color: #c9366f17;
         cursor: default;
         text-align: left;
         padding-left: 9px;
+         padding-right: 9px;
       }
 
       .subtitlesponso {
@@ -1395,6 +1371,7 @@ background-color: #c9366f17;
         cursor: default;
         text-align: left;
         padding-left: 9px;
+         padding-right: 9px;
       }
 
       .formsponso {
@@ -1493,14 +1470,7 @@ background-color: #c9366f17;
         <div class="defibcontainer">
           <h1 class="filtertagtxtmaster lazyload">Rechercher un prestataire</h1>
           <p class="filtertagtxt lazyload">
-            Idéal pour trouver à proximité un installateur ou mainteneur de
-            défibrillateurs, extincteurs, systèmes d'incendie, organisation
-            d'évacutation, (...) ou un formateur ; et vérifier la conformité du
-            prestataire avec les normes ainsi que notre notation (grade). Si
-            vous êtes prestataire, vous pouvez
-            <a href="https://google.com/"
-              >demander une indexation et contrôle.</a
-            >
+Idéal pour trouver à proximité un installateur ou mainteneur de défibrillateurs, d'extincteurs, et d'autres systèmes pour la sécurité et la prévention des risques, ainsi que des formateurs. Risqueo est un moteur de recherche français gratuit. Les critères de nos grades s'appuient sur les expériences, les qualifications, la réputation, et le respect de la conformité aux normes.
           </p>
 
 
@@ -1522,7 +1492,7 @@ background-color: #c9366f17;
               <div id="word-container"></div>
 
               <input
-    maxlength="35"
+    maxlength="19"
     type="text"
     id="search-input"
     autofocus
@@ -1566,10 +1536,10 @@ background-color: #c9366f17;
                 ""
               );
               input.value = updatedInputValue.trim();
-              updateWordContainer(); // Met à jour les mots après la suppression
+              updateWordContainer(); 
             }
 
-            // Ajoutez cet événement pour mettre à jour le conteneur de mots à chaque saisie
+           
             document
               .getElementById("search-input")
               .addEventListener("input", updateWordContainer);
@@ -1592,7 +1562,7 @@ background-color: #c9366f17;
         if (index < placeholder.length - 1) {
             typingTimeout = setTimeout(() => {
                 typePlaceholder(placeholder, index + 1, callback);
-            }, 120); // ajustez la vitesse de frappe ici
+            }, 120); 
         } else {
             callback();
         }
@@ -1606,13 +1576,13 @@ background-color: #c9366f17;
         typePlaceholder(placeholders[currentPlaceholderIndex], 0, () => {
             setTimeout(() => {
                 updatePlaceholder();
-            }, 1200); // ajustez le délai avant le prochain placeholder ici
+            }, 1200); 
         });
 
         currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholders.length;
     }
 
-    // Appel initial pour définir le premier placeholder
+   
     updatePlaceholder();
 </script>
           
@@ -1626,16 +1596,16 @@ background-color: #c9366f17;
       
 
       <div class="column">
-        <!-- Div principale avec classes sponso -->
+     
         <div class="divsponso">
-          <!-- Titre et sous-titre avec classes sponso -->
+        
           <div class="titlesponso lazyload">Ou publier une mission ou appel d'offres</div>
           <div class="subtitlesponso lazyload">
             Recevez des options pour effectuer une formation, assurer la
             maintenance d'un défibrillateur, installer un extincteur, (...)
           </div>
 
-          <!-- Bouton avec classe sponso et lien vers nouvel onglet -->
+         
 
           <div class="radio-container snipcss-YDHU2 lazyload">
             <label for="termsRadio" class="custom-radio">
@@ -1727,10 +1697,10 @@ background-color: #c9366f17;
             var dwayneDiv = document.querySelector('.dwayne');
             var boutonMontrerPlus = document.getElementById('boutonMontrerPlus');
 
-            // Ajoute ou supprime la classe 'visible' pour montrer ou masquer la div
+          
             dwayneDiv.classList.toggle('visible');
 
-            // Ajoute ou supprime la classe 'invisible' pour masquer ou montrer le bouton
+            
             boutonMontrerPlus.classList.toggle('invisible');
         }
     </script>
@@ -2207,6 +2177,7 @@ background-color: #c9366f17;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 19999999;
       }
 
       .cta-text {
@@ -2221,17 +2192,27 @@ background-color: #c9366f17;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+     
       }
 
       @media (max-width: 768px) {
         .sticky-cta-bar {
           flex-direction: column;
-          text-align: center;
+          text-align: left !important;
           padding: 10px;
+             padding-bottom: 30px !important;
+          
         }
-
+        
+        
+        .fermerinfoable {
+    margin-left: 8.5px;
+    margin-right: auto;
+}
+        
         .cta-text {
-          margin-bottom: 10px;
+          margin-bottom: 3px;
+      
         }
       }
       
@@ -2264,13 +2245,13 @@ background-color: #c9366f17;
       var div = document.getElementById("maDiv");
       div.style.display = "none";
 
-      // Enregistrez l'information dans un cookie qui expire dans 1 jour
+      
       var dateExpiration = new Date();
-      dateExpiration.setTime(dateExpiration.getTime() + (1 * 24 * 60 * 60 * 1000)); // 1 jour en millisecondes
+      dateExpiration.setTime(dateExpiration.getTime() + (1 * 24 * 60 * 60 * 1000)); 
       document.cookie = "annonceMasquee=true; expires=" + dateExpiration.toUTCString() + "; path=/";
     }
 
-    // Vérifiez si le cookie existe au chargement de la page
+
     window.onload = function () {
       var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)annonceMasquee\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
