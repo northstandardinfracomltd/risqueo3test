@@ -1352,23 +1352,27 @@ Postulez pour des missions ou des appels d'offres publiés par des clients à la
           performSearch();
         });
 
-        tags.forEach((tag) => {
-         
-          tag.addEventListener("click", function () {
-            tag.classList.toggle("selected");
-            performSearch();
-          });
-        });
-        
-        
-        
+tags.forEach((tag) => {
+  tag.addEventListener("click", function () {
+    // Désélectionne tous les tags
+    tags.forEach((otherTag) => {
+      if (otherTag !== tag) {
+        otherTag.classList.remove("selected");
+      }
+    });
 
-        
-        
-        
-        locationFilter.addEventListener("change", function () {
-          performSearch();
-        });
+    // Sélectionne le tag cliqué
+    tag.classList.toggle("selected");
+
+    // Exécute la recherche
+    performSearch();
+  });
+});
+
+locationFilter.addEventListener("change", function () {
+  performSearch();
+});
+
 
         function performSearch() {
           const searchTerm = document
