@@ -503,14 +503,72 @@ Activer une alerte
 
 <form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbyRzssaS16KZFd7wdXo-jNBCQDbk-md_4ExQatEcspks1OzkUaLxt8amZN3QXsoE6XG/exec">
  
-  <input class="gum lazyload" name="Emailx" type="email" placeholder="Email" required>
-    <input class="gum lazyload" name="Telx" type="text" placeholder="Téléphone" required>
-  <input class="gum lazyload" name="Entreprisex" type="text" placeholder="Entreprise" required>
+  <select class="f16 lazyload" name="alerttype" id="alerttype" required>
+<option value="" disabled selected hidden>Type d'annonce privilégiée</option>
+<option value="sanspreference">Sans préférence</option>
+<option value="mission">Appel d'offres</option>
+<option value="appeloffre">Mission</option>
+<option value="soustraitance">Sous-traitance</option>
+<option value="soustraitance">CDD</option>
+<option value="autre">Autre</option>
+</select><br>
   
-<textarea class="gum gumtxtplus f2 lazyload" name="demandex" placeholder="Renseignements"></textarea><br>
+  
+    <select class="f16 lazyload" name="alertlocation" id="alertlocation" required>
+<option value="" disabled selected hidden>Localisation privilégiée</option>
+        <option value="sanspreference">Sans préférence</option>
+        <option value="caen">Caen, 14000</option>
+        <option value="ajaccio">Ajaccio, 20000</option>
+        <option value="dijon">Dijon, 21000</option>
+        <option value="besançon">Besançon, 25000</option>
+        <option value="quimper">Quimper, 29000</option>
+        <option value="brest">Brest, 29200</option>
+        <option value="nîmes">Nîmes, 30000</option>
+        <option value="toulouse">Toulouse, 31000</option>
+        <option value="bordeaux">Bordeaux, 33000</option>
+        <option value="merignac">Mérignac, 33700</option>
+        <option value="montpellier">Montpellier, 34000</option>
+        <option value="rennes">Rennes, 35000</option>
+        <option value="tours">Tours, 37000</option>
+        <option value="grenoble">Grenoble, 38000</option>
+        <option value="nantes">Nantes, 44000</option>
+        <option value="orleans">Orléans, 45000</option>
+        <option value="angers">Angers, 49000</option>
+        <option value="reims">Reims, 51100</option>
+        <option value="laval">Laval, 53000</option>
+        <option value="nancy">Nancy, 54000</option>
+        <option value="metz">Metz, 57000</option>
+        <option value="roubaix">Roubaix, 59100</option>
+        <option value="tourcoing">Tourcoing, 59200</option>
+        <option value="calais">Calais, 62100</option>
+        <option value="pau">Pau, 64000</option>
+        <option value="perpignan">Perpignan, 66000</option>
+        <option value="strasbourg">Strasbourg, 67000</option>
+        <option value="mulhouse">Mulhouse, 68100</option>
+        <option value="villeurbanne">Villeurbanne, 69100</option>
+        <option value="mans">Le Mans, 72000</option>
+        <option value="annecy">Annecy, 74000</option>
+        <option value="rouen">Rouen, 76000</option>
+        <option value="versailles">Versailles, 78000</option>
+        <option value="amiens">Amiens, 80000</option>
+        <option value="toulon">Toulon, 83000</option>
+        <option value="avignon">Avignon, 84000</option>
+        <option value="poitiers">Poitiers, 86000</option>
+        <option value="limoges">Limoges, 87000</option>
+        <option value="nanterre">Nanterre, 92000</option>
+        <option value="montreuil">Montreuil, 93100</option>
+        <option value="creteil">Créteil, 94000</option>
+        <option value="argenteuil">Argenteuil, 95100</option>
+                  <option value="autre">Autre</option>
+
+</select><br>
+  
+  
+  <input class="gum lazyload" name="Emailx" type="email" placeholder="Email" required>
+<br>
 
   <div class="lazyload">
-  <button type="submit">Envoyer</button>
+  <button type="submit">Activer l'alerte</button>
   </div>
   <script type = "text/javascript" >
     window.addEventListener("DOMContentLoaded", function() {
