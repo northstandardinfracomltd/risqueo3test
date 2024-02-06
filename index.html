@@ -744,27 +744,37 @@ margin-right: auto;
     cursor: pointer !important;
      
 }
+  
       
+      
+      ::selection {
+    background-color: #007c8c24; 
+}
+
       
     </style>
-  <div class="top-bar" id="myTopBar">
+  <div class="top-bar" id="myTopBar" onclick="openIndexation()">
     <div class="announcement">
       <span class="announcement-title lazyload">Utilisez le code <span class="codepromo">RISQ15</span> pour bénéficier de 15% de réduction¹ sur votre indexation et licence en tant que prestataire</span>
       <a href="/indexation" class="contribute-button science lazyload">S'inscrire</a>
     </div>
   </div>
     
-  <script>
-    // Fonction pour afficher la top-bar après 5 secondes
-    function showTopBar() {
-      var topBar = document.getElementById("myTopBar");
-      topBar.style.display = "block";
-    }
+<script>
+  // Fonction pour afficher la top-bar après 5 secondes
+  function showTopBar() {
+    var topBar = document.getElementById("myTopBar");
+    topBar.style.display = "block";
+  }
 
-    // Appeler la fonction après 5 secondes
-    setTimeout(showTopBar, 4100);
-  </script>
-    
+  // Fonction pour ouvrir /indexation dans un nouvel onglet
+  function openIndexation() {
+    window.open('/indexation', '_blank');
+  }
+
+  // Appeler la fonction après 5 secondes
+  setTimeout(showTopBar, 4100);
+</script>
     
     <div class="navbar">
       <div class="logo-container">
