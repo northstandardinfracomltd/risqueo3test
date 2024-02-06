@@ -500,23 +500,22 @@ height: 100px !important;
   
 
 
-<form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbyRzssaS16KZFd7wdXo-jNBCQDbk-md_4ExQatEcspks1OzkUaLxt8amZN3QXsoE6XG/exec">
+<form id="FORM_ID" method="POST" action="https://script.google.com/macros/s/AKfycbywf7R4AY89Z187sLMQZGWgFWPb7DQfmMBeS7G_3FrCiO6mOyNta_RIiYCMSuhxjot_/exec">
  
   
 <p class="filtertagtxt lazyload">Type d'annonce privilégiée</p>
   <select class="f16 lazyload" name="alerttype" id="alerttype" required>
-<option value="" disabled selected hidden>Type d'annonce</option>
+<option value="" disabled selected hidden>Choisir</option>
 <option value="sanspreference">Sans préférence</option>
 <option value="mission">Appel d'offres</option>
 <option value="appeloffre">Mission</option>
 <option value="soustraitance">Sous-traitance</option>
 <option value="soustraitance">CDD</option>
-<option value="autre">Autre</option>
 </select><br>
   
 <p class="filtertagtxt lazyload">Localisation privilégiée</p>
 <select class="f16 lazyload" name="alertlocation" id="alertlocation" required>
-<option value="" disabled selected hidden>Localisation privilégiée</option>
+<option value="" disabled selected hidden>Choisir</option>
 <option value="sanspreference">Sans préférence</option>
         <option value="caen">Caen, 14000</option>
         <option value="ajaccio">Ajaccio, 20000</option>
@@ -560,22 +559,20 @@ height: 100px !important;
         <option value="montreuil">Montreuil, 93100</option>
         <option value="creteil">Créteil, 94000</option>
         <option value="argenteuil">Argenteuil, 95100</option>
-                  <option value="autre">Autre</option>
-
 </select><br>
   
-  <p class="filtertagtxt lazyload">Type de secteur</p>
+  <p class="filtertagtxt lazyload">Secteur privilégié</p>
     <select class="f16 lazyload" name="alertclient" id="alertclient" required>
-<option value="" disabled selected hidden>Type de secteur</option>
+<option value="" disabled selected hidden>Choisir</option>
 <option value="sanspreference">Sans préférence</option>
 <option value="mission">Secteur public</option>
 <option value="appeloffre">Secteur privé</option>
 </select><br>
   
   
-    <p class="filtertagtxt lazyload">Catégorie d'annonce</p>
+    <p class="filtertagtxt lazyload">Catégorie dprivilégiée</p>
       <select class="f16 lazyload" name="alertkey" id="alertkey" required>
-<option value="" disabled selected hidden>Catégorie d'annonce</option>
+<option value="" disabled selected hidden>Choisir</option>
 <option value="sanspreference">Sans préférence</option>
 <option value="sanspreference">Défibrillation</option>
 <option value="mission">Incendie</option>
@@ -600,7 +597,7 @@ height: 100px !important;
                 method: 'POST',
                 body: data,
             }).then(() => {
-                window.location.replace('/support/confirmation')
+                window.location.replace('/notif20372039209377230932/confirmation')
             })
         })
     }); 
