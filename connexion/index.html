@@ -384,8 +384,9 @@
      
                     <h1 class="filtertagtxtmaster lazyload">Connexion</h1>
           <p class="filtertagtxt lazyload">
-Utilisez votre licence pour accéder à toutes les informations obtenez-en une
-           
+Utilisez votre licence Risqueo existente pour accéder aux contenus illimités. Pour toute remarque ou question concernant nos services, veuillez <a class="grisnardo" href="/support"
+              >ouvrir un ticket auprès du support.</a
+            >           
           </p>
      
     <style>
@@ -479,7 +480,7 @@ Utilisez votre licence pour accéder à toutes les informations obtenez-en une
         margin-bottom: 26px;
             position: relative;
     overflow: hidden;
-              width: 110px;
+              width: 90px;
         }
       
       
@@ -562,11 +563,25 @@ Utilisez votre licence pour accéder à toutes les informations obtenez-en une
     text-align: left;
     padding-left: 0px;
 }
+      
+                  .grisnardo {
+    color: #2a5bd7;
+    text-decoration: none;
+}
+      
+            
+      .grisnardo:hover {
+    color: #2a5bd7;
+    text-decoration: underline;
+        cursor: pointer;
+}
+      
+      
     </style>
  <div class="lazyload">
 
     <input  type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
-    <button id="publierBtn" onclick="publierAvecLicence()">Continuer</button><br>
+    <button id="publierBtn" onclick="publierAvecLicence()">Accéder</button><br>
     <p class="blackhawk">ou</p>
     <button id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
   <p class="blackhawk">L'abonnement de la licence est de 99£/an</p>
