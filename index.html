@@ -617,7 +617,7 @@
       
           .codepromo {
     color: #f4f6fa;
-    font-family: "proxima nova semibold" !important;
+    font-family: "proxima nova bold" !important;
     font-weight: 100;
     letter-spacing: -0.2px;
     cursor: default;
@@ -1312,7 +1312,7 @@ background-color: #c9366f17;
         letter-spacing: -0.2px;
         font-size: 16px;
         border-radius: 12px !important;
-        margin-left: 8px;
+        margin-left: 0px;
       }
 
       .fermerinfoable:hover {
@@ -1461,6 +1461,10 @@ background-color: #c9366f17;
         border-radius: 5px;
         cursor: pointer;
       }
+      
+      
+
+
     </style>
 
     <br /><br />
@@ -1601,8 +1605,7 @@ Idéal pour trouver à proximité un installateur ou mainteneur de défibrillate
         
           <div class="titlesponso lazyload">Ou publier une mission ou appel d'offres</div>
           <div class="subtitlesponso lazyload">
-            Recevez des options pour effectuer une formation, assurer la
-            maintenance d'un défibrillateur, installer un extincteur, (...)
+Recevez des offres de spécialistes pour répondre à votre recherche. Il peut s'agir d'une formation spécifique, d’installer ou d’effectuer la maintenance de défibrillateurs, d'extincteurs, et d'autres systèmes pour la sécurité et la prévention des risques.
           </div>
 
          
@@ -1625,6 +1628,22 @@ Idéal pour trouver à proximité un installateur ou mainteneur de défibrillate
           <a href="/publier-mission" class="btnsponso science lazyload"
             >Partager une mission</a
           >
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var boutonPartager = document.querySelector('.btnsponso');
+    var radioTerms = document.getElementById('termsRadio');
+
+    boutonPartager.addEventListener('click', function (event) {
+      if (!radioTerms.checked) {
+        event.preventDefault();
+
+
+      }
+    });
+  });
+</script>
+
+
           <p class="othertify lazyload">ou</p>
           <a href="/missions"  class="btnsponso2 lazyload"
             >Parcourir les missions</a
@@ -1636,6 +1655,9 @@ Idéal pour trouver à proximité un installateur ou mainteneur de défibrillate
 
 
         <style>
+
+          
+          
         .dwayne {
             display: none; /* Par défaut, la div est masquée */
         }
@@ -1849,13 +1871,13 @@ Idéal pour trouver à proximité un installateur ou mainteneur de défibrillate
 
     <style>
       .othertify {
-        color: #4c587c;
-        font-family: "proxima nova" !important;
+    color: #4c587c4a;
+    font-family: "proxima nova semibold" !important;
         font-weight: 100;
         letter-spacing: -0.2px;
         line-height: 28px;
         font-size: 16px;
-        margin-bottom: 18px;
+        margin-bottom: 17.5px;
         cursor: default;
         text-align: left;
         padding-left: 9px;
@@ -2081,8 +2103,8 @@ Idéal pour trouver à proximité un installateur ou mainteneur de défibrillate
       .radio-container {
         display: flex;
         align-items: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: -7px;
+        margin-bottom: 23px;
         padding-left: 10px;
         padding-right: 10px;
       }
