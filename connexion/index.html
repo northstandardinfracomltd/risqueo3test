@@ -583,8 +583,8 @@ Utilisez votre licence Risqueo existente pour accéder aux contenus illimités. 
     <input  type="text" id="licenceCode" placeholder="Entrez votre code de licence"><br>
     <button id="publierBtn" onclick="publierAvecLicence()">Accéder</button><br>
     <p class="blackhawk">ou</p>
-    <button id="acheterBtn" onclick="acheterLicence()">Acheter une licence</button><br>
-  <p class="blackhawk">L'abonnement de la licence est de 99£/an</p>
+    <button id="acheterBtn" onclick="acheterLicence()">Ouvrir un compte</button><br>
+  <p class="blackhawk">Vous devez être enregistré sur Risqueo pour récupérer une licence. Il s'agit notamment d'un pass illimité renouvelé tous les 12 mois et de l'accès à l'indexation.</p>
 </div>
     <div id="licencesValides" class="hidden">
         <p>Licences valides :</p>
@@ -614,7 +614,7 @@ Utilisez votre licence Risqueo existente pour accéder aux contenus illimités. 
     }
 
     function acheterLicence() {
-        window.location.href = 'https://buy.stripe.com/4gwcOnc2B1YY7Fm4h1';
+        window.location.href = '/indexation/inscription';
     }
 </script>
   
